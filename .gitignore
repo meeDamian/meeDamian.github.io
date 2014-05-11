@@ -3,3 +3,4 @@ downloads
 .npm
 .DS_Store
 *.pyc
+node_modules

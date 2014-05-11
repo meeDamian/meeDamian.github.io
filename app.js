@@ -8,7 +8,7 @@ var express = require('express')
   , path = require('path');
 
 var app = express();
-var poet = require('poet')(app);
+var Poet = require('poet');
 var markdown = require( "markdown" ).markdown;
 var request = require('request');
 var html2text = require( 'html-to-text');
@@ -52,10 +52,8 @@ pygmentsExecute = function(target, lang, callback) {
   pyg.stdin.end();
 };
 
-
 function renderMarkdown(string, cb) {
   var data = markdown.parse(string);
-  // console.log(data);
   var snippets = [];
   
   function recurse(entry) {
@@ -168,21 +166,19 @@ app.configure('development', function(){
 });
 
 
-poet
-.createPostRoute()
-.createPageRoute()
-.createTagRoute()
-.createCategoryRoute()
-.addTemplate({
+var poet = Poet(app, {
+  posts: './_posts',
+  postsPerPage: 3
+});
+
+poet.addTemplate({
   ext : [ 'markdown', 'md' ],
   fn : renderMarkdown
-})
-.set({
-  postsPerPage: 3
-})
-.init(function(core) {
+});
+
+poet.init(function() {
   app.get('/rss', function ( req, res ) {
-    var posts = core.getPosts(0, 5);
+    var posts = core.helpers.getPosts(0, 5);
     
     // Since the preview is automatically generated for the examples,
     // it contains markup. Strip out the markup with the html-to-text
@@ -197,7 +193,7 @@ poet
   
   
   app.get('/', function(req, res) {
-    var posts = core.getPosts(0, 3);
+    var posts = core.helpers.getPosts(0, 3);
     res.render('index', { posts: posts });
   });
   
@@ -241,15 +237,15 @@ poet
       });
   }
 
-  app.get('/AndroidAsync', function(req, res) {
-    getProject('koush/AndroidAsync', req, res);
-  })
-  app.get('/ion', function(req, res) {
-    getProject('koush/ion', req, res);
-  })
-  app.get('/UrlImageViewHelper', function(req, res) {
-    getProject('koush/UrlImageViewHelper', req, res);
-  })
+  // app.get('/AndroidAsync', function(req, res) {
+  //   getProject('koush/AndroidAsync', req, res);
+  // })
+  // app.get('/ion', function(req, res) {
+  //   getProject('koush/ion', req, res);
+  // })
+  // app.get('/UrlImageViewHelper', function(req, res) {
+  //   getProject('koush/UrlImageViewHelper', req, res);
+  // })
 
   var server = http.createServer(app).listen(app.get('port'), function(){
     console.log("Express server listening on port " + app.get('port'));

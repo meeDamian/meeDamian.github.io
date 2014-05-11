@@ -1,64 +1,65 @@
 ==================================================================
-https://keybase.io/koush
+https://keybase.io/meedamian
 --------------------------------------------------------------------
 
 I hereby claim:
 
-  * I am an admin of http://koush.com
-  * I am koush (https://keybase.io/koush) on keybase.
-  * I have a public key with fingerprint 8263 4D45 4FFE 5213 0F71  868A 078A 8C77 C06F 6C89
+  * I am an admin of http://meedamian.com
+  * I am meedamian (https://keybase.io/meedamian) on keybase.
+  * I have a public key with fingerprint D8CA 1776 EB92 6549 1D07  CE67 F546 ECBE A809 CB18
 
 To claim this, I am signing this object:
 
 {
     "body": {
         "key": {
-            "fingerprint": "82634d454ffe52130f71868a078a8c77c06f6c89",
+            "fingerprint": "d8ca1776eb9265491d07ce67f546ecbea809cb18",
             "host": "keybase.io",
-            "key_id": "078a8c77c06f6c89",
-            "uid": "09f51aec5b2c376ba1511ba42f4f5100",
-            "username": "koush"
+            "key_id": "f546ecbea809cb18",
+            "uid": "47cfae5b501fe61b7dbbe6caab415700",
+            "username": "meedamian"
         },
         "service": {
-            "hostname": "koush.com",
+            "hostname": "meedamian.com",
             "protocol": "http:"
         },
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1397328426,
+    "ctime": 1399770224,
     "expire_in": 157680000,
-    "prev": "9d82996653632342b879e86484db60b78dba24007e4297f72c7ba8aec7b67867",
-    "seqno": 3,
+    "prev": "1db3afd2803de5e6f7e3a5a78e9cad62bed083d35082daff72ccec03e4b3498e",
+    "seqno": 5,
     "tag": "signature"
 }
 
 with the aforementioned key, yielding the PGP signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v0.1.5
+Version: Keybase OpenPGP v0.1.14
 Comment: https://keybase.io/crypto
 
-yMHZAnicbZFtSFNRGMc3l2XDoMw+RQNPoSRj3tdz7p2gFPbBsH0JFMEY996d667p
-vXNvTueyliVpQhIE2WAYZGEYYfT6wSTKsogiIpGQCJFADYymUazwXCvoQ+fL4fyf
-///3nIfn8RabxW49ix38XCbvgfXFxGLEcri6tzQOZMPXDtxxcBSvX6qmN+JgIKjp
-YeAGAgNZzsfxnKpinqFZSkW0AAWJQoIkKAgpFFShIojACfxGyEwQjCyFsEsziEYe
-Xs1H1P/4I78LosrTElZ4mVFYBGWJ5mlaljhG5UiBokxjCAd1qQWbcCMS8oOEExAp
-qilEiq/3/bfsUowWkgoEjbChGM1E9ofDAbeZCrcHTFsblr1/AF5Z031kYhKI4mBI
-M3TgpolTCWsmkWZFxDICx0AnwLGAFsRezXTwCAoUOWYbHCVI0Scwogghz0KWYTlG
-FpCIBcgJnE+GlIwEnywxHEUhzDEiUhGjIFkSyNxIhkiAiPQP4VbdAG6WfFNqJMiQ
-1qhL4UgQg8SjiYYNFqvdsjE3x9yZxb55699N7lE3/aI9/HYHsOW/nWyF73ads+Xd
-O22zddxqOuJicq5UOo93jzOpHaNPdveVM7xtPDafSD4dfYlLSoarcj9OJwqbxkvu
-Ds7Sh6INOlecqqrVskVDS6XJJfVOfn9F+luBZ3hVGh305LuSb844ygaS1+GE//1y
-V/OB6KXL9liqWA/c1LJTC9NlDzM/Lkxdq19cKagpT3+1Lncaq3uL+usq83rmOy4e
-1Kx9vT1X25KdszOfXF9yy+RjjppIBR9bkW8s28dGksbtwu/17MDQh+5n50+duK+D
-n68zn5+P7TyZ7oIjk5WxVLy6cF82PQdmxNoqOtv2anibpw4uZPZra/TmCxA=
-=bYpF
+yMHrAnicbZFrSFRpHMbHK2YOlVhRIjscIiIGO/fLRMiiXWSFEbcWSWl8zzn/M57a
+OWc6M+MFk9K02Mhd3SXZb+LObrgWiSjJbG0O1kS5llY4CBoRGbhlF6gPQSK+R+pL
+9H45vM//9zzPe/jfcqY5slPKigeTUDMkpPwXfxdxfG9MBJsI2VQbCU8TcQxWP5pu
++MEKWroRJjyEKiqIEgQeZInmOVaiVFJQgBc0juVBkQGJpKTIlEi4iVozZDtwjIxC
+UKibWMMXn65i9St8ZHXACoqGgJM5ktKAp2RBlWXgFYRkluIEkrTBEFgGCgCmAwAq
+CujIIJrdBJbrdAXLTavdXyKFihnA7qBlhk3F/BGPasPhoMd2hhuDNloPsu9TiE/W
+DRX/OTbUgRXSTYPwUJhUwrqdSjGSJAgkTbNuAhqCugU+3SY4gRdJfOwaqMORlCoz
+SFNpkWRU4IDXBGAQhwQRJAWpPC2DSoqMynCkSKtI0wRaUUAhGWBlhpVEwP0hOG6Y
+hIfDz0R+HBnS/QYKRywgmsfi1emOlGxHZkaqvTtH9pr1nzfq785ynKswyPafpvvT
+7jinuKrpN+bYt8nlnLyOi6W5VUMvW2YjR6Plo+a2AXby9X2Y6+6pjpqVuzbTlLcs
+V/plxrV3prXngBj7wdWWvzDqm59cNxwbr+y/m3h1MLbjT+vkjcxTH5Onux44432B
+2JG/p9rfple47/3jnft5xDu+3Pt4oGAxWhJn1v7RcrOj87uJUN+lzn3fdDzP3RhV
+n+y+XECzzVuWnMXp2w9vypvduXS94faL5bbI++T8ng2VbCJxtqgg319/5dpC+dUS
+3fs0q2hr18P9PX+5cp7NXch4dKLU6/q9v/C3vsGyM76aRe18Y+vI/6nsr4ciH4Z7
+E8Z8ntJdNPvvCkpzGTQ=
+=OP8L
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
 
-View my publicly-auditable identity here: https://keybase.io/koush
+View my publicly-auditable identity here: https://keybase.io/meedamian
 
 ==================================================================

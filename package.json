@@ -1,12 +1,21 @@
 {
-  "name": "application-name",
+  "name": "meeDamian.com",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "coffee app"
   },
   "dependencies": {
-    "express": "3.1.0",
-    "jade": "*"
+    "express": "*",
+    "jade": "*",
+    "async": "*",
+    "html-to-text": "*",
+    "less-middleware": "*",
+    "poet": "chester1000/poet",
+    "request": "*",
+    "socket.io": "*",
+    "supervisor": "*",
+    "websocket": "*",
+    "marked": "*"
   }
 }
