@@ -1,8 +1,7 @@
-.well
+.well(itemprop="BlogPost")
   .row-fluid
-    div: h3: a(href=post.url, itemprop="name")=post.title
+    div: h3: a(href=post.url, itemprop="headline")=post.title
     include share
 
-  span.date #{post.date.getFullYear()} - #{post.date.getMonth()+1} - #{post.date.getDate()}
-  div.post.content
-    != post.content
+  span(itemprop="datePublished") #{post.date.getFullYear()}-#{post.date.getMonth()+1}-#{post.date.getDate()}
+  != post.content

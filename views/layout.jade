@@ -4,13 +4,17 @@ html(itemscope, itemtype="http://schema.org/Blog", lang="en")
     title Damian Mee | Blog
     meta(charset='utf-8')
     meta(name="viewport", content="width=device-width, initial-scale=1")
+    block metastuff
+
+    link(rel="author", href="https://plus.google.com/+MaurycyDamianWasilewski/")
+
     link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
 
+    link(rel="stylesheet", href="/stylesheets/highlight/railscasts.css")
     //- link(rel="stylesheet", href="/stylesheets/highlight/foundation.css")
     //- link(rel="stylesheet", href="/stylesheets/highlight/idea.css")
     //- link(rel="stylesheet", href="/stylesheets/highlight/monokai.css")
     //- link(rel="stylesheet", href="/stylesheets/highlight/monokai_sublime.css")
-    link(rel="stylesheet", href="/stylesheets/highlight/railscasts.css")
     //- link(rel="stylesheet", href="/stylesheets/highlight/zenburn.css")
 
     link(rel="stylesheet", href="/stylesheets/mystyle.min.css")
@@ -30,7 +34,7 @@ html(itemscope, itemtype="http://schema.org/Blog", lang="en")
         .col-md-2.text-right
           ul.nav.nav-list.uppercase
             li.nav-header Projects
-            - each repo in repos
+            each repo in repos
               li: a(href=repo.path)=repo.name
 
         .col-md-10: block content

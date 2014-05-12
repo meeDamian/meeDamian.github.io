@@ -1,4 +1,7 @@
 extends layout
 
+block metastuff
+  meta(name="description", content=post.title)
+
 block content
   include includes/postSnippet

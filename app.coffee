@@ -139,12 +139,11 @@ poet = Poet app,
   fn: marked
 
 .addRoute '/', (req, res) -> 
-  res.render 'index', 
+  res.render 'page', 
     posts: poet.helpers.getPosts 0, 3
     page: 1
 
 poet.init ->
-
   app.get '/rss', (req, res) ->
     posts = poet.helpers.getPosts 0, 5
 
