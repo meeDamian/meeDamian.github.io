@@ -1,6 +1,6 @@
 {
   "name": "meeDamian.com",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "coffee app.coffee"
@@ -15,5 +15,10 @@
     "request": "*",
     "marked": "chester1000/marked",
     "highlight.js": "*"
+  },
+  "engine": "node 0.10.26",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chester1000/meeDamian.com"
   }
 }
