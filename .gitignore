@@ -4,3 +4,4 @@ downloads
 .DS_Store
 *.pyc
 node_modules
+npm-debug.log
