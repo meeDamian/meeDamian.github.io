@@ -13,7 +13,7 @@
     "less-middleware": "*",
     "poet": "chester1000/poet",
     "request": "*",
-    "marked": "*",
+    "marked": "chester1000/marked",
     "highlight.js": "*"
   }
 }

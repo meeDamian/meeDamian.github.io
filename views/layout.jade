@@ -5,7 +5,16 @@ html(itemscope, itemtype="http://schema.org/Blog", lang="en")
     meta(charset='utf-8')
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+
+    //- link(rel="stylesheet", href="/stylesheets/highlight/foundation.css")
+    //- link(rel="stylesheet", href="/stylesheets/highlight/idea.css")
+    //- link(rel="stylesheet", href="/stylesheets/highlight/monokai.css")
+    //- link(rel="stylesheet", href="/stylesheets/highlight/monokai_sublime.css")
+    link(rel="stylesheet", href="/stylesheets/highlight/railscasts.css")
+    //- link(rel="stylesheet", href="/stylesheets/highlight/zenburn.css")
+
     link(rel="stylesheet", href="/stylesheets/mystyle.min.css")
+
     script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js")
     script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
 
@@ -13,7 +22,9 @@ html(itemscope, itemtype="http://schema.org/Blog", lang="en")
     .container      
       .row
         .com-md-10.col-md-offset-2
-          h3: a(href="/") Damian Mee
+          h3: a(href="/") 
+            img(src="/images/mustache64.png")
+            span Damian Mee
 
       .row
         .col-md-2.text-right

@@ -1,10 +1,10 @@
-highlight   = require 'highlight.js'
 html2text   = require 'html-to-text'
 express     = require 'express'
 request     = require 'request'
 marked      = require 'marked'
 async       = require 'async'
 less        = require 'less-middleware'
+hljs        = require 'highlight.js'
 http        = require 'http'
 path        = require 'path'
 Poet        = require 'poet'
@@ -122,11 +122,17 @@ marked.setOptions
   gfm: true
   sanitize: true
   smartypants: true
-  highlight: (code) -> highlight.highlightAuto(code).value
+  highlightClass: "hljs"
+  highlight: (code, lang) ->
+    if lang?
+      hljs.highlight(lang, code).value
+    else 
+      hljs.highlightAuto(code).value
+
 
 poet = Poet app, 
   posts: './_posts'
-  postsPerPage: 5
+  postsPerPage: 3
 
 .addTemplate
   ext: ['markdown', 'md']
@@ -134,7 +140,8 @@ poet = Poet app,
 
 .addRoute '/', (req, res) -> 
   res.render 'index', 
-    posts: poet.helpers.getPosts 0, 5
+    posts: poet.helpers.getPosts 0, 3
+    page: 1
 
 poet.init ->
 

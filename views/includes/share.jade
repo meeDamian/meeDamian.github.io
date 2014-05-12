@@ -1,0 +1,19 @@
+.dropdown.pull-right
+  a.dropdown-toggle(href="#share", data-toggle='dropdown')
+    img(src='/images/share.png')
+
+  ul.dropdown-menu
+    li.dropdown-header Share using...
+    li: a(href='//plus.google.com/share?url=' + encodeURIComponent('http://meeDamian.com' + post.url), onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;")
+      img(src='//www.gstatic.com/images/icons/gplus-32.png', alt='Share on Google+')
+      span Google+
+
+    li: a(href='//twitter.com/intent/tweet?via=chester1000&url=' + encodeURIComponent('http://meeDamian.com' + post.url), onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;")
+      img(src='//dev.twitter.com/sites/default/files/images_documentation/bird_blue_32.png', alt='Tweet on Twitter')
+      span Twitter
+
+    li.divider
+    li.dropdown-header Fork on...
+    li: a(href='//github.com/chester1000/meeDamian.com/tree/master/_posts/' + post.file)
+      img(src='/images/octocat32.png', alt='Fork on Github')
+      span Github

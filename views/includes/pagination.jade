@@ -1,12 +1,3 @@
-.pagination.pagination-large
-  ul
-    - var i = 1;
-    - var pageCount = getPageCount();
-    - while ( i <= pageCount )
-      if page == i
-        li.active
-          a(href=pageUrl(i)) #{i}
-      else
-        li
-          a(href=pageUrl(i)) #{i}
-      - i++;
+ul.pagination: - for(var i = 1; i <= getPageCount(); i++)
+  li(class=page==i ? "active" : undefined) 
+    a(href=pageUrl(i)) #{i}
