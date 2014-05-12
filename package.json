@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "coffee app"
+    "start": "coffee app.coffee"
   },
   "dependencies": {
     "express": "*",
@@ -13,9 +13,7 @@
     "less-middleware": "*",
     "poet": "chester1000/poet",
     "request": "*",
-    "socket.io": "*",
-    "supervisor": "*",
-    "websocket": "*",
-    "marked": "*"
+    "marked": "*",
+    "highlight.js": "*"
   }
 }
