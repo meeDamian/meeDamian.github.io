@@ -16,7 +16,10 @@
     "marked": "chester1000/marked",
     "highlight.js": "*"
   },
-  "engine": "node 0.10.26",
+  "engines": {
+    "node": ">=0.10.26",
+    "npm": ">=1.4.3"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/chester1000/meeDamian.com"
