@@ -7,15 +7,21 @@
   },
   "dependencies": {
     "coffee-script": "*",
-    "express": "*",
-    "jade": "*",
-    "async": "*",
-    "html-to-text": "*",
-    "less-middleware": "*",
+
     "poet": "chester1000/poet",
-    "request": "*",
     "marked": "chester1000/marked",
-    "highlight.js": "*"
+
+    "jade": "*",
+    "less-middleware": "*",
+    "html-to-text": "*",
+    
+    "async": "*",
+    "request": "*",
+    "highlight.js": "*",
+
+    "express": "*",
+    "serve-favicon": "*",
+    "morgan": "*"
   },
   "engines": {
     "node": "0.10.28",
