@@ -6,6 +6,7 @@
     "start": "coffee app.coffee"
   },
   "dependencies": {
+    "coffee-script": "*",
     "express": "*",
     "jade": "*",
     "async": "*",
