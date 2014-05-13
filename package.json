@@ -6,6 +6,7 @@
     "start": "coffee app.coffee"
   },
   "author": "Damian Mee <mee.damian@gmail.com> (http://meeDamian.com)",
+  "homepage": "http://meeDamian.com",
   "dependencies": {
     "coffee-script":    "^1.7.1",
 
