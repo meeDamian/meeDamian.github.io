@@ -38,7 +38,6 @@ app.use (req, res, next) ->
   next()
 
 app.use (req, res, next) ->
-  # TODO: req.is -> is()
   unless req.is 'text/*' then next()
   else
     req.text = ''
@@ -83,7 +82,6 @@ attachGithubRepo = (repoName) ->
       return res.send err if err?
 
       info = results[0]
-
       res.render 'github',
         name: fullRepoName
         markdown: results[1]
