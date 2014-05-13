@@ -1,34 +1,36 @@
 {
   "name": "meeDamian.com",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "start": "coffee app.coffee"
   },
+  "author": "Damian Mee <mee.damian@gmail.com> (http://meeDamian.com)",
   "dependencies": {
-    "coffee-script": "*",
+    "coffee-script":    "^1.7.1",
 
-    "poet": "chester1000/poet",
-    "marked": "chester1000/marked",
+    "poet":             "chester1000/poet",
+    "marked":           "chester1000/marked",
 
-    "jade": "*",
-    "less-middleware": "*",
-    "html-to-text": "*",
+    "jade":             "^1.3.1",
+    "less-middleware":  "^1.0.3",
+    "html-to-text":     "^0.0.8",
     
-    "async": "*",
-    "request": "*",
-    "highlight.js": "*",
+    "async":            "^0.8.0",
+    "request":          "^2.34.0",
+    "highlight.js":     "^8.0.0",
 
-    "express": "*",
-    "serve-favicon": "*",
-    "morgan": "*"
+    "express":          "^4.2.0",
+    "serve-favicon":    "^2.0.0",
+    "morgan":           "^1.0.1"
   },
   "engines": {
-    "node": "0.10.28",
-    "npm": "1.4.3"
+    "node": "^0.10.28",
+    "npm":  "^1.4.3"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/chester1000/meeDamian.com"
-  }
+  },
+  "licence": "MIT"
 }
