@@ -11,7 +11,7 @@ by [koush](https://github.com/koush), and instantly understood that's the bloggi
 publish/deploy from terminal.
 
 I had to do some cleanup there, update & fix some dependencies and rewrite parts of it to [a better language](http://coffeescript.org/).
-Later I've created a new [Heroku](https://www.heroku.com/) instance, moved my domain to a heroku Add-on called [pointDNS](https://addons.heroku.com/pointdns),
+Later, I've created a new [Heroku](https://www.heroku.com/) instance, moved my domain to a heroku Add-on called [pointDNS](https://addons.heroku.com/pointdns),
 did `git push heroku`, and it worked great :). I still have some styling to do, though...
 
 So let's go through it step by step (`WARNING` that may be boring if you don't like details):
@@ -23,7 +23,7 @@ There was quite a bunch of code I wasn't going to use.
 #### package.json
 I have moved dependencies from being hardcoded in `node_modules` folder to a proper `dependencies` section in `package.json`
 file. I prefer stuff on CDN's, so I had to re-link some things, like [Bootstrap](http://getbootstrap.com/) or [jQuery](http://jquery.com)
-(required, but not budled with **Bootstrap**).
+(required by, but not budled with **Bootstrap**).
 
 I've restructured some view files, removed almost all styles and left only two **.less** files with very small changes to
 a default **Bootstrap** theme.
@@ -37,7 +37,7 @@ First _problem_ I've encountered was an instant crash [poet](https://github.com/
 tried _friending_ it with [express](http://expressjs.com/) v4.x, where `app.locals` 
 [is no longer a function](https://github.com/visionmedia/express/wiki/Migrating-from-3.x-to-4.x#reslocals), and I had to
 handle it [like this](https://github.com/jsantell/poet/pull/88/files) (I've used [underscore](http://underscorejs.org/), 
-only because it was already required there). As I didn't wanted to wait for someone to merge my PR, I decided to 
+only because it was already `require`d there). As I didn't wanted to wait for someone to merge my PR, I decided to 
 [link to own repo](https://github.com/chester1000/meeDamian.com/blob/cf8c24355dce30b395ca790718fcd84815b4323b/package.json#L12) 
 in `package.json`.
 
