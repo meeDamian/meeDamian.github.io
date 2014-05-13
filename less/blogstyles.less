@@ -16,6 +16,8 @@ body {
   font-family: @fontFamily;
 }
 
+.my-name { margin-left: 10px; }
+
 .uppercase { text-transform: uppercase; }
 
 .well { background-color:@white; }
@@ -25,6 +27,16 @@ a {
   &:hover { color:@mainColor; }
 }
 a.list-group-item { color:@mainColor; }
+
+.linkland {
+  .list-group-item {
+    &:hover,
+    &:focus {
+      background-color: @lightColor;
+      color: @white;
+    }
+  }
+}
 
 .share {
   .btn { margin-top:25px; }
