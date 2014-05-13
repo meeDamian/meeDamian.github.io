@@ -3,6 +3,7 @@
 
 // variables:
 @fontFamily:  'Roboto Condensed', sans-serif;
+@mainColor:   #690;
 
 
 body {
@@ -11,6 +12,10 @@ body {
   font-family: @fontFamily;
 }
 
-.uppercase {
-  text-transform: uppercase;
+.uppercase { text-transform: uppercase; }
+
+a {
+  color:@mainColor;
+  &:hover { color:@mainColor; }
 }
+a.list-group-item { color:@mainColor; }

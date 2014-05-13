@@ -17,7 +17,7 @@ html(itemscope, itemtype="http://schema.org/Blog", lang="en")
     //- link(rel="stylesheet", href="/stylesheets/highlight/monokai_sublime.css")
     //- link(rel="stylesheet", href="/stylesheets/highlight/zenburn.css")
 
-    link(rel="stylesheet", href="/stylesheets/mystyle.min.css")
+    link(rel="stylesheet", href="/stylesheets/blogstyles.min.css")
 
 
   body
@@ -30,17 +30,20 @@ html(itemscope, itemtype="http://schema.org/Blog", lang="en")
 
       .row
         .col-md-2.text-right
-          ul.nav.nav-list.uppercase
-            li.nav-header Projects
-            each repo in repos
-              li: a(href=repo.path)=repo.name
+          .panel.panel-default
+            .panel-heading.uppercase Projects
+            .list-group
+              each repo in repos
+                a.list-group-item(href=repo.path)=repo.name
 
-          ul.nav.nav-list.uppercase
-            li.nav-header Links
-            li: a(href='//google.com/+MaurycyDamianWasilewski?rel=author') Google+
-            li: a(href='//twitter.com/meeDamian') Twitter
-            li: a(href='//linkedin.com/in/meeDamian/en') LinkedIn
-            li: a(href='//github.com/chester1000') Github
+          .panel.panel-default.uppercase
+            .panel-heading Links
+            .list-group
+              a.list-group-item(href='https://google.com/+MaurycyDamianWasilewski?rel=author') Google+
+              a.list-group-item(href='https://twitter.com/meeDamian') Twitter
+              a.list-group-item(href='https://linkedin.com/in/meeDamian/en') LinkedIn
+              a.list-group-item(href='https://github.com/chester1000') Github
+              a.list-group-item(href='https://play.google.com/store/apps/developer?id=meeDamian') Play Store
 
         .col-md-10: block content
         
