@@ -1,6 +1,7 @@
 .well(itemprop="BlogPost")
-  .row-fluid
-    div: h3: a(href=post.url, itemprop="headline")=post.title
+  .row-fluid.clearfix
+    div.pull-left
+      h3: a(href=post.url, itemprop="headline")=post.title
     include share
 
   span(itemprop="datePublished") #{post.date.getFullYear()}-#{post.date.getMonth()+1}-#{post.date.getDate()}
