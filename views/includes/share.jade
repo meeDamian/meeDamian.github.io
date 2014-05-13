@@ -1,19 +1,19 @@
-.dropdown.pull-right
+.share.dropdown.pull-right
   a.dropdown-toggle(href="#share", data-toggle='dropdown')
-    img.share-btn(src='/images/share.png')
+    img.btn(src='/images/share.png')
 
   ul.dropdown-menu
     li.dropdown-header Share using...
     li: a(href='//plus.google.com/share?url=' + encodeURIComponent('http://meeDamian.com' + post.url), onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;")
-      img(src='//www.gstatic.com/images/icons/gplus-16.png', alt='Share on Google+')
+      img.icon(src='//www.gstatic.com/images/icons/gplus-16.png', alt='Share on Google+')
       span Google+
 
     li: a(href='//twitter.com/intent/tweet?via=chester1000&url=' + encodeURIComponent('http://meeDamian.com' + post.url), onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;")
-      img(src='//dev.twitter.com/sites/default/files/images_documentation/bird_blue_16.png', alt='Tweet on Twitter')
+      img.icon(src='//dev.twitter.com/sites/default/files/images_documentation/bird_blue_16.png', alt='Tweet on Twitter')
       span Twitter
 
     li.divider
     li.dropdown-header Fork this post on...
     li: a(href='//github.com/chester1000/meeDamian.com/tree/master/_posts/' + post.file)
-      img(src='/images/octocat16.png', alt='Fork on Github')
+      img.icon(src='/images/octocat16.png', alt='Fork on Github')
       span Github

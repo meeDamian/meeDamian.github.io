@@ -4,6 +4,7 @@
 // variables:
 @fontFamily:  'Roboto Condensed', sans-serif;
 @mainColor:   #690;
+@lightColor:  #9c0;
 
 @white:       #fff;
 @black:       #000;
@@ -25,4 +26,15 @@ a {
 }
 a.list-group-item { color:@mainColor; }
 
-.share-btn { margin-top:25px; }
+.share {
+  .btn { margin-top:25px; }
+  .icon { margin-right:5px; }
+  .dropdown-menu {
+    & > li > a:hover,
+    & > li > a:focus {
+      background-color: @lightColor;
+      color: @white;
+    }
+  }
+
+}
