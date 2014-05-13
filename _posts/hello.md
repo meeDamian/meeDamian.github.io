@@ -1,7 +1,7 @@
 {{{
   "title" : "Beginning...",
   "date": "2014-05-13",
-  "tags": ["first", "author"],
+  "tags": ["web", "coffeescript", "heroku", "nodejs", "npm"],
   "category": "junk"
 }}}
 
@@ -20,8 +20,13 @@ So let's go through it step by step (`WARNING` that may be boring if you don't l
 ### Cleanup
 There was quite a bunch of code I wasn't going to use.
 
-Also, I prefer stuff on CDN's, so I had to re-link some things, like [Bootstrap](http://getbootstrap.com/) or 
-[jQuery](http://jquery.com) (required, but not budled with **Bootstrap**).
+#### package.json
+I have moved dependencies from being hardcoded in `node_modules` folder to a proper `dependencies` section in `package.json`
+file. I prefer stuff on CDN's, so I had to re-link some things, like [Bootstrap](http://getbootstrap.com/) or [jQuery](http://jquery.com)
+(required, but not budled with **Bootstrap**).
+
+I've restructured some view files, removed almost all styles and left only two **.less** files with very small changes to
+a default **Bootstrap** theme.
 
 
 ### Upgrades
@@ -56,8 +61,11 @@ Obviously it couldn't be that easy and some problems had to emerge: code block b
 wrapped code with a div with `.hljs` class, background had wrong shape. But [one quick PR](https://github.com/chjj/marked/pulls) 
 solved that isse for me.
 
-### Features
 
+### Heroku
+Deploying on Heroku, was way easier than I expected. Basically the only two things I had to do was, to create a `Procfile`
+containing only: `web: npm start`. And add `coffee-script` dependency to my `package.json` file, since I prefer running 
+**coffeescript** directly than compiling it to **js**, and then running it.
 
 
 ### Little Things
