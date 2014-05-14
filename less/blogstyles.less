@@ -56,5 +56,24 @@ a.list-group-item { color:@mainColor; }
       color:@white;
     }
   }
+}
+
+.pagination {
+  & > li > a { 
+    color:@lightColor;
+    &:hover, &:focus { 
+      background-color:@lightColor; 
+      border-color:@lightColor;
+      color:@white;
+    }
+  }
+  & > .active > a {
+    background-color:@mainColor;
+    border-color:@mainColor;
+    &:hover, &:focus { 
+      background-color:@lightColor; 
+      border-color:@lightColor;
+    }
+  }
 
 }
