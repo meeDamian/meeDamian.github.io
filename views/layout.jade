@@ -22,16 +22,15 @@ html(itemscope, itemtype="http://schema.org/Blog", lang="en")
       .row
         .my-heading.com-md-10.col-md-offset-2
           h2: a(href="/") 
-            img(src="/images/mustache64.png")
+            img.my-mustache(src="/images/mustache64.png")
             span.my-name Damian Mee
 
       .row
         .linkland.col-md-2.text-right
           .panel.panel-default
             .panel-heading.uppercase Projects
-            .list-group
-              each repo in repos
-                a.list-group-item(href=repo.path)=repo.name
+            .list-group: each repo in repos
+              a.list-group-item(href=repo.path)=repo.name
 
           .panel.panel-default.uppercase
             .panel-heading Links
