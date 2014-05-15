@@ -75,4 +75,4 @@ module:
 
 Luckily [one little PR](https://github.com/werk85/node-html-to-text/pull/19) solved this issue.
 
-![Awesome mustache](/images/mustache512.png)
+![Awesome mustache](/images/mustache512_short.png)
