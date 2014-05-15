@@ -8,7 +8,10 @@ block content
 
   script.
     (function(){
-      var dsq=document.createElement('script');dsq.async=true;dsq.src='//meedamian.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);
+      $('#disqus_thread').removeAttr('class');
+      var dsq = document.createElement('script');
+      dsq.async = true;
+      dsq.src = '//meedamian.disqus.com/embed.js';
+      ( $('head')[0] || $('body')[0] ).appendChild(dsq);
     })();
 
