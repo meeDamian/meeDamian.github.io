@@ -109,7 +109,7 @@ renderer.image = (href, title, text) ->
 
     if yt? then app.get('youtube embed url').replace "%s", yt[1]
     else 
-      href = "/post-content/" + href unless href.startsWith "http"
+      href = "/post-content/" + href unless href.startsWithAny [ "http", "/images" ]
       new Renderer().image href, title, text
 
   ) + "</center>"

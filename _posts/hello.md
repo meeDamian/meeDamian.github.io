@@ -5,7 +5,6 @@
   "category": "junk"
 }}}
 
-
 Several days ago I was casually browsing awesomness of [Github](http://github.com) when I saw [this project](https://github.com/koush/koush.com) 
 by [koush](https://github.com/koush), and instantly understood that's the blogging flow I could use - write in sublime and 
 publish/deploy from terminal.
@@ -76,3 +75,4 @@ module:
 
 Luckily [one little PR](https://github.com/werk85/node-html-to-text/pull/19) solved this issue.
 
+![Awesome mustache](/images/mustache512.png)
