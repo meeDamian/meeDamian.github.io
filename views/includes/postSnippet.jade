@@ -7,3 +7,7 @@
   span.date-published(itemprop="datePublished") #{post.date.getFullYear()}-#{post.date.getMonth()+1}-#{post.date.getDate()}
   .post-body(itemprop="description")
     != post.content
+
+  a#disqus_thread.btn.btn-default.center-block(href=post.url) Click to comment
+
+    
