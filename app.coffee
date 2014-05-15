@@ -19,16 +19,17 @@ String::startsWith    ?= (str) -> 0 is @indexOf str
 String::startsWithAny  = (lst) -> return true for str in lst when @startsWith str; false
 
 app = express()
-app.set 'port', process.env.PORT or 3000
-app.set 'views', __dirname + '/views'
-app.set 'view engine', 'jade'
+app.set 'port',         process.env.PORT or 3000
+app.set 'views',        __dirname + '/views'
+app.set 'view engine',  'jade' 
 
-app.set 'github name',        'chester1000'
-app.set 'github repo url',    'https://api.github.com/repos/%s'
-app.set 'github readme url',  'https://raw.github.com/%s/master/README.md'
+app.set 'github name',            'chester1000'
+app.set 'github repo url',        'https://api.github.com/repos/%s'
+app.set 'github readme url',      'https://raw.github.com/%s/master/README.md'
 
-app.set 'youtube embed url',  '<iframe width="853" height="480" src="//www.youtube.com/embed/%s" frameborder="0" allowfullscreen></iframe>'
-app.set 'youtube url regex',  /^.*(?:youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/
+app.set 'youtube embed url',      '<iframe width="853" height="480" src="//www.youtube.com/embed/%s" frameborder="0" allowfullscreen></iframe>'
+app.set 'youtube url regex',      /^(?:http(?:s)?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/
+app.set 'youtube url regex old',  /^.*(?:youtu.be\/|v\/|e\/|u\/\w+\/|embed\/|v=)([^#\&\?]*).*/
 
 app.use morgan 'dev'
 
@@ -101,11 +102,12 @@ app.locals.repos = [
 # prefix relative picture urls, and support youtube links
 renderer = new Renderer()
 renderer.image = (href, title, text) ->
-  yt = href.match app.get 'youtube url regex'
 
-  "<center>" + (
+  yt = href.match app.set 'youtube url regex'
 
-    if yt? then app.get('youtube embed url').replace /%s/g, yt[1]
+  '<center class="resource">' + (
+
+    if yt? then app.get('youtube embed url').replace "%s", yt[1]
     else 
       href = "/post-content/" + href unless href.startsWith "http"
       new Renderer().image href, title, text
