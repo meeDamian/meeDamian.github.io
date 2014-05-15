@@ -5,5 +5,5 @@
     include share
 
   span.date-published(itemprop="datePublished") #{post.date.getFullYear()}-#{post.date.getMonth()+1}-#{post.date.getDate()}
-  .post-body(itemprop="articleBody")
+  .post-body(itemprop="description")
     != post.content
