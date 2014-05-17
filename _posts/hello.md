@@ -71,7 +71,7 @@ containing only: `web: npm start`. And add `coffee-script` dependency to my `pac
 I hate when things annoy me with their little warnigs, and so was [html-to-text](https://github.com/werk85/node-html-to-text) 
 module:
 
-```
+```bash
 npm WARN package.json html-to-text@0.0.8 No repository field.
 ```
 
