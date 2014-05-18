@@ -33,12 +33,16 @@ variant. If those _border tabs_ are not visible you can reveal them by pressing 
 
 ### Step 2 - Know _"the code"_
 
-I have _evolved_ through 3 different [flows](#flows) until I've found the one I like the most. As the last one is also
-the most complex I'll cover all 3 of them, so you can choose the one you like to most:
+~~I have _evolved_ through 3 different [flows](#flows) until I've found the one I like the most. As the last one is also
+the most complex I'll cover all 3 of them, so you can choose the one you like to most:~~
+
+I have evolved through 4 different [flows](#flows). Last one was created with help from [+Mucelium](https://plus.google.com/115557143272470220180/posts)
+and [+Hugo Visser](https://plus.google.com/+HugoVisser/posts) after I've published that post.
 
 * [Convenient flow](#convenient-flow) - keep credentials in `build.gradle` file,
 * [Shared Repo flow](#shared-repo-flow) - input credentials in console,
-* [Awesome flow](#awesome-flow) - keep credentials in a separate and `.gitignore`d file.
+* [Awesome flow](#awesome-flow) - keep credentials in a separate and `.gitignore`d file,
+* [Perfect flow](#perfect-flow) - Similar to [Awesome](#awesome-flow), but **way** slicker!
 
 
 ### Step 3 - Know where to look
@@ -87,7 +91,7 @@ android {
 }
 ```
 
-**WARN: If you've made ANY COMMITS while using this flow, IT IS NOT SAVE FOR YOU TO EVER OPEN-SOURCE THIS REPOSITORY!!!**
+**`WARN`: If you've made ANY COMMITS while using this flow, IT IS NOT SAVE FOR YOU TO EVER OPEN-SOURCE THIS REPOSITORY!!!**
 
 [inspiration](http://stackoverflow.com/a/18329835/390493)
 
@@ -123,7 +127,7 @@ android {
 }
 ```
 
-**WARN: This flow will only work if you have `gradle daemon` DISABLED, otherwise `System.console()` will be `null`, and
+**`WARN`: This flow will only work if you have `gradle daemon` DISABLED, otherwise `System.console()` will be `null`, and
 your script will crash. You can overcome this using `SwingBuilder` library, and [here's how](https://www.timroes.de/2014/01/19/using-password-prompts-with-gradle-build-files/).**
 
 [inspiration](http://stackoverflow.com/a/19130098/390493)
@@ -150,6 +154,8 @@ apply plugin: 'android'
 
 android {
 
+  // some other gradle magic
+
   signingConfigs {
     release
   }
@@ -168,6 +174,8 @@ android {
 
           (String) file.name.replace(
             ".apk",
+
+            // alter this string to change output file name
             "-" + defaultConfig.versionName + "-build" + defaultConfig.versionCode + ".apk"
           )
         )
@@ -235,8 +243,92 @@ by awesome guys from [+Mycelium](https://plus.google.com/115557143272470220180/p
 
 If you know how to do it [contact me](https://google.com/+MaurycyDamianWasilewski) or leave a comment below.
 
+### Perfect flow
 
-#### Other things worth remembering:
+This flow automates all of your builds, is 100% repo-friendly, makes your script slick and elegant, and allows you to 
+easily set up output dir and output file name.
+
+First, create a `gradle.properties` file. This file **is automatically included** in all of your `build.gradle`
+files, so we won't have to handle that manually.
+
+**NOTE:** `OUTPUT_DIR` will be used only if you provide **valid and existing** path.
+
+```
+STORE_FILE=/home/<user>/path/to/your/keystore.release
+STORE_PASSWORD=keySt0reP4s5word
+KEY_ALIAS=keyName
+KEY_PASSWORD=KeyPas5word
+OUTPUT_DIR=
+```
+
+now in `MyApp/build.gradle` put:
+
+```
+apply plugin: 'android'
+
+android {
+
+  // some other gradle magic
+
+  signingConfigs {
+    release {
+      storeFile     file(STORE_FILE)
+      storePassword STORE_PASSWORD
+      keyAlias      KEY_ALIAS
+      keyPassword   KEY_PASSWORD
+    }
+  }
+  buildTypes {
+    release {
+      signingConfig signingConfigs.release
+
+      // this is used to alter output directory and file name. If you don't need it
+      // you can safely comment it out.
+      applicationVariants.all { variant ->
+        def file = variant.outputFile
+
+        String parent = file.parent
+        if( project.hasProperty('OUTPUT_DIR') && new File( (String)OUTPUT_DIR ).exists() )
+          parent = OUTPUT_DIR
+
+        variant.outputFile = new File(
+          parent,
+          (String) file.name.replace(
+            ".apk",
+
+            // alter this string to change output file name
+            "-" + defaultConfig.versionName + "-build" + defaultConfig.versionCode + ".apk"
+          )
+        )
+      }
+      // end your comment here
+    }
+  }
+}
+```
+
+Last required thing is to add this to your `.gitignore` file:
+
+```
+# ...
+
+gradle.properties
+```
+
+**`WARN:` if you already had this file in your repo, you'll have to run `git rm --cached gradle.properties` first.**
+
+Optionally, include `gradle.properties.template` so others will know how to write their **properties** file:
+
+```
+STORE_FILE=/path/to/your/keystore.release
+STORE_PASSWORD=password
+KEY_ALIAS=key_name
+KEY_PASSWORD=password
+OUTPUT_DIR=
+```
+
+
+### Other things worth remembering:
 
 * **before** building, increase both `versionCode` and `versionName` in your `MyApp/build.gradle` file,
 * it's a good idea to move as much data from `AndroidManifest.xml` to your `build.gradle` as possible.
