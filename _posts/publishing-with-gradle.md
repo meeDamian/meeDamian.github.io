@@ -156,6 +156,23 @@ android {
   buildTypes {
     release {
       signingConfig signingConfigs.release
+
+      // that will output files named: 
+      //   MyApp-release-<versionName>-build<versionCode>.apk
+      applicationVariants.all { variant ->
+        def file = variant.outputFile
+        variant.outputFile = new File(
+
+          // override this to change output directory
+          (String) file.parent, 
+
+          (String) file.name.replace(
+            ".apk",
+            "-" + defaultConfig.versionName + "-build" + defaultConfig.versionCode + ".apk"
+          )
+        )
+      }
+
     }
   }
 }
@@ -210,8 +227,11 @@ KEY_PASSWORD=password
 
 This flow is almost perfect for me, but there are still things I could see improved:
 
-* automatically rename output files to include `versionName`,
-* change output directory to some external location.
+* ~~automatically rename output files to include `versionName`~~,
+* ~~change output directory to some external location,~~
+* fix for those things is now included above. It [was provided](https://plus.google.com/+MaurycyDamianWasilewski/posts/fe6ZaSbwSsC) 
+by awesome guys from [+Mycelium](https://plus.google.com/115557143272470220180/posts)
+
 
 If you know how to do it [contact me](https://google.com/+MaurycyDamianWasilewski) or leave a comment below.
 
