@@ -92,7 +92,7 @@ android {
 }
 ```
 
-**`WARN`: If you've made ANY COMMITS while using this flow, IT IS NOT SAVE FOR YOU TO EVER OPEN-SOURCE THIS REPOSITORY!!!**
+**`WARN`: If you've made ANY COMMITS while using this flow, IT IS NOT SAFE FOR YOU TO EVER OPEN-SOURCE THIS REPOSITORY!!!**
 
 [inspiration](http://stackoverflow.com/a/18329835/390493)
 
