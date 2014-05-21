@@ -37,7 +37,7 @@ variant. If those _border tabs_ are not visible you can reveal them by pressing 
 ~~I have _evolved_ through 3 different [flows](#flows) until I've found the one I like the most. As the last one is also
 the most complex I'll cover all 3 of them, so you can choose the one you like to most:~~
 
-I have evolved through 4 different [flows](#flows). Last one was created with help from [+Mucelium](https://plus.google.com/115557143272470220180/posts)
+I have evolved through 4 different [flows](#flows). Last one was created with help from [+Mycelium](https://plus.google.com/115557143272470220180/posts)
 and [+Hugo Visser](https://plus.google.com/+HugoVisser/posts) after I've published that post.
 
 * [Convenient flow](#convenient-flow) - keep credentials in `build.gradle` file,
