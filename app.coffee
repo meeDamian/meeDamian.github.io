@@ -134,7 +134,8 @@ poet = Poet app,
 
 .addTemplate
   ext: ['markdown', 'md']
-  fn: marked
+  fn: (options) -> 
+    marked options.source
 
 .addRoute '/', (req, res) -> 
   res.render 'page', 
