@@ -132,6 +132,8 @@ poet = Poet app,
   posts: './_posts'
   postsPerPage: 3
 
+# using my own marked instead of one bundled with poet, because
+# standard doesn't support easy class injection to a <pre> element.
 .addTemplate
   ext: ['markdown', 'md']
   fn: (options) -> 
