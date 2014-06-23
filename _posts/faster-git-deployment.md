@@ -2,8 +2,7 @@
   "title" : "Faster git deployment",
   "date": "2014-06-23",
   "tags": ["git", "vcs", "heroku", "PaaS"],
-  "category": "tricks",
-  "draft": true
+  "category": "tricks"
 }}}
 
 **This trick let's you push to two repositories with one command.** It is great for projects that need really rapid development and aren't yet populated by many users. Before using make sure that **deploying with every `git push`** will not result with _catastrophic consequences_.
