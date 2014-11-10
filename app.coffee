@@ -21,7 +21,7 @@ String::startsWithAny  = (lst) -> return true for str in lst when @startsWith st
 app = express()
 app.set 'port',         process.env.PORT or 3000
 app.set 'views',        __dirname + '/views'
-app.set 'view engine',  'jade' 
+app.set 'view engine',  'jade'
 
 app.set 'github name',            'chester1000'
 app.set 'github repo url',        'https://api.github.com/repos/%s'
@@ -47,7 +47,7 @@ app.use (req, res, next) ->
     req.on 'end', next
 
 # less middleware
-app.use less __dirname, 
+app.use less __dirname,
   dest:path.join(__dirname, 'public')
   force:true # WARN: only for debug
   preprocess: path: (p) -> p.replace /stylesheets/, 'less'
@@ -108,7 +108,7 @@ renderer.image = (href, title, text) ->
   '<center class="resource">' + (
 
     if yt? then app.get('youtube embed url').replace "%s", yt[1]
-    else 
+    else
       href = "/post-content/" + href unless href.startsWithAny [ "http", "/images" ]
       new Renderer().image href, title, text
 
@@ -124,11 +124,11 @@ marked.setOptions
   highlight: (code, lang) ->
     if lang?
       hljs.highlight(lang, code).value
-    else 
+    else
       hljs.highlightAuto(code).value
 
 
-poet = Poet app, 
+poet = Poet app,
   posts: './_posts'
   postsPerPage: 3
 
@@ -136,11 +136,11 @@ poet = Poet app,
 # standard doesn't support easy class injection to a <pre> element.
 .addTemplate
   ext: ['markdown', 'md']
-  fn: (options) -> 
+  fn: (options) ->
     marked options.source
 
-.addRoute '/', (req, res) -> 
-  res.render 'page', 
+.addRoute '/', (req, res) ->
+  res.render 'page',
     posts: poet.helpers.getPosts 0, 3
     page: 1
 
