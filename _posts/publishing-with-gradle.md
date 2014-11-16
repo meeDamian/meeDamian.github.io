@@ -67,7 +67,7 @@ I usually copy that file to some external directory, and rename it to sth like: 
 This flow is really simple all you have to do is to just input your credentials directly into `MyApp/build.gradle` file.
 You can do it like this:
 
-```
+```gradle
 apply plugin 'android'
 
 android {
@@ -103,7 +103,7 @@ This flow is basically the same as [Convenient flow](#convenient-flow), but inst
 `MyApp/build.gradle` file, you will be asked to type them in your console each time you'll make a production build.
 
 
-```
+```gradle
 apply plugin 'android'
 
 android {
@@ -150,7 +150,7 @@ KEY_PASSWORD=KeyPas5word
 
 Now, edit `MyApp/build.gradle`:
 
-```
+```gradle
 apply plugin: 'android'
 
 android {
@@ -264,7 +264,7 @@ OUTPUT_DIR=
 
 now in `MyApp/build.gradle` put:
 
-```
+```gradle
 apply plugin: 'android'
 
 android {
