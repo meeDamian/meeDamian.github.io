@@ -19,7 +19,7 @@ String::startsWith    ?= (str) -> 0 is @indexOf str
 String::startsWithAny  = (lst) -> return true for str in lst when @startsWith str; false
 
 app = express()
-app.set 'port',         process.env.PORT or 3000
+app.set 'port',         process.env.PORT or 3002
 app.set 'views',        __dirname + '/views'
 app.set 'view engine',  'jade'
 
