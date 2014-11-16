@@ -16,7 +16,7 @@ like this:
 So, you can imagine my surprise when [this happened](https://plus.google.com/+MaurycyDamianWasilewski/posts/hD7BhwN1cH5)
 (if you can't access this link [click here](https://github.com/chester1000/meeDamian.com/blob/master/_posts/publishing-with-gradle/this-happened.png)).
 It was unexpected, but pushed me to learn more about [Gradle](http://www.gradle.org/) build system. At first **gradle**
-docs seemed really overwhelming, because they were covering so much more than only publishing production builds (more 
+docs seemed really overwhelming, because they were covering so much more than only publishing production builds (more
 about that in my future posts).
 
 
@@ -27,7 +27,7 @@ That's something extremely simple **and** crucial to make anything else work, ye
 ![Change build to release](/publishing-with-gradle/where-to-click.png)
 
 In your **Android Studio** press `1` to reveal **Build Variants** menu, then from a dropdown list `2` select **release**
-variant. If those _border tabs_ are not visible you can reveal them by pressing `3`. 
+variant. If those _border tabs_ are not visible you can reveal them by pressing `3`.
 
 **NOTE: don't worry if you don't have `release` there yet - it will show up once we write our script.**
 
@@ -64,7 +64,7 @@ I usually copy that file to some external directory, and rename it to sth like: 
 
 ### Convenient flow
 
-This flow is really simple all you have to do is to just input your credentials directly into `MyApp/build.gradle` file. 
+This flow is really simple all you have to do is to just input your credentials directly into `MyApp/build.gradle` file.
 You can do it like this:
 
 ```
@@ -80,7 +80,7 @@ android {
       storePassword "**********"
       keyAlias      "******"
       keyPassword   "**********"
-    }    
+    }
   }
 
   buildTypes {
@@ -88,7 +88,7 @@ android {
       signingConfig signingConfigs.release
     }
   }
-  
+
 }
 ```
 
@@ -99,7 +99,7 @@ android {
 
 ### Shared Repo flow
 
-This flow is basically the same as [Convenient flow](#convenient-flow), but instead of hard-coding values in a 
+This flow is basically the same as [Convenient flow](#convenient-flow), but instead of hard-coding values in a
 `MyApp/build.gradle` file, you will be asked to type them in your console each time you'll make a production build.
 
 
@@ -116,7 +116,7 @@ android {
       storePassword       System.console().readPassword("\n\$ Enter keystore password: ")
       keyAlias            System.console().readLine("\n\$ Enter key alias: ")
       keyPassword         System.console().readPassword("\n\$ Enter key password: ")
-    }    
+    }
   }
 
   buildTypes {
@@ -124,7 +124,7 @@ android {
       signingConfig signingConfigs.release
     }
   }
-  
+
 }
 ```
 
@@ -164,14 +164,14 @@ android {
     release {
       signingConfig signingConfigs.release
 
-      // that will output files named: 
+      // that will output files named:
       //   MyApp-release-<versionName>-build<versionCode>.apk
       applicationVariants.all { variant ->
         def file = variant.outputFile
         variant.outputFile = new File(
 
           // override this to change output directory
-          (String) file.parent, 
+          (String) file.parent,
 
           (String) file.name.replace(
             ".apk",
@@ -238,7 +238,7 @@ This flow is almost perfect for me, but there are still things I could see impro
 
 * ~~automatically rename output files to include `versionName`~~,
 * ~~change output directory to some external location,~~
-* fix for those things is now included above. It [was provided](https://plus.google.com/+MaurycyDamianWasilewski/posts/fe6ZaSbwSsC) 
+* fix for those things is now included above. It [was provided](https://plus.google.com/+MaurycyDamianWasilewski/posts/fe6ZaSbwSsC)
 by awesome guys from [+Mycelium](https://plus.google.com/115557143272470220180/posts)
 
 
@@ -246,7 +246,7 @@ If you know how to do it [contact me](https://google.com/+MaurycyDamianWasilewsk
 
 ### Perfect flow
 
-This flow automates all of your builds, is 100% repo-friendly, makes your script slick and elegant, and allows you to 
+This flow automates all of your builds, is 100% repo-friendly, makes your script slick and elegant, and allows you to
 easily set up output dir and output file name.
 
 First, create a `gradle.properties` file. This file **is automatically included** in all of your `build.gradle`
