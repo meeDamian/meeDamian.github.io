@@ -52,11 +52,24 @@ a.list-group-item { color:@mainColor; }
   }
 }
 
-// stupid 300x150 iFrame fix
+#projects {
+  .chrome {
+    height: 11px;
+    vertical-align: text-bottom;
+    margin-bottom: 2px;
+  }
+  .android {
+    height: 15px;
+    vertical-align: text-bottom;
+    margin-bottom: 0px;
+  }
+}
+
 .resource > * {
   max-width: 100%;
   height: auto;
 }
+// stupid 300x150 iFrame fix
 .videoWrapper {
   position: relative;
   padding-bottom: 56.27%;
