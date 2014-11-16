@@ -97,6 +97,10 @@ attachGithubRepo = (repoName) ->
 app.locals.repos = [
   attachGithubRepo "Pretty-Binary-Clock"
   attachGithubRepo "BitcoinMonitor"
+  attachGithubRepo "Tabs-Butcher"
+  attachGithubRepo "Weather-Happy"
+  attachGithubRepo "Dvorak-Programmer"
+  attachGithubRepo "Chrome-Bitcoin-Monitor"
 ]
 
 # prefix relative picture urls and support youtube links
