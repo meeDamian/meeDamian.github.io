@@ -99,7 +99,7 @@ app.locals.repos = [
   attachGithubRepo "BitcoinMonitor"
 ]
 
-# prefix relative picture urls, and support youtube links
+# prefix relative picture urls and support youtube links
 renderer = new Renderer()
 renderer.image = (href, title, text) ->
 
@@ -107,7 +107,12 @@ renderer.image = (href, title, text) ->
 
   '<center class="resource">' + (
 
-    if yt? then app.get('youtube embed url').replace "%s", yt[1]
+    if yt?
+      '<div class="videoWrapper">' + (
+        app.get('youtube embed url').replace "%s", yt[1]
+
+      ) + '</div>'
+
     else
       href = "/post-content/" + href unless href.startsWithAny [ "http", "/images" ]
       new Renderer().image href, title, text

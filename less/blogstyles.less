@@ -52,11 +52,25 @@ a.list-group-item { color:@mainColor; }
   }
 }
 
+// stupid 300x150 iFrame fix
 .resource > * {
   max-width: 100%;
   height: auto;
 }
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.27%;
+  padding-top: 25px;
+  height: 0;
 
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .share {
   .btn { margin-top:25px; }
