@@ -162,6 +162,7 @@ poet.init ->
 
     res.render 'rss', posts: posts
 
+# random comment.
 app.listen app.get('port'), ->
   console.log 'Express server listening on port ' + app.get 'port'
 
