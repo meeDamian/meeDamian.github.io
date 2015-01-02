@@ -6,5 +6,7 @@ downloads
 node_modules
 npm-debug.log
 
+dist/
+
 public/stylesheets/*
 !public/stylesheets/highlight
