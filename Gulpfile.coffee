@@ -56,7 +56,6 @@ gulp.task 'lint', ->
     .pipe g.coffeelint()
     .pipe g.coffeelint.reporter()
 
-
 gulp.task 'check', [
   'lint'
   'test'
@@ -68,14 +67,12 @@ gulp.task 'createDist', [
   'compile'
 ]
 
-gulp.task 'release', [
-  'check'
-  'bump'
-  'copy'
-  'compile'
-]
+# colon instead of camelCase, because some service enforces it
+gulp.task 'serve:dist', ['createDist'], ->
+  g.express.run
+    file: 'dist/app.js'
 
-gulp.task 'default', ['createDist']
+gulp.task 'default', ['serve:dist']
 
 # TODO:
 # * add WATCH
