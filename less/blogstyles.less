@@ -41,6 +41,11 @@ body {
 a {
   color:@mainColor;
   &:hover { color:@mainColor; }
+  &:focus {
+    outline-color:@lightColor !important;
+    color:@mainColor;
+    z-index: 90;
+  }
 }
 a.list-group-item { color:@mainColor; }
 
