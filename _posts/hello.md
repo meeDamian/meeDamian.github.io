@@ -57,7 +57,7 @@ marked.setOptions
 ```
 
 Obviously it couldn't be that easy and some problems had to emerge: code block background was always **white**, and if I
-wrapped code with a div with `.hljs` class, background had wrong shape. But [one quick PR](https://github.com/chjj/marked/pulls)
+wrapped code with a div with `.hljs` class, background had wrong shape. But [one quick PR](https://github.com/chjj/marked/pull/418)
 solved that isse for me.
 
 ### Heroku
