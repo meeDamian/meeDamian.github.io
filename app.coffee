@@ -127,7 +127,6 @@ renderer.image = (href, title, text) ->
 marked.setOptions
   renderer: renderer
   gfm: true
-  sanitize: true
   smartypants: true
   highlightClass: 'hljs'
   highlight: (code, lang) ->
