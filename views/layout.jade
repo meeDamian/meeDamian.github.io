@@ -50,11 +50,12 @@ html(itemscope, itemtype="http://schema.org/Blog", lang="en")
       .row
         .linkland.col-md-2.text-right
           .panel.panel-default
-            #projects.panel-heading.uppercase Projects (
-              img.android(src='/images/android64.png')
-              |,&nbsp;
-              img.chrome(src='/images/chrome64.png')
-              |, )
+            #projects.panel-heading.uppercase Projects
+            //- #projects.panel-heading.uppercase Projects (
+            //-   img.android(src='/images/android64.png')
+            //-   |,&nbsp;
+            //-   img.chrome(src='/images/chrome64.png')
+            //-   |, )
 
             .list-group: each repo in repos
               a.list-group-item(href=repo.path)=repo.name
