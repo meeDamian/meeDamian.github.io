@@ -69,8 +69,16 @@ gulp.task 'createDist', [
 
 # colon instead of camelCase, because some service enforces it
 gulp.task 'serve:dist', ['createDist'], ->
-  g.express.run
-    file: 'dist/app.js'
+  server = g.liveServer.new 'dist/app.js'
+  server.start()
+
+  g.watch '_posts/**', ->
+    gulp.src [ '_posts/**' ], base: WORK_DIR
+      .pipe gulp.dest DEST_DIR
+
+    server.notify()
+    server.start()
+
 
 gulp.task 'default', ['serve:dist']
 
