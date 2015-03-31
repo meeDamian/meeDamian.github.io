@@ -33,7 +33,7 @@
   "licence": "MIT",
   "devDependencies": {
     "del": "^1.1.1",
-    "gulp": "^3.8.10",
+    "gulp": "^3.8.11",
     "gulp-bump": "^0.3.0",
     "gulp-coffee": "^2.2.0",
     "gulp-coffeelint": "^0.4.0",
