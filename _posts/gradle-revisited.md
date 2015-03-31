@@ -1,6 +1,6 @@
 {{{
   "title" : "Publishing with Gradle (Revisited)",
-  "date": "2015-04-01",
+  "date": "2015-03-31",
   "tags": ["android", "gradle", "android studio", "apk"],
   "category": "advice"
 }}}
@@ -9,14 +9,14 @@
 
 #### Paragraph that everybody will ignore
 
-Since [my last post](/post/publishing-with-gradle) a lot has changed and, apart from previous flow not working with newer versions of Android Studio and Gradle, [new things](https://developers.google.com/android-publisher/#publishing) are now possible. Not to mention that previous flow was not versatile and flexible enough. Let's fix that.
+Since [my last post](/post/publishing-with-gradle) a lot has changed, broken down and [new things](https://developers.google.com/android-publisher/#publishing) are possible. Let's see what can be done now.
 
 
 ### Configuration
 
 #### Handling missing variables
 
-Previously signing configuration for each project was kept in a `gradle.properties` file. Since it contained sensitive info (key and store passwords) it had to be `.gitignore`'d, and that caused _`Could not find property`_ errors after fresh repo clone and [was unusable](/post-content/gradle-revisited/ship.io-screenshot.png) on CI systems. It can be fixed easily, by just adding a `safeGet` function:
+Previously `gradle.properties` contained sensitive info (passwords, duh), so it had to be `.gitignore`'d, that caused _`Could not find property`_ errors just after repo clone and [was unusable](/post-content/gradle-revisited/ship.io-screenshot.png) on CI systems. It can be fixed by adding:
 
 ```gradle
 // returns value of requested variable or default (as a fallback)
@@ -25,16 +25,16 @@ String safeGet(String name, String defaultValue = '') {
 }
 ```
 
-and then, replacing all `project.VARIABLE` occurunces with `safeGet('VARIABLE')`.
+And replacing all `project.VARIABLE` occurunces with `safeGet('VARIABLE')`.
 
 **NOTE:** Variable name is **quoted** in a function call.
 
-That little trick **should** prevent `debug` builds failling due to the lack of `gradle.properties` file (or in fact any missing variable).
+That little trick disables [instacrash™](http://www.urbandictionary.com/define.php?term=Instacrash) functionality on the gradle part.
 
 
 #### Extracting _secret_ variables
 
-Now, let's focus on getting **local** `gradle.properties` file back to the repo. To do that we need to move all _super-secret variables_ some place safe and outside of the repo. Luckily, there's another file gradle reads by default - its **global** properties file: **`~/.gradle/gradle.properties`**.
+Now, let's get **local** `gradle.properties` file back to the repo. To do that we need to move all _super-secret variables_ somewhere safe and outside of the repo. Luckily, gradle by default also reads its **global** properties file: **`~/.gradle/gradle.properties`**.
 
 ```bash
 # release builds dir
@@ -52,7 +52,7 @@ STORE_PASSWORD=superSecretKeyPassword
 
 #### Setting local properties
 
-The only required variable in a local `gradle.properties` is `KEY_ALIAS`.
+The only _required_ variable in a local `gradle.properties` is `KEY_ALIAS`.
 
 ```bash
 # Override name of the folder created in RELEASES_PARENT_DIR;
@@ -65,23 +65,23 @@ KEY_ALIAS=myKeyAlias
 
 **NOTE:** Remember to remove `gradle.properties` exclusion from `.gitignore` file.
 
-If you use the same password for store and keys you can [skip to the next section](#signing-release-builds), otherwise there's one more thing we should do.
+If you use the same password for store and its keys you can [skip to the next section](#signing-and-getting-release-builds), otherwise there's one more thing to do.
 
 
 #### Setting key-specific password
 
-The easiest way I've found was to create `secret.properties` file in the project root. Say:
+Create `secret.properties` file in the **project root**:
 
 ```bash
 # Key-specific password
 KEY_PASSWORD=AnotherSuperSecretPass
 ```
-**NOTE:** remember to add this file to `.gitignore`!!!
+**IMPORTANT:** remember to add this file to `.gitignore`!!!
 
 Then create a function to safely attach properties to the `project` object:
 
 ```gradle
-// loads variables from a file to `project` so they can be `safeGet`-ed later
+// attach new global property to the `project`. Will not override by default
 def safeLoad(String name, Object value, Boolean override = false) {
   if (!hasProperty(name) || override)
     project.set name, value
@@ -91,7 +91,7 @@ def safeLoad(String name, Object value, Boolean override = false) {
 And finally load properties from a file:
 
 ```gradle
-// read secret variables
+// loads variables from a file to `project` so they can be `safeGet`-ed later
 File secretPropsFile = file('../secret.properties')
 if (secretPropsFile.exists()) {
   Properties p = new Properties()
@@ -102,13 +102,13 @@ if (secretPropsFile.exists()) {
 }
 ```
 
-**IMPORTANT:** must be **above** `android {}` declaration
+**IMPORTANT:** this last snippet **must be above** `android {}` declaration.
 
 ### Signing and getting release builds
 
 #### Release APK
 
-Once that is setup, let's take care of output apk file
+Once that is setup, let's take care of output APK file:
 
 ```gradle
   buildTypes {
@@ -158,10 +158,10 @@ Once that is setup, let's take care of output apk file
 
 #### Proguard's `mappings.txt` file
 
-If you'd also want to move mappings file replace `// <here>` with:
+If you'd also want to move mappings file replace `// mapping.txt file code` with:
 
 ```gradle
-// copy mappings.txt (JIC)
+// copy mappings.txt
 if (variant.getBuildType().isMinifyEnabled()) {
 
   File mappingDir = new File(releasesDir, 'mappings')
@@ -178,9 +178,9 @@ if (variant.getBuildType().isMinifyEnabled()) {
 }
 ```
 
-### (Optional) Auto-inrementing `versionCode`
+### (Optional) Auto-incrementing `versionCode`
 
-I know it's nasty, ond I would love to see suggestions on how this can be done better.
+I know it's nasty, and **I would love to see suggestions on how this can be done better :)**. Put this anywhere in your `build.gradle`:
 
 ```gradle
 task('increaseVersionCode') << { getBuildVersion(null, true) }
@@ -218,4 +218,9 @@ Integer getBuildVersion(defaultVersion, Boolean increment = false) {
 }
 ```
 
-And that's it. **Here's a [complete version](https://goo.gl/LNyhfj) again.**
+### Publishing to the [Play Store](https://play.google.com/apps/publish/)
+
+It appears that it's a wider topic and I'll address it in a next post. (But if you don't feel like waiting - use [this awesome plugin](https://github.com/Triple-T/gradle-play-publisher)).
+
+
+> And that's it. **Here's a [complete version](https://goo.gl/LNyhfj) again.**
