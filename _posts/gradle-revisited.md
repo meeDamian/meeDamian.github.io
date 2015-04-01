@@ -180,16 +180,11 @@ if (variant.getBuildType().isMinifyEnabled()) {
 
 ### (Optional) Auto-incrementing `versionCode`
 
-I know it's nasty, and **I would love to see suggestions on how this can be done better :)**. Put this anywhere in your `build.gradle`:
+I know it's nasty, and **I would love to see suggestions on how this can be done better :)**.
+
+#### Put this anywhere in `build.gradle`:
 
 ```gradle
-task('increaseVersionCode') << { getBuildVersion(null, true) }
-
-tasks.whenTaskAdded { task ->
-  if (task.name == 'generateReleaseBuildConfig')
-    task.dependsOn 'increaseVersionCode'
-}
-
 Integer getBuildVersion(defaultVersion, Boolean increment = false) {
   File verFile = file('../version.properties')
 
@@ -218,9 +213,36 @@ Integer getBuildVersion(defaultVersion, Boolean increment = false) {
 }
 ```
 
+#### Replace all `versionCode` references with calls to `getBuildVersion()`:
+
+First one is `defaultConfig` definition:
+
+```gradle
+defaultConfig {
+  applicationId "com.yourPackage.someMore"
+  minSdkVersion 15 // because #minSDK15
+  targetSdkVersion 22
+  versionCode getBuildVersion(defaultValue: 1)
+  versionName "0.0.1"
+}
+```
+
+Second one is `fileName` construction:
+
+```gradle
+String fileName = [
+  defaultConfig.applicationId,
+  project.name,
+  defaultConfig.versionName,
+  getBuildVersion(increment: true)
+].join('-')
+```
+
+
 ### Publishing to the [Play Store](https://play.google.com/apps/publish/)
 
 It appears that it's a wider topic and I'll address it in a next post. (But if you don't feel like waiting - use [this awesome plugin](https://github.com/Triple-T/gradle-play-publisher)).
 
 
 > And that's it. **Here's a [complete version](https://goo.gl/LNyhfj) again.**
+
