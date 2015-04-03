@@ -23,9 +23,14 @@ Previously `gradle.properties` contained sensitive info (passwords, duh), so it 
 String safeGet(String name, String defaultValue = '') {
   hasProperty(name) ? project[name] : defaultValue
 }
+// returns file from a path provided in properties file
+File safeGetFile(String name) {
+    String fileName = safeGet(name, null)
+    fileName != null ? file(fileName) : null
+}
 ```
 
-And replacing all `project.VARIABLE` occurunces with `safeGet('VARIABLE')`.
+And replacing all `project.VARIABLE` occurunces with `safeGet('VARIABLE')`. Use `safeGetFile('VARIABLE')` to get files.
 
 **NOTE:** Variable name is **quoted** in a function call.
 
@@ -222,7 +227,7 @@ defaultConfig {
   applicationId "com.yourPackage.someMore"
   minSdkVersion 15 // because #minSDK15
   targetSdkVersion 22
-  versionCode getBuildVersion(defaultValue: 1)
+  versionCode getBuildVersion(1)
   versionName "0.0.1"
 }
 ```
@@ -234,7 +239,7 @@ String fileName = [
   defaultConfig.applicationId,
   project.name,
   defaultConfig.versionName,
-  getBuildVersion(increment: true)
+  getBuildVersion(android.defaultConfig.versionCode, true)
 ].join('-')
 ```
 
