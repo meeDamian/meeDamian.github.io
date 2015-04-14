@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    #text {
+      width: 800px;
+      height: 800px;
+      overflow: hidden;
+      font-size: 500px;
+      line-height: auto;
+    }
+  </style>
+  <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script>
+    function setText(text) {
+        var $h = $('#text');
+        var $d = $('<div/>');
+
+        $h.text(text);
+        $h.wrapInner($d);
+        var $i = $('#text div')[0];
+        var height = $h.height();
+        var innerHeight = $i.scrollHeight;
+        while(innerHeight > height) {
+            size = parseInt($h.css("font-size"), 10);
+            $h.css("font-size", size - 1);
+            innerHeight = $i.scrollHeight;
+        }
+        if(height > innerHeight)
+          $h.height(innerHeight);
+    }
+  </script>
+  </head>
+  <body>
+    <h1 id="text"></h1>
+  </body>
+  <script type="text/javascript">
+    setText("La Al so uu xi");
+  </script>
+</html>
