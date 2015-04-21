@@ -33,10 +33,16 @@
       var $c = $('#container');
       var $t = $('#text');
 
-      var margins = parseInt(2 * parseFloat($('body').css('margin')));
+      function setWindowSize() {
+        var margins = parseInt(2 * parseFloat($('body').css('margin')));
 
-      $c.height( $(window).height() - margins);
-      $c.width($(window).width() - margins);
+        $c.height( $(window).height() - margins);
+        $c.width($(window).width() - margins);
+      }
+
+      setWindowSize();
+
+      $(window).on('orientationchange', setWindowSize);
 
       window.setText = function setText(text) {
         $t.text(text);
@@ -44,6 +50,13 @@
       }
       window.getText = function getText() {
         return $t.text();
+      }
+
+      function setWindowSize() {
+        var margins = parseInt(2 * parseFloat($('body').css('margin')));
+
+        $c.height( $(window).height() - margins);
+        $c.width($(window).width() - margins);
       }
 
       function getFontSize() {
