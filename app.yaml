@@ -1,0 +1,32 @@
+version: 1
+runtime: custom
+vm: true
+api_version: 1
+
+manual_scaling:
+  instances: 1
+
+vm_health_check:
+  enable_health_check: False
+
+env_variables:
+  PORT: 8080
+
+
+handlers:
+
+- url: /
+  script: dynamic
+
+- url: /post/(.*)
+  script: dynamic
+
+- url: /post-content/(.*)
+  script: dynamic
+
+- url: /page/(\d+)
+  script: dynamic
+
+- url: /(.*)
+  static_files: public/\1
+  upload: public/
