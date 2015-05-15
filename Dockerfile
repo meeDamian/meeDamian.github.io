@@ -1,3 +1,5 @@
 FROM google/nodejs-runtime
 
-# gulp build
+RUN npm i -g coffee-script
+
+EXPOSE 8080
