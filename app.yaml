@@ -1,6 +1,7 @@
 runtime: custom
 vm: true
 api_version: 1
+threadsafe: yes
 
 manual_scaling:
   instances: 1
@@ -26,9 +27,9 @@ handlers:
 - url: /post-content/(.*)
   script: dynamic
 
-- url: /page/(\d+)
+- url: /page/(.*)
   script: dynamic
 
-- url: /(.*)
+- url: /(.*\.(css|png|ico|txt|html|xml|svg))
   static_files: public/\1
   upload: public/
