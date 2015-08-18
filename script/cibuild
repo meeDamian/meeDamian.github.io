@@ -2,4 +2,4 @@
 set -e # halt script on error
 
 bundle exec jekyll build
-bundle exec htmlproof ./_site --disable-external --empty-alt-ignore --href-ignore #share,#awesome-flow,#convenient-flow,#flows,#perfect-flow,#shared-repo-flow,#signing-and-getting-release-builds --check-favicon
+bundle exec htmlproof ./_site --disable-external --empty-alt-ignore --href-ignore "#share,#awesome-flow,#convenient-flow,#flows,#perfect-flow,#shared-repo-flow,#signing-and-getting-release-builds" --check-favicon
