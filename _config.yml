@@ -9,4 +9,4 @@ redcarpet:
 paginate: 3
 paginate_path: "/page/:num"
 permalink: /post/:title
-exclude: ['README.markdown', 'README.md', 'Gemfile.lock', 'Gemfile']
+exclude: [README.md, Gemfile.lock, Gemfile, script, vendor]
