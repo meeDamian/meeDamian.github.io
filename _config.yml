@@ -5,7 +5,7 @@ repoBranch: master
 highlighter: pygments
 markdown: redcarpet
 redcarpet:
-  extension: ["smart"]
+  extension: [with_toc_data]
 paginate: 3
 paginate_path: "/page/:num"
 permalink: /post/:title
