@@ -145,6 +145,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 39)
   html-proofer
+  jekyll
   json
   redcarpet
 
