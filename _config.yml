@@ -1,7 +1,7 @@
 url: "http://meeDamian.com"
 githubUrl: https://github.com/chester1000
 repoName: chester1000.github.io
-repoBranch: gh-pages
+repoBranch: master
 highlighter: pygments
 markdown: redcarpet
 redcarpet:
