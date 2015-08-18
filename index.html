@@ -1,0 +1,18 @@
+---
+layout: master
+---
+{% for post in paginator.posts %}
+  {% include post.html url=post.url title=post.title path=post.path date=post.date content=post.content %}
+{% endfor %}
+
+<ul class="pagination">
+  {% for p in (1..paginator.total_pages) %}
+  <li{% if p == paginator.page %} class="active"{% endif %}>
+  {% if p == 1 %}
+    <a href="/">{{ p }}</a>
+  {% else %}
+    <a href="/page/{{p}}">{{ p }}</a>
+  {% endif %}
+  </li>
+  {% endfor %}
+</ul>

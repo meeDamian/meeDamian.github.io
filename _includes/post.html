@@ -1,0 +1,15 @@
+<div class="post well" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="row-fluid clearfix">
+    <div class="pull-left">
+      <h3>
+        <a href="{{ include.url }}" itemprop="headline">{{ include.title }}</a>
+      </h3>
+    </div>
+    {% include share.html url=include.url path=include.path %}
+  </div>
+  <span itemprop="datePublished" class="date-published">{{ include.date | date: '%Y-%m-%d'}}</span>
+  <div itemprop="description" class="post-body">
+    {{ include.content }}
+    {% include disqus.html url=include.url %}
+  </div>
+</div>

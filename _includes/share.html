@@ -1,0 +1,10 @@
+<div class="share dropdown pull-right"><a href="#share" data-toggle="dropdown" class="dropdown-toggle"><img src="/images/share.svg" class="btn"/></a>
+  <ul class="dropdown-menu">
+    <li class="dropdown-header">Share using...</li>
+    <li><a href="//plus.google.com/share?url={{ site.url | append:include.url | encodeURIComponent }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="/images/gplus64.png" alt="Share on Google+" class="icon"/><span>Google+</span></a></li>
+    <li><a href="//twitter.com/intent/tweet?via=meeDamian&url={{ site.url | append:include.url | encodeURIComponent }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><img src="/images/twitter64.png" alt="Tweet on Twitter" class="icon"/><span>Twitter</span></a></li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Fork this post on...</li>
+    <li><a href="{{ site.githubUrl }}/{{ site.repoName }}/tree/{{ site.repoBranch }}/{{ include.path }}"><img src="/images/octocat64.png" alt="Fork on Github" class="icon"/><span>Github</span></a></li>
+  </ul>
+</div>

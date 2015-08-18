@@ -1,0 +1,12 @@
+url: "http://meeDamian.com"
+githubUrl: https://github.com/chester1000
+repoName: meeDamian.com
+repoBranch: gh-pages
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extension: ["smart"]
+paginate: 3
+paginate_path: "/page/:num"
+permalink: /post/:title
+exclude: ['README.markdown', 'README.md', 'Gemfile.lock', 'Gemfile']

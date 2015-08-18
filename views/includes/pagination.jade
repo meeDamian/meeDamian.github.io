@@ -1,4 +1,0 @@
-if getPageCount() > 1
-  ul.pagination: - for(var i = 1; i <= getPageCount(); i++)
-    li(class=page==i ? "active" : undefined) 
-      a(href=pageUrl(i)) #{i}

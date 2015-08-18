@@ -1,12 +1,4 @@
 uploads
 downloads
-.npm
 .DS_Store
-*.pyc
-node_modules
-npm-debug.log
-
-dist/
-
-public/stylesheets/*
-!public/stylesheets/highlight
+_site
