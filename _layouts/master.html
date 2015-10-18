@@ -1,58 +1,34 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/Blog" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="p:domain_verify" content="58ac57589f27d39cd05a30872ef38854">
-    <link rel="author" href="https://plus.google.com/+MaurycyDamianWasilewski/">
-    {% include favicons.html %}
-    <meta name="application-name" content="meeDamian.com">
-    <meta name="theme-color" content="#669900">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="/stylesheets/blogstyles.css" />
-    <link rel="stylesheet" href="/stylesheets/railscasts.css" />
-  {% if page.title %}
-    <meta name="description" content="{{page.title}}" />
-  {% endif %}
-    <title>{% if page.title %} {{ page.title }} | {% endif %}Damian Mee | Blog</title>
-  </head>
+
+  {% include head.html %}
 
   <body>
-    <span id="forkongithub">
-      <a href="{{ site.githubUrl }}/{{ site.repoName }}">Fork me on Github</a>
-    </span>
-    <div class="container">
-      <div class="row">
-        <div class="my-heading com-md-10 col-md-offset-2">
-          <h2>
-            <a href="/">
-              <img src="/images/mustache64.png" class="my-mustache" alt="Mustashe you a logo" /><span class="my-name">Damian Mee</span>
-            </a>
-          </h2>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+
+      <header class="mdl-layout__header mdl-layout--small-screen-only">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Damian Mee</span>
         </div>
-      </div>
-      <div class="row">
-        <div class="linkland col-md-2 text-right">
-          <div class="panel panel-default">
-            <div id="projects" class="panel-heading uppercase">Projects</div>
-            <div class="list-group">
-              {% include repos.html %}
-            </div>
-          </div>
-          <div class="panel panel-default uppercase">
-            <div class="panel-heading">Links</div>
-            <div class="list-group">
-              {% include socials.html %}
-            </div>
-          </div>
-        </div>
-        <div class="col-md-10">
-          {{ content }}
-        </div>
-      </div>
+      </header>
+
+      {% include header.html %}
+
+      <main class="mdl-layout__content">
+        <div class="page-content">{{content}}</div>
+      </main>
     </div>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12389124-6','meedamian.com');ga('require','linkid','linkid.js');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+    <script>
+      // load Google Analytics
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-12389124-6','meedamian.com');ga('require','linkid','linkid.js');ga('require','displayfeatures');ga('send','pageview');
+
+      {% unless page.projects %}
+      // add stuff to paginator
+      var p = document.getElementsByClassName('pagination')[0];
+      if (p) p.innerHTML = '&lt;' + p.innerHTML + '&gt;';
+      {% endunless %}
+    </script>
   </body>
 </html>

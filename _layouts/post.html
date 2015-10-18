@@ -2,4 +2,10 @@
 layout: master
 ---
 {% include post.html url=page.url title=page.title date=page.date path=page.path content=content %}
-<script>(function(){$('#disqus_thread').removeAttr('class');var dsq=document.createElement('script');dsq.async=true;dsq.src='//meedamian.disqus.com/embed.js';($('head')[0]||$('body')[0]).appendChild(dsq);})();</script>
+<script>
+  var disqus_url = '{{site.url}}{{page.url}}';
+  (function() {
+    document.getElementById('disqus_thread').removeAttribute('class');
+    loadScript('https://meedamian.disqus.com/embed.js');
+  })();
+</script>

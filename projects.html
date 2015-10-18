@@ -1,0 +1,53 @@
+---
+layout: master
+title: My Projects
+permalink: /projects/
+projects: true
+---
+<section ng-app="App" class="tiles with-whitesmoke" ng-controller="MainCtrl">
+  <div id="loader">
+    <div class="mdl-spinner mdl-js-spinner is-active"></div>
+  </div>
+
+  <md-grid-list
+    md-gutter="0.7em"
+    md-cols="6"
+    md-cols-md="4"
+    md-cols-sm="2"
+    md-row-height="4:3"
+    md-on-layout="onLayout()">
+    {% for project in site.data.projects %}
+      <md-grid-tile
+        md-colspan="{(getMaxCols('{{project.cols}}', 2, 6))}"
+        md-colspan-md="{(getMaxCols('{{project.cols}}', 2, 4))}"
+        md-colspan-sm="{(getMaxCols('{{project.cols}}', 2, 2))}"
+
+        md-rowspan="{('{{project.rows}}' || 2)}"
+        md-rowspan-md="{('{{project.rowsMd}}' || 2)}"
+        md-rowspan-sm="{('{{project.rowsSm}}' || 2)}">
+
+        <div class="content">
+          <i id="{{project.id}}" class="info mdi mdi-information-outline"></i>
+          <div class="mdl-tooltip" for="{{project.id}}">{{project.status}}</div>
+          <div>
+            {% if project.video %}
+              <video class="cover" src="{{project.video}}" poster="{{project.image}}"></video>
+            {% elsif project.image %}
+              <img class="cover" src="{{project.image}}" />
+            {% endif %}
+            <h3>{% if project.type %}<i class="mdi mdi-{{project.type}}"></i>&nbsp;{% endif %}{{project.title}}</h3>
+            <p>{% if project.description %}{{project.description}}{% else %}{{project.status}}{% endif %}</p>
+          </div>
+          <span class="buttons">
+          {% for button in project.buttons %}
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="newTab('{{button.url}}')">
+              {% if button.icon %}<i class="mdi mdi-{{button.icon}}"></i>&nbsp;{% endif %}{{button.label}}
+            </button>
+          {% endfor %}
+          </span>
+        </div>
+
+      </md-grid-tile>
+    {% endfor %}
+  </md-grid-list>
+</section>

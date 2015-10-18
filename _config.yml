@@ -1,7 +1,16 @@
-url: "http://meeDamian.com"
-githubUrl: https://github.com/chester1000
-repoName: chester1000.github.io
-repoBranch: master
+author:
+  name: Damian Mee
+  phone: +886 909 377 026
+  github: chester1000
+  username: meeDamian
+
+repo:
+  name: chester1000.github.io
+  branch: master
+
+url: https://meeDamian.com
+enforce_ssl: meeDamian.com
+
 highlighter: pygments
 markdown: redcarpet
 redcarpet:

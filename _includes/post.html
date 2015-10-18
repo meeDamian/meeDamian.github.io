@@ -1,15 +1,21 @@
-<div class="post well" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="row-fluid clearfix">
-    <div class="pull-left">
-      <h3>
-        <a href="{{ include.url }}" itemprop="headline">{{ include.title }}</a>
-      </h3>
-    </div>
-    {% include share.html url=include.url path=include.path %}
-  </div>
-  <span itemprop="datePublished" class="date-published">{{ include.date | date: '%Y-%m-%d'}}</span>
-  <div itemprop="description" class="post-body">
-    {{ include.content }}
-    {% include disqus.html url=include.url %}
-  </div>
-</div>
+<section>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
+    <h3>
+      <a href="{{include.url}}" itemprop="headline">{{include.title}}</a>
+      {% include share.html url=include.url path=include.path date=include.date %}
+    </h3>
+
+    <span class="post-meta">
+      <span itemprop="datePublished">{{include.date | date_to_long_string}}</span>
+      <span>
+        <i class="mdi mdi-disqus-outline"></i>
+        <span class="disqus-comment-count" data-disqus-url="http://meedamian.com{{include.url | removeTrailingSlash }}"></span>
+      </span>
+    </span>
+
+    <section>{{include.content}}</section>
+
+    <footer>{% include disqus.html url=include.url %}</footer>
+
+  </article>
+</section>

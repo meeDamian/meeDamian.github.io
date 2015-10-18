@@ -1,0 +1,326 @@
+- title: Pretty Binary Clock
+  image: /res/binary_feature_graphic.png
+  description: A hobby project from ~3 years ago which has gained over 60 000 downloads on the Play Store, and I keep seeing it shared in random screenshots <a href="https://plus.google.com/u/0/+martinseal/posts/TKnQJ7eAZeu">all the time</a>.
+  type: android
+  status: Concluded
+  cols: 4
+  rows: 4
+  rowsMd: 4
+  rowsSm: 3
+  id: binary-clock
+  buttons:
+    - label: Google Play
+      icon: google-play
+      url: https://play.google.com/store/apps/details?id=pl.d30.binClock
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/Pretty-Binary-Clock
+
+- title: Net Tester
+  type: console
+  description: OSX CLI utility that gathers basic hotspot info (SSID, geo-location, DL/UP speed and ping) and submits it for other DNs to see.
+  status: In&nbsp;Progress
+  id: net-test
+  buttons:
+    - label: Web
+      url: https://meedamian.com/net-test/
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/net-test
+
+- title: Phonetics
+  image: /res/phonetics_cover.png
+  type: language-javascript
+  description: It appears that when you're learning new language it's quite important to produce the right sounds. That app intends to help with that.
+  status: In&nbsp;Progress
+  id: phonetics
+  rows: 3
+  rowsMd: 3
+  buttons:
+    - label: Web
+      url: https://meedamian.com/phonetics/
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/phonetics
+
+- title: Grant You
+  type: android
+  status: Past
+  description: A pilot app simplifing the process of finding suitable grants and schoolarships for Danish citizens. Distributed independly from the Play Store.
+  id: grant-you
+
+- title: Lamassu Server
+  type: language-javascript
+  status: Significant Contributions
+  description: I designed, implemented and documented a universal API for plugins, among other things.
+  id: lamassu-server
+  buttons:
+    - label: npm
+      url: https://www.npmjs.com/package/lamassu-server
+    - label: Github
+      icon: github-circle
+      url: https://github.com/lamassu/lamassu-server
+
+- title: Business Card
+  image: /res/lines.png
+  status: Concluded
+  rows: 3
+  rowsMd: 3
+  description: A minimalistic design of my business card created in <a hrey="https://itunes.apple.com/us/app/sketch-3/id852320343?mt=12">Sketch&nbsp;3</a>.
+  id: business-card
+  buttons:
+    - label: pdf
+      icon: download
+      url: https://github.com/chester1000/business-card/raw/master/lines.pdf
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/business-card
+
+- title: Big Text
+  image: /res/big_text_cover.png
+  type: android
+  description: Utility app showing as <i>Big Text</i> on your screen as possible. Supports incoming shares, casting to your biggest screen via Chromecast and sending directly to your printer. Not yet published.
+  status: In&nbsp;Progress
+  id: big-text
+  cols: 4
+  rows: 4
+  rowsMd: 5
+  rowsSm: 3
+  buttons:
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/BigText
+
+- title: Rakía
+  type: android
+  status: Past
+  description: A concept app presenting how to simplify User ⇄ Bitcoin ATM interacitons.
+  id: raqia
+
+- title: Lamassu Plugins
+  type: language-javascript
+  status: past
+  description: 'I have rebuild or contributed to plugins such as: <a href="https://github.com/lamassu/lamassu-blockchain">Blockchain.info</a>, <a href="https://github.com/lamassu/lamassu-bitstamp">Bitstamp</a>, <a href="https://github.com/lamassu/lamassu-coinbase">Coinbase</a> or <a href="https://github.com/lamassu/lamassu-bitcoind/commits/master">bitcoind</a>.'
+  id: lamassu-plugins
+  buttons:
+    - label: Github
+      icon: github-circle
+      url: https://github.com/search?utf8=%E2%9C%93&q=lamassu+plugin
+
+- title: Twitter Lists
+  description: Because accessing your carefully collected lists on Twitter should not be hidden behind <a href="https://youtu.be/SiMHTK15Pik">over 9000</a> taps.
+  type: android
+  status: Concluded
+  id: twitter-lists
+  buttons:
+    - label: Google Play
+      icon: google-play
+      url: https://play.google.com/store/apps/details?id=com.meedamian.twitterlists
+
+- title: Ozora Countdown
+  type: android
+  status: Concluded
+  description: A beautiful app that made waiting for the O.Z.O.R.A. festival in 2013 a little bit more bearable.
+  id: ozora-countdown
+  buttons:
+    - label: Google Play
+      icon: google-play
+      url: https://play.google.com/store/apps/details?id=pl.d30.ozora
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/ozoraApp
+
+- title: BTC DashClock Monitor
+  type: android
+  status: Concluded
+  description: A <a href="https://play.google.com/store/apps/details?id=net.nurik.roman.dashclock">DashClock Widget</a> plugin showing Bitcoin and Litecoin price from selected cryptocurrency exchanges, as well as arbitrage opportunities between them.
+  id: btc-dash-monitor
+  buttons:
+    - label: Google Play
+      icon: google-play
+      url: https://play.google.com/store/apps/details?id=pl.d30.bitcoin
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/BitcoinMonitor
+
+- title: Auto-Resize TextView
+  type: android
+  status: In&nbsp;Progress
+  description: A library to produce the biggest text devices' screen can handle.
+  id: artv
+  buttons:
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/AutoResizeTextView
+
+- title: Good Fucking Design Advice
+  type: android
+  status: Concluded
+  description: Because sometimes you have to put your fucking soul in your designs.
+  id: gfda
+  buttons:
+    - label: Google Play
+      icon: google-play
+      url: https://play.google.com/store/apps/details?id=com.meeDamian.designAdvice
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/Good-Fucking-Design-Advice-Android
+
+- title: Dvorak Keyboard Layout
+  type: apple
+  status: Concluded
+  description: Some worry about kids in Africa never experiencing snow and some about their fingers getting tired too quickly. Apparently I'm the latter one.
+  id: dvorak
+  rows: 3
+  buttons:
+    - label: what?
+      icon: keyboard
+      url: https://github.com/chester1000/dvorak-programmer/blob/master/mac/Dvorak%20-%20Programmer's%20(Polish%2C%20ISO).pdf
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/dvorak-programmer
+
+- title: Cropp Mobile
+  type: android
+  status: Concluded
+  id: cropp-mobile
+  description: Can't say this app didn't have many users. Can't say I was proud of it either.
+  buttons:
+    - label: Google Play
+      icon: google-play
+      url: http://play.google.com/store/apps/details?id=pl.cropp
+
+- title: Plus Day
+  image: /res/plus_day_cover.png
+  type: android
+  status: Frozen
+  description: Minimalistic pre-Material Design app made to count things that occur daily.
+  id: plus-day
+  rows: 4
+  rowsMd: 4
+  rowsSm: 4
+
+- title: Elimi
+  type: android
+  status: Concluded
+  id: elimi
+  description: Let the smart and playful dating begin! I've built the foundations of the Android app and backend.
+  buttons:
+    - label: Google Play
+      icon: google-play
+      url: https://play.google.com/store/apps/details?id=com.elimiapp.app
+
+- title: Teleport Me
+  type: android
+  status: Past
+  description: It's a huge arrow you just need to follow to get home, for all those times when <i>reading books</i> and <i>conversing with friends</i> made you so <i>tired</i>, that you're just not able to deal with the impossible complexity of Google Maps. The startup failed.
+  id: teleport-me
+  rows: 3
+  rowsMd: 3
+
+- title: BTC Balance Monitor
+  type: google-chrome
+  status: Concluded
+  description: Add your Bitcoin addresses, get Chrome to notify you whenever there's a balance change.
+  id: btc-balance-monitor
+  buttons:
+    - label: Web Store
+      icon: google-chrome
+      url: https://chrome.google.com/webstore/detail/btc-address-monitor/cneciocfhifeoejglgkjmnjcpgdgioji
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/chrome-bitcoin-monitor
+
+- title: BTC Loan
+  status: Past
+  id: btc-loan
+  description: My first Bitcoin startup that was aiming to enable enable crowd loans for people in remote parts of the world. It was supposed to be zero-trust, by utilizing full client-side encryption, smart contracts and multi-signature transaction. It has failed due to being built on false premises and team incompatibility.
+  rows: 3
+  rowsMd: 3
+
+- title: BTC Arbitrage Bot
+  status: Concluded
+  id: btc-arbitrage
+  description: During the times when Altcoin arbitrage was still easy I had a coffeescript bot, that was trying its best to obtain capitol.
+
+- title: Dev Collective
+  status: Concluded
+  type: language-html5
+  id: dev-collective
+  description: An intentionally small website of an intentionally small collective of devs freelancing as a team.
+  buttons:
+    - label: web
+      url: http://devcollective.io/
+
+- title: Tags
+  video: /res/tags_tc_demo.mp4
+  image: /res/tags_tc_cover.png
+  type: android
+  status: Frozen
+  id: tags-notes
+  description: Video above is teammate presenting the project on <a href="http://techcrunch.com/events/disrupt-europe-berlin-2013/event-home/">TechCrunch Disrupt Europe</a>.
+  rows: 3
+  rowsMd: 3
+  rowsSm: 3
+
+- title: Linker for Google+
+  type: google-chrome
+  status: Concluded
+  description: Sometimes Google breaks habits. This tiny extension extends the life of one of your habits for a little bit longer.
+  id: linker-plus
+  buttons:
+    - label: Web Store
+      icon: google-chrome
+      url: https://chrome.google.com/webstore/detail/g+-profile-link-fix/ajjoapnmpgnoemaepmjkkdlelgdddnch
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/google-plus-profile-link-fixer
+
+- title: Simple.meet
+  status: Frozen
+  id: simple-meet
+  rows: 3
+  rowsMd: 3
+  rowsSm: 3
+  description: A very promising startup streamlining the experience of meeting new people and driving business cards obsolete. The plan assumed embracing newest technologies, but leaving plenty of fallback options as well. Had a very creative grow path. Unfortunately, because of other urging issues at the time, I had to shelf it. I still hope one day I'll got back to it.
+
+- title: Tabs Butcher
+  description: Chrome extension that, by keeping the count of open and closed tabs for current day, helps you to get rid of those hundrets you have there.
+  type: google-chrome
+  status: Concluded
+  id: tabs-butcher
+  buttons:
+    - label: Web Store
+      icon: google-chrome
+      url: https://chrome.google.com/webstore/detail/tabs-butcher/ofclkefgijcdjfilhhgdfabpdlcjogce
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/Tabs-Butcher
+
+- title: Weather Happy
+  image: /res/weather_happy_cover.png
+  type: android
+  status: Concluded
+  id: weather-happy
+  description: An app showing a weather from, so to say, an independent source.
+  rows: 3
+  rowsMd: 3
+  rowsSm: 3
+  buttons:
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/Weather-Happy
+
+- title: This Blog
+  status: In&nbsp;Progress
+  description: Yup, the very website you're looking at now. It's built using <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>, <a target="_blank" href="https://pages.github.com/">Github Pages</a>, <a target="_blank" href="https://www.cloudflare.com">Cloud Flare</a>, <a target="_blank" href="https://domains.google.com">Google Domains</a>, <a target="_blank" href="http://www.getmdl.io/">Material Design Lite</a>, <a target="_blank" href="https://material.angularjs.org">Angular Material</a> and <a target="_blank" href="https://materialdesignicons.com/">Material Design Icons Webfont</a>. Inspired by <a target="_blank" href="http://bernardopacheco.net/">Bernardo Pacheco Blog</a>.
+  id: this-blog
+  rows: 3
+  rowsMd: 3
+  buttons:
+    - label: Reload
+      icon: refresh
+      url: refresh
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/chester1000.github.io
