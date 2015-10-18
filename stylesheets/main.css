@@ -234,19 +234,6 @@ pre > code {
   text-decoration: none;
 }
 
-.cards md-card {
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
-  margin: 0;
-}
-.cards md-grid-list {
-  margin: 0 8px 0 8px;
-  padding-top: 8px;
-}
-.cards md-grid-tile {
-  padding: 4px;
-}
 
 .tiles md-grid-list {
   margin-right: 8px;
