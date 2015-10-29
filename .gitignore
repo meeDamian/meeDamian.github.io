@@ -2,3 +2,4 @@ uploads
 downloads
 .DS_Store
 _site
+.sass-cache
