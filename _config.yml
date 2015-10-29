@@ -15,9 +15,6 @@ highlighter: pygments
 markdown: redcarpet
 redcarpet:
   extension: [with_toc_data]
-sass:
-  style: compressed
-  
 paginate: 3
 paginate_path: "/page/:num"
 permalink: /post/:title
