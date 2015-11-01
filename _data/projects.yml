@@ -78,6 +78,7 @@
 
 - title: Big Text
   image: /res/big_text_cover.png
+  imgTitle: NOT a Snowden reference. Not at all.
   type: android
   description: Utility app showing as <i>Big Text</i> on your screen as possible. Supports incoming shares, casting to your biggest screen via Chromecast and sending directly to your printer. Not yet published.
   status: In&nbsp;Progress
