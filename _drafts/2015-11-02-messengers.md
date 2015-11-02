@@ -84,9 +84,9 @@ I've heard you like checking checkboxes, so new you can un-check your "Always On
 
 Can you spot the icon here?
 
-img1_invisible
+![Hangouts icon the same color as Upper OSX bar](/post-content/messengers/hangouts-invisible.png)
 
-img2_highlighted
+![Hangouts icon visible after selecting](/post-content/messengers/hangouts-selected.png)
 
 
 #### Dedicated [web interface][hangouts_web]
