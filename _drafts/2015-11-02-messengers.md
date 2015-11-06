@@ -6,7 +6,7 @@ tags: [cooldull, facebook, hangouts, google, opinion]
 category: review
 ---
 
-This is a series of posts that highlights The Great and not-so-great parts of the IT industry.
+This is a series of posts that highlights _The Great_ and _The Not-So-Great_ parts of the IT industry.
 
 ### [Cool] <small>Facebook</small> [Messenger][fb_web] <small>[<i class="mdi mdi-google-play"></i>][fb_play] [<i class="mdi mdi-apple"></i>][fb_apple]</small>
 
@@ -15,17 +15,21 @@ Let's get it out of the picture first: I don't like Facebook. I don't like it at
 
 ### [Dull] [Hangouts][hangouts_web] <small>[<i class="mdi mdi-google-play"></i>][hangouts_play] [<i class="mdi mdi-apple"></i>][hangouts_apple] [<i class="mdi mdi-google-chrome"></i>][hangouts_app] [<i class="mdi mdi-google-chrome"></i>][hangouts_ext]</small>
 
-I remember times when most of my communication was happening on Google Talk/Hangouts. I remember times when it was The Way to communicate online, those times are over, and it's sad AF.
+I remember times when Hangouts (then Google Talk) was **the way** to communicate online. I remember when the vast majority of my communication was happening on it. However, as the times kept changing and messengers kept evolving, Hangouts stayed far behind. Even though Hangouts was continuously worked on, the majority of changes I remember actually brought more bad than good. Material redesign brought better looks, but made the app unusably slow. Half-assed SMS integration only brought frustration, ex: still no SMS sync. Ditching XMPP haven't brought us much magic - still only one photo at the time, but hey, we have stickers now. And _"recently"_ added drawing is still available through some interfaces.
+
+I'm really unable to see any sense in it all. With Google heavily investing in Android, Project Fi, Hangouts on Air, Google Voice it seems like Hangouts should be the natural extension and glue for all that products.
 
 
 #### Sooooo slooooow
 
-This product is so ridiculously and awfully slow, that I frequently forget what I was supposed to do there before it loads.
+This product is so ridiculously and awfully slow, that I frequently forget what I was supposed to do there before it even launches.
+
+First, the splash screen, then the contact list, then contacts pictures and messages. Once you tap to get into the conversation you wait for the Activity to load, then for messages to load, but even when it's done, you still have to wait before you can write for some reason.
 
 
 #### Notifications
 
-Hangouts being an app made by Google, one would expect it would have notifications polished to perfection, but nope - they suck terribly, terribly bad.
+Hangouts being an app made by Google, one would expect it would have notifications polished to perfection, but nope - they suck terribly, terribly bad. First of all, **why on earth** would you group conversations from different people into one notification? There's exactly zero fun in finding the person on the messages list after I already tapped the notification, especially when your app loads so terribly slow.
 
 
 #### One image at a time
@@ -35,7 +39,20 @@ Need to send 10 pictures? Well, you're out of luck.
 
 #### Zero video at a time
 
-Yes, Hangouts **does not** support sending videos at all.
+Yes it's 2015 and not only we don't have hoverboards, we also don't have Hangouts with a _futuristic_ feature of sending a video file.
+
+
+#### Email-based
+
+There are two facts I should start with:
+
+1. The majority of people is completely not _"technical"_,
+2. Most _"technical"_ people use more than one email.
+
+As I belong to group #2 I do have multiple email addresses, some private, some for clients, some for strangers etc. But I only
+
+
+The reason I want someone on Hangouts is so they **don't send me emails**. If I wanted them to send me emails, I would give them one of my emails. I don't want people to send me emails to the address I have hangouts on. And then I end up having people added on different accounts, just so they don't get confused and
 
 
 #### Confusing calls buttons
@@ -44,12 +61,21 @@ Yes, Hangouts **does not** support sending videos at all.
 **A:** In my experience: randomly calls the other person either via hangouts or their cell number.
 
 
+#### Separate _"incognito"_ history for the Video calls
+
+The choice is either toggling between windows or writing in a video thread that will sis to exist as soon as the conversation ends.
+
+
 #### SMS
 
 It's just fundamentally broken, mkay.
 
 * No sync
 * Makes hangouts even slower
+
+#### "Signed as [email]" snackbar
+
+Do I really need to see it every single time I open hangouts?
 
 
 #### Stickers
@@ -80,13 +106,27 @@ I've heard you like checking checkboxes, so new you can un-check your "Always On
 
 #### Chrome OSX [Extension][hangouts_ext]
 
+As the extension is definately the best way to experience Hangouts, it still has many drawbacks.
+
 ##### The invisible, low-resolution icon
 
 Can you spot the icon here?
 
-![Hangouts icon the same color as Upper OSX bar](/post-content/messengers/hangouts-invisible.png)
+![Hangouts icon the same color as Upper OSX bar](/post-content/messengers/hangouts-ext-invisible.png)
 
-![Hangouts icon visible after selecting](/post-content/messengers/hangouts-selected.png)
+![Hangouts icon visible after selecting](/post-content/messengers/hangouts-ext-selected.png)
+
+##### Upside down graphics
+
+It's upside down
+
+![](/post-content/messengers/hangouts-ext-hidden.png)
+
+![](/post-content/messengers/hangouts-ext-peek.png)
+
+##### Low resolution
+
+High-resolution (aka. Retina) devices are on the market for millions of years now. Is it really that hard to update couple of graphics here and there?
 
 
 #### Dedicated [web interface][hangouts_web]
@@ -102,6 +142,7 @@ It opens conversations in those teeny tiny windows. WHY‽
 
 * Video conferences
 * Emoji
+* **Form***att*~~ing~~
 * "Where are you"
 
 
