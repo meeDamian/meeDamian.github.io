@@ -15,34 +15,46 @@ Let's get it out of the picture first: I don't like Facebook. I don't like it at
 
 ### [Dull] [Hangouts][hangouts_web] <small>[<i class="mdi mdi-google-play"></i>][hangouts_play] [<i class="mdi mdi-apple"></i>][hangouts_apple] [<i class="mdi mdi-google-chrome"></i>][hangouts_app] [<i class="mdi mdi-google-chrome"></i>][hangouts_ext]</small>
 
-I remember times when Hangouts (then Google Talk) was **the way** to communicate online. I remember when the vast majority of my communication was happening on it. However, as the times kept changing and messengers kept evolving, Hangouts stayed far behind. Even though Hangouts was continuously worked on, the majority of changes I remember actually brought more bad than good. Material redesign brought better looks, but made the app unusably slow. Half-assed SMS integration only brought frustration, ex: still no SMS sync. Ditching XMPP haven't brought us much magic - still only one photo at the time, but hey, we have stickers now. And _"recently"_ added drawing is still available through some interfaces.
+I remember times when Hangouts (then Google Talk) was **the way** to communicate online. I remember when it was handling the vast majority of my communication. However, as the times kept changing and messengers kept evolving, Hangouts stayed far behind. Even though Hangouts was continuously worked on, the majority of changes I remember actually brought more bad than good. Material <small>re</small>Design brought better looks, but made the app unusably slow. Half-assed SMS integration only brought frustration, ex: still no SMS sync. Ditching XMPP haven't brought us much magic - still only one photo at the time, but hey, we have stickers now... And the _"recently"_ added drawing function is still available through some interfaces.
 
-I'm really unable to see any sense in it all. With Google heavily investing in Android, Project Fi, Hangouts on Air, Google Voice it seems like Hangouts should be the natural extension and glue for all that products.
+I'm really unable to see any sense in it all. With Google seemingly investing heavily in Android, Project Fi, Hangouts on Air, Google Voice it seems like Hangouts should be the backbone and a glue holding all those products together. It's obviously not the case and I'll do my best to remind you why.
 
 
 #### Sooooo slooooow
 
-This product is so ridiculously and awfully slow, that I frequently forget what I was supposed to do there before it even launches.
+Even after couple of updates focused on performance, this product is still so awfully slow, that I frequently forget what I was going to do there before it even launches.
 
-First, the splash screen, then the contact list, then contacts pictures and messages. Once you tap to get into the conversation you wait for the Activity to load, then for messages to load, but even when it's done, you still have to wait before you can write for some reason.
+When I say slow I mean it in two ways: real elapsed time and the time perceived.
+
+Assuming a, purely hypothetical, scenario where I want to send a message using Hangouts, here are the steps:
+
+* **Wait** for Splash Screen¹
+* **Wait** for contacts list to load and become usable
+* Be distracted by useless "Signed as [...]" SnackBar
+* Tap the contact & see a ripple
+* **Wait** for anything to happen
+* Conversation loads
+* **Wait** a little bit more until you can actually type
+
+<small>¹ - I sincerely [dislike those][splash].</small>
 
 
 #### Notifications
 
-Hangouts being an app made by Google, one would expect it would have notifications polished to perfection, but nope - they suck terribly, terribly bad. First of all, **why on earth** would you group conversations from different people into one notification? There's exactly zero fun in finding the person on the messages list after I already tapped the notification, especially when your app loads so terribly slow.
+Hangouts being an app made by Google, one would expect it would have notifications polished to perfection, but nope - they suck really bad. First of all, **why on earth** would you group conversations from different people into one notification? There's exactly zero fun in finding the person on the messages list after I already tapped the notification, especially when your app loads so terribly slow.
 
 
 #### One image at a time
 
-Need to send 10 pictures? Well, you're out of luck.
+Need to send 10 pictures? Well, you're out of luck. You can either send them some other way or relax practice slow-tapping sending them one-by-one, that _shouldn't_ take you _much_ more than 15 minutes.
 
 
 #### Zero video at a time
 
-Yes it's 2015 and not only we don't have hoverboards, we also don't have Hangouts with a _futuristic_ feature of sending a video file.
+Yes, it's 2015 and not only we don't have hoverboards, we also don't have Hangouts with a _futuristic_ feature of sending a video file.
 
 
-#### Email-based
+#### `[to-fix]` Email-based
 
 There are two facts I should start with:
 
@@ -55,53 +67,58 @@ As I belong to group #2 I do have multiple email addresses, some private, some f
 The reason I want someone on Hangouts is so they **don't send me emails**. If I wanted them to send me emails, I would give them one of my emails. I don't want people to send me emails to the address I have hangouts on. And then I end up having people added on different accounts, just so they don't get confused and
 
 
-#### Confusing calls buttons
+#### Confusing voice call button
 
 **Q:** What happens when you click the voice call button above the conversation?<br>
-**A:** In my experience: randomly calls the other person either via hangouts or their cell number.
+**A:** Randomly calls the other person either on their hangouts or their cell phone number. No way to set it, no way to change it, no way to even guess.
 
 
-#### Separate _"incognito"_ history for the Video calls
+#### Separate _incognito_ chat for video calls
 
-The choice is either toggling between windows or writing in a video thread that will sis to exist as soon as the conversation ends.
+Hangouts video calls are great, m'kay. I love them and use them all the time, **but** there's one really annoying thing about them: internal chat. It's in no way integrated with anything, there's no notifications about messages there and its history is lost once the conversation finishes. It's always a disruption and confusion when someone has to send a link and where-did-you-send-it?-ping-pong begins.
 
 
 #### SMS
 
-It's just fundamentally broken, mkay.
+Honestly, I stopped using it couple of versions before, and never even thought about enabling it again. It made Hangouts slow beyond belief and lack of even the simplest sync, made merging hangouts and sms threads only confusing and inconvenient. Perhaps it's fixed now, but I'm afraid to check.
 
-* No sync
-* Makes hangouts even slower
 
-#### "Signed as [email]" snackbar
+#### _"Signed as [email]"_ snackbar
 
-Do I really need to see it every single time I open hangouts?
+I get it, [Snackbar][snackbar] is a cool Material Design element, but there's really no point in shoving it in my face every single time I finish my Splash Screen indoctrination.
+
+
+#### _"Widget no longer available"_
+
+![](/post-content/messengers/hangouts-android-widget.png)
+
+This is not a joke. It's what actually happens when you add a widget to your homescreen - it will just sit there telling you that it's not available.
 
 
 #### Stickers
 
-I know it's a matter of taste, but those stickers are just ugly, they don't carry emotions properly, none of them are "cute", you can't identify with them, you can't add custom packs. It's just better to never use them.
+I know it's a matter of taste, but those stickers are just plain ugly, they neither carry emotions nor meaning, none of them are "cute", you really can't identify with them and you can't add custom packs. It's just better to never use them. And I never had anyone send me a sticker on Hangouts (unlike FB messenger).
 
 
 #### No API
 
-I get it Google, we have plenty choices, and you don't want us to have an inferior experience. BUT all the choices you give us are inferior in the first place.
-
-Remember times when we were able to use Google Talk via XMPP/Jabber in all those funny little messengers, and some of them were even CLI-based? I do too, and I guess that's why seeing what happens to Hangouts now is so sad and disappointing.
+Remember times when we were able to use Google Talk via XMPP/Jabber in all those funny little messengers? Some of them even being CLI-based? I do too, and I guess that's why seeing what happens to Hangouts now is so sad and disappointing.
 
 
 ### Broken consistently everywhere
 
-Don't get me wrong, I'm not only talking about Hangouts for Android! It is fundamentally broken on every single interface I happened to use it on
+I get it Google, you offer us have plenty choices, and you don't want us to have a broken experience. BUT all the choices you give us are broken in the first place.
+
+Don't get me wrong, those points don't only refer to Hangouts for Android, most of them can be applied to Hangouts in general. Here are some examples for other _interfaces_:
 
 
-#### Chrome OSX [app][hangouts_app]
+#### Chrome OSX [App][hangouts_app]
 
 I get it, it's really hard to implement _"chat-heads"_-like esthetic on OSX, but if you can give me an OK experience I'd be fine, but...
 
-I've heard you like checking checkboxes, so new you can un-check your "Always On Top"¹ checkbox after every app reload?
+I've heard you like checking checkboxes, so new you can un-check your "Always On Top"² checkbox after every app reload?
 
-<small>¹ - Nope, I don't know why every word is capitalized either.</small>
+<small>² - Nope, I don't know why every word is capitalized either.</small>
 
 
 #### Chrome OSX [Extension][hangouts_ext]
@@ -131,11 +148,11 @@ High-resolution (aka. Retina) devices are on the market for millions of years no
 
 #### Dedicated [web interface][hangouts_web]
 
-Facebook Messenger has a [great web interface][fb_web]¹ I'm using, I would be totally fine with one more pinned tab, but...
+Facebook Messenger has a [great web interface][fb_web]³ I'm using, I would be totally fine with one more pinned tab, but...
 
 It opens conversations in those teeny tiny windows. WHY‽
 
-<small>¹ - Seriously, check it out it's great!</small>
+<small>³ - Seriously, check it out it's great!</small>
 
 
 ### Good
@@ -145,6 +162,9 @@ It opens conversations in those teeny tiny windows. WHY‽
 * **Form***att*~~ing~~
 * "Where are you"
 
+
+[splash]: https://plus.google.com/+MaurycyDamianWasilewski/posts/81jQC4rcRTb
+[snackbar]: http://developer.android.com/intl/ru/reference/android/support/design/widget/Snackbar.html
 
 [fb]: https://facebook.com
 [fb_web]: https://www.messenger.com
