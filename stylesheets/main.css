@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #logo img {
   width: 70%;
+  max-height: 73px;
   margin-top: 20px;
   filter: drop-shadow(3px 3px 3px rgba(66, 66, 66, 0.75))
 }
