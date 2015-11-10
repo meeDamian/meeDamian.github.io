@@ -46,8 +46,10 @@
     {% endunless %}
   </script>
 
+<meta property="og:image" content="/images/thumbnail.png" />
 {% if page.title %}
   <meta name="description" content="{{page.title}}" />
+  <meta property="og:description" content="{{page.title}}" />
 {% endif %}
 
   <title>{% if page.title %} {{page.title}} | {% endif %}{{site.author.name}} | Blog</title>
