@@ -298,3 +298,7 @@ pre > code {
 .wall-of-text p {
   text-align: justify;
 }
+
+sup {
+  line-height: 0.01;
+}
