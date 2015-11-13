@@ -4,23 +4,74 @@ title: About
 permalink: /about/
 ---
 
-### I am a mobile<sup><small><i id="i-mobile" class="info mdi mdi-information-outline"></i></small></sup> developer building **native apps** for **Android** and **websites** in **Node.js**; currently freelancing from **[Taiwan][geo]**<sup><small><i id="i-geo" class="info mdi mdi-information-outline"></i></small></sup>.
+### I am a mobile<sup><small><i id="i-mobile" class="info mdi mdi-information-outline"></i></small></sup> developer building **native apps** for **Android** and **websites** in **Node.js**; currently freelancing from **<a target="_blank" id="location" href="https://goo.gl/maps/NamBYKMgKU12">Taiwan</a>**<sup><small><i id="i-geo" class="info mdi mdi-information-outline"></i></small></sup>.
 
 I am a minimalist, perfectionist and relativist. Always reliable internet tests diagnosed me as [INTJ-A][intj] and after solving enough logic charades I was invited to join [Mensa][mensa]. I am passionate about Futurism and all the technologies it will bring along. Being fascinated by the potential of [Artificial **Super** Intelligence][asi], I am curiously looking forward to witnessing the outcomes of [A.I.][agi] and [machine learning][machine] marriage. I am very drawn to decentralized technologies like [Blockchain][bc] or [Mesh Networks][mesh] and I am currently diving deeper into [R][r], [Go][go] and Machine Learning to teach my pet computer (and&nbsp;<span id="i-iot" class="info">_[internetted thingies][iot]_</span>) to play fetch.
 
 <div class="mdl-tooltip" for="i-mobile">In the meaning of mobile apps,<br>as well as working remotely.</div>
-<div class="mdl-tooltip" for="i-geo">Updated 1 day ago</div>
+<div class="mdl-tooltip" for="i-geo">Updated <span id="locUpdated">1 day ago</span></div>
 <div class="mdl-tooltip" for="i-iot">Internet of Things</div>
 
 
+
 ### Contact:
-* Call me: <a href="tel:+886909377029" target="_blank">+886 909377029</a>
+* Call me: <a id="phone" href="tel:{{site.author.phone}}" target="_blank">{{site.author.phone}}</a>
 * Email me: <a href="mailto:hello@meedamian.com" target="_blank">hello@meedamian.com</a>
 * Schedule a Hangouts call: [here][hang_]
 * Book a mentoring session: [![Book session on Codementor][codementor_img]][codementor_url]
 
+<script>
+  function prettyDate(date) {
+   // JavaScript Pretty Date
+   // Copyright (c) 2011 John Resig (ejohn.org)
+   // Licensed under the MIT and GPL licenses.
 
-[geo]: https://goo.gl/maps/NamBYKMgKU12
+    var diff = (((new Date()).getTime() - date.getTime()) / 1000),
+      day_diff = Math.floor(diff / 86400);
+
+    if (isNaN(day_diff) || day_diff < 0 || day_diff >= 31)
+      return;
+
+    return day_diff == 0 && (
+      diff < 60 && "just now" ||
+      diff < 120 && "1 minute ago" ||
+      diff < 3600 && Math.floor( diff / 60 ) + " minutes ago" ||
+      diff < 7200 && "1 hour ago" ||
+      diff < 86400 && Math.floor( diff / 3600 ) + " hours ago") ||
+      day_diff == 1 && "Yesterday" ||
+      day_diff < 7 && day_diff + " days ago" ||
+      day_diff < 31 && Math.ceil( day_diff / 7 ) + " weeks ago";
+  }
+  function updateLink(id, href, text, repWith) {
+    repWith = repWith || '';
+    var a = document.getElementById(id);
+    a.href = href.replace(/ /g, repWith);
+    a.textContent = text;
+  }
+  window.setCurrentData = function(json) {
+    // PHONE
+    var phoneHref = 'tel:' + json.phone.replace(/ /g, '');
+    updateLink('phone', phoneHref, json.phone);
+
+    // LOCATION
+    var mapsLink = 'https://maps.google.com/?q=';
+    var query = [];
+    if (json.location.country != null)
+      query.push(json.location.country);
+
+    if (json.location.city != null)
+      query.push(json.location.city);
+
+    var queryStr = query.join(', ').replace(/ /g, '+');
+
+    updateLink('location', mapsLink + queryStr, json.location.country);
+
+    // LOCATION UPDATED
+    document.getElementById('locUpdated').textContent = prettyDate(new Date(json.location.updated));
+  };
+</script>
+<script src="https://basic-data.parseapp.com/{{site.author.username}}?callback=setCurrentData"></script>
+
 [intj]: https://www.linkedin.com/pulse/5-reasons-intjs-best-employees-penelope-trunk
 [mensa]: https://www.mensa.org/
 [agi]: https://en.wikipedia.org/wiki/Artificial_general_intelligence

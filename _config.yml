@@ -1,6 +1,6 @@
 author:
   name: Damian Mee
-  phone: +886 909 377 026
+  phone: '+886909377026'
   github: chester1000
   username: meeDamian
 
@@ -17,7 +17,7 @@ redcarpet:
   extension: [with_toc_data]
 sass:
   style: compressed
-  
+
 paginate: 3
 paginate_path: "/page/:num"
 permalink: /post/:title
