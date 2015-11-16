@@ -13,6 +13,12 @@ I am a minimalist, perfectionist and relativist. Always reliable internet tests 
 <div class="mdl-tooltip" for="i-iot">Internet of Things</div>
 
 
+#### Frequent guests on **my stack** party:
+
+Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [CloudFlare][cloudflare]¹, [Coffee Script][coffee]¹, [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku, [Jade][jade], Java, JavaScript, [ES6][es6], Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Parse][parse]¹, Polymer, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo].
+
+<small>¹ - Hidden behind pixels on this very website.</small>
+
 
 ### Contact:
 * Call me: <a id="phone" href="tel:{{site.author.phone}}" target="_blank">{{site.author.phone}}</a>
@@ -72,6 +78,7 @@ I am a minimalist, perfectionist and relativist. Always reliable internet tests 
 </script>
 <script src="https://basic-data.parseapp.com/{{site.author.username}}?callback=setCurrentData"></script>
 
+<!-- Description -->
 [intj]: https://www.linkedin.com/pulse/5-reasons-intjs-best-employees-penelope-trunk
 [mensa]: https://www.mensa.org/
 [agi]: https://en.wikipedia.org/wiki/Artificial_general_intelligence
@@ -83,6 +90,29 @@ I am a minimalist, perfectionist and relativist. Always reliable internet tests 
 [machine]: https://en.wikipedia.org/wiki/Machine_learning
 [iot]: https://en.wikipedia.org/wiki/Internet_of_Things
 
+<!-- Stack -->
+[material]: https://material.angularjs.org/latest/
+[atom]: https://atom.io/
+[bitcoin]: https://github.com/bitcoin/bitcoin
+[cloudflare]: https://www.cloudflare.com/
+[coffee]: http://coffeescript.org/
+[iced]: http://maxtaco.github.io/coffee-script/
+[firebase]: https://www.firebase.com/
+[geny]: https://www.genymotion.com/#!/
+[gh-pages]: https://pages.github.com/
+[gae]: https://cloud.google.com/appengine/
+[gulp]: http://gulpjs.com/
+[jade]: http://jade-lang.com/
+[es6]: http://es6-features.org/
+[mdl]: http://www.getmdl.io/
+[meteor]: https://www.meteor.com/
+[mongoose]: http://mongoosejs.com/
+[npm]: https://www.npmjs.com/~meedamian
+[parse]: https://www.parse.com/
+[travis]: https://travis-ci.org/
+[yo]: http://yeoman.io/
+
+<!-- Contact -->
 [hang_]: https://calendly.com/meedamian/30min
 [codementor_img]: https://cdn.codementor.io/badges/book_session_github.svg
 [codementor_url]: https://www.codementor.io/meedamian?utm_source=github&utm_medium=button&utm_term=meedamian&utm_campaign=github
