@@ -155,6 +155,11 @@ It opens conversations in those teeny tiny windows. WHY‽
 <small>³ - Seriously, check it out it's great!</small>
 
 
+### Other:
+* iOS first/better
+* Ctrl+T on extension
+
+
 ### Good
 
 * Video conferences

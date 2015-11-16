@@ -13,7 +13,7 @@ I am a minimalist, perfectionist and relativist. Always reliable internet tests 
 <div class="mdl-tooltip" for="i-iot">Internet of Things</div>
 
 
-#### Frequent guests on **my stack** party:
+#### Frequent guests at **my stack** party:
 
 Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [CloudFlare][cloudflare]¹, [Coffee Script][coffee]¹, [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku, [Jade][jade], Java, JavaScript, [ES6][es6], Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Parse][parse]¹, Polymer, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo].
 
