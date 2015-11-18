@@ -298,6 +298,19 @@
       icon: github-circle
       url: https://github.com/chester1000/Tabs-Butcher
 
+- title: Coinbase BTC price ticker
+  description: Configurable Chrome extension showing current BTC price from Coinbase. Also available for <a href="https://chrome.google.com/webstore/detail/kraken-btc-price/hbhnkankpgganmfflohdjjaiclgleocc" target="_blank">Kraken</a> and <a href="https://chrome.google.com/webstore/detail/btcchina-btc-price/aocobngnigfikpncfonplfgfmdihfoco" target="_blank">BTC China</a>.
+  type: google-chrome
+  status: Concluded
+  id: coinbase-ticker
+  buttons:
+    - label: Web Store
+      icon: google-chrome
+      url: https://chrome.google.com/webstore/detail/coinbase-btc-price/fmibcmmnjijbkmohmicihncfmpbojcgo
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/coinbase-btc-price
+
 - title: Weather Happy
   image: /res/weather_happy_cover.png
   type: android
