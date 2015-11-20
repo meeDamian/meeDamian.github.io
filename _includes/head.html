@@ -4,6 +4,7 @@
   <meta name="p:domain_verify" content="58ac57589f27d39cd05a30872ef38854">
   <link rel="author" href="https://plus.google.com/+MaurycyDamianWasilewski/">
   <link rel="canonical" href="{{site.url}}{{page.url}}/" />
+  <meta property="og:url" content="{{site.url}}{{page.url}}/" />
   {% include favicons.html %}
   <meta name="application-name" content="meeDamian.com">
   <meta name="theme-color" content="#669900">
@@ -60,4 +61,5 @@
 {% endif %}
 
   <title>{% if page.title %} {{page.title}} | {% endif %}{{site.author.name}} | Blog</title>
+  <meta property="og:description" content="{% if page.title %} {{page.title}} | {% endif %}{{site.author.name}} | Blog" />
 </head>
