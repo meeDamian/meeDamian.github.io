@@ -59,7 +59,7 @@ Today, during a glorious transition from **1.5 rc1** to **1.5** Android Studio d
 1. Click **Apply**/**OK**.
 
 
-** tl;dr: `⌘⇧a → "Android Logcat" → [Save as...] → "ChroMATERIAL + HOLO"¹ → ↩ → <set foreground colors according to the table above> → ⎋`**
+** tl;dr: `⌘⇧a → "Android Logcat" → [Save as...] → "ChroMATERIAL + HOLO"¹ → ↩ → <set foreground colors as in the table ↑> → ⎋`**
 
 <small>`¹` - any other name is fine too</small>
 
