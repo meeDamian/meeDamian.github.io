@@ -14,7 +14,8 @@ enforce_ssl: meeDamian.com
 highlighter: pygments
 markdown: redcarpet
 redcarpet:
-  extension: [with_toc_data]
+  extensions: [with_toc_data, tables]
+
 sass:
   style: compressed
 
