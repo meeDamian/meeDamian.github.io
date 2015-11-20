@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Making Android Studio pretty
-thumbnail: /post-content/deuglifying-android-studio/prettyAS-2.png
+thumbnail: /post-content/deuglifying-android-studio/prettyAS-2-small.png
 date: 2015-11-20
 tags: [android, android studio, theme]
 category: guide
