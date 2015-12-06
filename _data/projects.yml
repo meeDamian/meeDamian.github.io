@@ -23,6 +23,7 @@
   id: net-test
   buttons:
     - label: Web
+      icon: web
       url: https://meedamian.com/net-test/
     - label: Github
       icon: github-circle
@@ -38,6 +39,7 @@
   rowsMd: 3
   buttons:
     - label: Web
+      icon: web
       url: https://meedamian.com/phonetics/
     - label: Github
       icon: github-circle
@@ -251,6 +253,7 @@
   description: An intentionally small website of an intentionally small collective of devs freelancing as a team.
   buttons:
     - label: web
+      icon: web
       url: http://devcollective.io/
 
 - title: Tags
