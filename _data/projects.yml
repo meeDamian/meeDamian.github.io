@@ -328,6 +328,21 @@
       icon: github-circle
       url: https://github.com/chester1000/Weather-Happy
 
+- title: JS Flows
+  status: In&nbsp;Progress
+  type: language-javascript
+  description: "Showdown of different execution flows for JavaScript (and CoffeeScript). Includes: sync, callbacks, promises, generators, async lib, Iced CoffeeScript, ES7 and more..."
+  id: js-flows
+  rows: 2
+  rowsMd: 2
+  buttons:
+    - label: Web
+      icon: web
+      url: https://meedamian.com/js-flows/
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/js-flows
+
 - title: This Blog
   status: In&nbsp;Progress
   description: Yup, the very website you're looking at now. It's built using <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>, <a target="_blank" href="https://pages.github.com/">Github Pages</a>, <a target="_blank" href="https://www.cloudflare.com">Cloud Flare</a>, <a target="_blank" href="https://domains.google.com">Google Domains</a>, <a target="_blank" href="http://www.getmdl.io/">Material Design Lite</a>, <a target="_blank" href="https://material.angularjs.org">Angular Material</a> and <a target="_blank" href="https://materialdesignicons.com/">Material Design Icons Webfont</a>. Inspired by <a target="_blank" href="http://bernardopacheco.net/">Bernardo Pacheco Blog</a>.
