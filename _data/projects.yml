@@ -329,7 +329,7 @@
       url: https://github.com/chester1000/Weather-Happy
 
 - title: JS Flows
-  status: In&nbsp;Progress
+  status: Concluded
   type: language-javascript
   description: "Showdown of different execution flows for JavaScript (and CoffeeScript). Includes: sync, callbacks, promises, generators, async lib, Iced CoffeeScript, ES7 and more..."
   id: js-flows
