@@ -303,21 +303,21 @@ sup {
   line-height: 0.01;
 }
 
-img[alt=AS-screenshot-main] {
+img[alt=screenshot-main] {
   width: 70%;
   min-width: 500px;
 }
 
-img[alt=AS-screenshot] {
+img[alt=screenshot] {
   width: 80%;
   min-width: 250px;
 }
 @media (max-width: 500px) {
-  img[alt=AS-screenshot-main] {
+  img[alt=screenshot-main] {
     width: 100%;
     min-width: 0;
   }
-  img[alt=AS-screenshot] {
+  img[alt=screenshot] {
     width: 100%;
     min-width: 0;
   }

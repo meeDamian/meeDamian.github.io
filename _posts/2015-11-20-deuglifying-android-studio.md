@@ -11,7 +11,7 @@ Today, during a glorious transition from **1.5 rc1** to **1.5** Android Studio d
 
 #### Final appearance <small>More [below](#screenshots-they-open-in-the-same-tab-sorry…)</small>
 
-![AS-screenshot-main][as2]
+![screenshot-main][as2]
 
 #### 1. [GUI Theme][gui] <small>manual from [here][gui-inst]</small>
 
@@ -67,9 +67,9 @@ Today, during a glorious transition from **1.5 rc1** to **1.5** Android Studio d
 
 #### Screenshots <small>they open in the same tab - sorry…</small>
 
-| [![AS-screenshot][as1-sm]][as1] | [![AS-screenshot][as2-sm]][as2] |
-|--------------------------------:|:--------------------------------|
-| [![AS-screenshot][as3-sm]][as3] | [![AS-screenshot][as4-sm]][as4] |
+| [![screenshot][as1-sm]][as1] | [![screenshot][as2-sm]][as2] |
+|-----------------------------:|:-----------------------------|
+| [![screenshot][as3-sm]][as3] | [![screenshot][as4-sm]][as4] |
 
 <br>
 
