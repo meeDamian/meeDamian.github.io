@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Unlocalize Google Chrome Omnibar
+thumbnail: /post-content/unlocalize-google/google-cn.png
 date: 2016-01-05
 tags: [google, trick, chrome]
 category: tricks
