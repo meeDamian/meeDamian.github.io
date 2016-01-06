@@ -43,25 +43,33 @@
 
     {% unless page.projects %}
     // add comment counts
-    var disqus_shortname = 'meedamian';
-    loadScript('//meedamian.disqus.com/count.js');
+    var disqus_shortname = '{{site.author.username}}';
+    loadScript('//{{site.author.username}}.disqus.com/count.js');
     {% endunless %}
   </script>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@{{site.author.username}}">
 
 {% if page.thumbnail %}
   <meta property="og:image" content="{{site.url}}{{page.thumbnail}}" />
   <meta itemprop="image" content="{{site.url}}{{page.thumbnail}}" />
   <meta property="image" content="{{site.url}}{{page.thumbnail}}" />
+  <meta name="twitter:image" content="{{site.url}}{{page.thumbnail}}" />
 {% else %}
   <meta property="og:image" content="{{site.url}}/images/thumbnail.png" />
   <meta itemprop="image" content="{{site.url}}/images/thumbnail.png" />
+  <meta name="twitter:image" content="{{site.url}}/images/thumbnail.png" />
 {% endif %}
 
 {% if page.title %}
-  <meta name="description" content="{{page.title}}" />
-  <meta property="og:description" content="{{page.title}}" />
+  <meta name="description" content="{{page.content | truncate: 128}}" />
+  <meta property="og:description" content="{{page.content | truncate: 128}}" />
+  <meta name="twitter:description" content="{{page.content | truncate: 128}}">
 {% endif %}
 
-  <title>{% if page.title %} {{page.title}} | {% endif %}{{site.author.name}} | Blog</title>
-  <meta property="og:title" content="{% if page.title %} {{page.title}} | {% endif %}{{site.author.name}} | Blog" />
+  <title>{% if page.title %}{{page.title}} | {% endif %}{{site.author.name}} | Blog</title>
+  <meta name="title" content="{% if page.title %}{{page.title}} | {% endif %}{{site.author.name}} | Blog" />
+  <meta name="twitter:title" content="{% if page.title %}{{page.title}} | {% endif %}{{site.author.name}} | Blog" />
+  <meta property="og:title" content="{% if page.title %}{{page.title}} | {% endif %}{{site.author.name}} | Blog" />
 </head>
