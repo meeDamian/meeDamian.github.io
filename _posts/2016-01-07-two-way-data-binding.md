@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Rapid Guide on Two-Way Data Binding in Android
+thumbnail: /post-content/2way-db.png
 date: 2016-01-07
 tags: [android, data-binding, mvvm]
 category: guide
