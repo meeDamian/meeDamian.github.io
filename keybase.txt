@@ -63,3 +63,58 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/meedamian
 
 ==================================================================
+
+==================================================================
+https://keybase.io/meedamian
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://meedamian.com
+  * I am meedamian (https://keybase.io/meedamian) on keybase.
+  * I have a public key ASAiRG_GuFkRqCzhpuOJp0RKi6Z3qlCQUPP26x_OIlFqXwo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01017b35f7c91ff98c238586ae4de5a8761862b631e7313e66f0286ede7f61c9a5f20a",
+            "host": "keybase.io",
+            "kid": "012022446fc6b85911a82ce1a6e389a7444a8ba677aa509050f3f6eb1fce22516a5f0a",
+            "uid": "47cfae5b501fe61b7dbbe6caab415700",
+            "username": "meedamian"
+        },
+        "service": {
+            "hostname": "meedamian.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.7"
+    },
+    "ctime": 1452277410,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1452277339,
+        "hash": "9d5094198de2c8cdfb5b474765f13ba8a4d767dda3b5e5ac9cc3994d9d4de3d8aa2fa615919a82e824af4855d3fec5180a37c4069b5c8d80419775773c0ec5ad",
+        "seqno": 345617
+    },
+    "prev": "dc16f7f10b73c2d60bc5bec75591a5fe94ffc00f9cb7f655b80286f839a3d1c5",
+    "seqno": 38,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgIkRvxrhZEags4abjiadESoumd6pQkFDz9usfziJRal8Kp3BheWxvYWTFAvZ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxN2IzNWY3YzkxZmY5OGMyMzg1ODZhZTRkZTVhODc2MTg2MmI2MzFlNzMxM2U2NmYwMjg2ZWRlN2Y2MWM5YTVmMjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMjI0NDZmYzZiODU5MTFhODJjZTFhNmUzODlhNzQ0NGE4YmE2NzdhYTUwOTA1MGYzZjZlYjFmY2UyMjUxNmE1ZjBhIiwidWlkIjoiNDdjZmFlNWI1MDFmZTYxYjdkYmJlNmNhYWI0MTU3MDAiLCJ1c2VybmFtZSI6Im1lZWRhbWlhbiJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoibWVlZGFtaWFuLmNvbSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjcifSwiY3RpbWUiOjE0NTIyNzc0MTAsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ1MjI3NzMzOSwiaGFzaCI6IjlkNTA5NDE5OGRlMmM4Y2RmYjViNDc0NzY1ZjEzYmE4YTRkNzY3ZGRhM2I1ZTVhYzljYzM5OTRkOWQ0ZGUzZDhhYTJmYTYxNTkxOWE4MmU4MjRhZjQ4NTVkM2ZlYzUxODBhMzdjNDA2OWI1YzhkODA0MTk3NzU3NzNjMGVjNWFkIiwic2Vxbm8iOjM0NTYxN30sInByZXYiOiJkYzE2ZjdmMTBiNzNjMmQ2MGJjNWJlYzc1NTkxYTVmZTk0ZmZjMDBmOWNiN2Y2NTViODAyODZmODM5YTNkMWM1Iiwic2Vxbm8iOjM4LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQKOs8RBucJnylMUZ4A4iT+KVjcdtjZIp6gnuFnG7uuRvomr3bWctaFoP47oDduFG47q9fu+nUm65vHnpsdldQw2oc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/meedamian
+
+==================================================================
