@@ -7,7 +7,7 @@ tags: [android, data-binding, mvvm]
 category: guide
 ---
 
-This post is **not** a comprehensive introduction to data binding in Android, it's a required minimum to get two-way data binding to work, that assumes your project to be configured for data binding already (If it's not, [start here][binding-guide]
+This post is **not** a comprehensive introduction to data binding in Android, it's a required minimum to get two-way data binding to work, that assumes your project to be configured for data binding already (if it's not, [start here][binding-guide]).
 
 **Complete source code available [here<sup><i class="mdi mdi-github-circle"></i></sup>][source-gh] or [here<sup><i class="mdi mdi-folder-download"></i></sup>][source-dl].**
 
