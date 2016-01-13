@@ -7,9 +7,10 @@ tags: [android, data-binding, mvvm]
 category: guide
 ---
 
-This post is **not** a comprehensive introduction to data binding in Android, it's a required minimum to get two-way data binding to work, that assumes your project to be configured for data binding already (If it's not, [start here](http://developer.android.com/tools/data-binding/guide.html))
+This post is **not** a comprehensive introduction to data binding in Android, it's a required minimum to get two-way data binding to work, that assumes your project to be configured for data binding already (If it's not, [start here][binding-guide]
 
-**Complete source code available [here<sup><i class="mdi mdi-github-circle"></i></sup>](https://github.com/chester1000/Two-Way-Data-Binding).**
+**Complete source code available [here<sup><i class="mdi mdi-github-circle"></i></sup>][source-gh] or [here<sup><i class="mdi mdi-folder-download"></i></sup>][source-dl].**
+
 
 [![screenshot-main][app-looks]][app-looks]
 
@@ -170,6 +171,9 @@ public class MainState extends BaseObservable {
 }
 ```
 
-> #### Complete source code available [here<sup><i class="mdi mdi-github-circle"></i></sup>](https://github.com/chester1000/Two-Way-Data-Binding).
+> #### Complete source code available [here<sup><i class="mdi mdi-github-circle"></i></sup>][source-gh] or [here<sup><i class="mdi mdi-folder-download"></i></sup>][source-dl].
 
+[binding-guide]: http://developer.android.com/tools/data-binding/guide.html
+[source-gh]: https://github.com/chester1000/Two-Way-Data-Binding
+[source-dl]: https://github.com/chester1000/Two-Way-Data-Binding/archive/master.zip
 [app-looks]: /post-content/2way-db.png
