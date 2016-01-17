@@ -62,10 +62,10 @@
   <meta name="twitter:image" content="{{site.url}}/images/thumbnail.png" />
 {% endif %}
 
-{% if page.title %}
-  <meta name="description" content="{{page.content | markdownify | strip_html | truncate: 128}}" />
-  <meta property="og:description" content="{{page.content | markdownify | strip_html | truncate: 128}}" />
-  <meta name="twitter:description" content="{{page.content | markdownify | strip_html | truncate: 128}}">
+{% if page.title %}g
+  <meta name="description" content="{{page.content | markdownify | strip_html | strip_newlines | truncate: 128}}" />
+  <meta property="og:description" content="{{page.content | markdownify | strip_html | strip_newlines | truncate: 128}}" />
+  <meta name="twitter:description" content="{{page.content | markdownify | strip_html | strip_newlines | truncate: 128}}">
 {% endif %}
 
   <title>{% if page.title %}{{page.title}} | {% endif %}{{site.author.name}} | Blog</title>
