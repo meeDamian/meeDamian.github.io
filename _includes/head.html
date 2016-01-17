@@ -63,9 +63,9 @@
 {% endif %}
 
 {% if page.title %}
-  <meta name="description" content="{{page.content | truncate: 128 | strip_html}}" />
-  <meta property="og:description" content="{{page.content | truncate: 128 | strip_html}}" />
-  <meta name="twitter:description" content="{{page.content | truncate: 128 | strip_html}}">
+  <meta name="description" content="{{page.content | markdownify | strip_html | truncate: 128}}" />
+  <meta property="og:description" content="{{page.content | markdownify | strip_html | truncate: 128}}" />
+  <meta name="twitter:description" content="{{page.content | markdownify | strip_html | truncate: 128}}">
 {% endif %}
 
   <title>{% if page.title %}{{page.title}} | {% endif %}{{site.author.name}} | Blog</title>
