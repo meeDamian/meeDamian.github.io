@@ -112,7 +112,7 @@ Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitc
 [travis]: https://travis-ci.org/
 [yo]: https://goo.gl/505aDq
 
-<!-- Contact -->
+<!-- Contact --> 
 [hang_]: https://calendly.com/meedamian/30min
 [codementor_img]: https://cdn.codementor.io/badges/book_session_github.svg
 [codementor_url]: https://www.codementor.io/meedamian?utm_source=github&utm_medium=button&utm_term=meedamian&utm_campaign=github
