@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-jekyll build
-htmlproof _site --url-ignore=/elements.heroku.com/ \
-                --enforce-https \
-                --file-ignore=/googleb2162d982ab64976.html/ \
-                --check-favicon
+bundle exec jekyll build
+bundle exec htmlproof ./_site \
+        --url-ignore=/elements.heroku.com/ \
+        --enforce-https \
+        --file-ignore=/googleb2162d982ab64976.html/ \
+        --check-favicon
