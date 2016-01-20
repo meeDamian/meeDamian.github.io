@@ -3,7 +3,6 @@ set -e # halt script on error
 
 bundle exec jekyll build
 bundle exec htmlproof ./_site \
-        --disable-external \
         --url-ignore=/elements.heroku.com/ \
         --enforce-https \
         --file-ignore=/googleb2162d982ab64976.html/ \
