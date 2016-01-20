@@ -8,14 +8,14 @@ category: advice
 
 #### Redundant intro
 
-As I started my [Android](http://d.android.com) journey with [Eclipse](http://www.eclipse.org/) I was used to wizards
+As I started my [Android](https://goo.gl/IMwNi9) journey with [Eclipse](https://eclipse.org) I was used to wizards
 like this:
 
 ![Android Studio generate wizard](/post-content/publishing-with-gradle/generate-wizard.png)
 
 So, you can imagine my surprise when [this happened](https://plus.google.com/+MaurycyDamianWasilewski/posts/hD7BhwN1cH5)
-(if you can't access this link [click here](https://github.com/chester1000/meeDamian.com/blob/master/_posts/publishing-with-gradle/this-happened.png)).
-It was unexpected, but pushed me to learn more about [Gradle](http://www.gradle.org/) build system. At first **gradle**
+(if you can't access this link [click here](https://github.com/chester1000/chester1000.github.io/blob/master/post-content/publishing-with-gradle/this-happened.png)).
+It was unexpected, but pushed me to learn more about [Gradle](https://gradle.org/) build system. At first **gradle**
 docs seemed really overwhelming, because they were covering so much more than only publishing production builds (more
 about that in my future posts).
 
@@ -94,7 +94,7 @@ android {
 
 **`WARN`: If you've made ANY COMMITS while using this flow, IT IS NOT SAFE FOR YOU TO EVER OPEN-SOURCE THIS REPOSITORY!!!**
 
-[inspiration](http://stackoverflow.com/a/18329835/390493)
+[inspiration](https://stackoverflow.com/a/18329835/390493)
 
 
 ### Shared Repo flow
@@ -131,7 +131,7 @@ android {
 **`WARN`: This flow will only work if you have `gradle daemon` DISABLED, otherwise `System.console()` will be `null`, and
 your script will crash. You can overcome this using `SwingBuilder` library, and [here's how](https://www.timroes.de/2014/01/19/using-password-prompts-with-gradle-build-files/).**
 
-[inspiration](http://stackoverflow.com/a/19130098/390493)
+[inspiration](https://stackoverflow.com/a/19130098/390493)
 
 
 ### Awesome flow

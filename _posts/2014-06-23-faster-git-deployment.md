@@ -8,7 +8,7 @@ category: tricks
 
 **This trick let's you push to two repositories with one command.** It is great for projects that need really rapid development and aren't yet populated by many users. Before using make sure that **deploying with every `git push`** will not result with _catastrophic consequences_.
 
-I assume [Github](http://github.com) for version control and [Heroku](http://heroku.com) for hosting, but it works with any remote [Git](http://git-scm.com/) repository and [Cloud Platform](http://www.tomsitpro.com/articles/paas-providers,1-1517.html) offering deployment by git.
+I assume [Github](https://github.com) for version control and [Heroku](https://heroku.com) for hosting, but it works with any remote [Git](https://git-scm.com/) repository and [Cloud Platform](https://goo.gl/O6ikUq) offering deployment by git.
 
 First, repo needs to be created:
 

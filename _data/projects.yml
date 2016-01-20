@@ -68,7 +68,7 @@
   status: Concluded
   rows: 3
   rowsMd: 3
-  description: A minimalistic design of my business card created in <a hrey="https://itunes.apple.com/us/app/sketch-3/id852320343?mt=12">Sketch&nbsp;3</a>.
+  description: A minimalistic design of my business card created in <a href="https://itunes.apple.com/us/app/sketch-3/id852320343?mt=12">Sketch&nbsp;3</a>.
   id: business-card
   buttons:
     - label: pdf
@@ -191,7 +191,7 @@
   buttons:
     - label: Google Play
       icon: google-play
-      url: http://play.google.com/store/apps/details?id=pl.cropp
+      url: https://play.google.com/store/apps/details?id=pl.cropp
 
 - title: Plus Day
   image: /res/plus_day_cover.png
@@ -254,7 +254,7 @@
   buttons:
     - label: web
       icon: web
-      url: http://devcollective.io/
+      url: https://devcollective.io/
 
 - title: Tags
   video: /res/tags_tc_demo.mp4
@@ -262,7 +262,7 @@
   type: android
   status: Frozen
   id: tags-notes
-  description: Video above is teammate presenting the project on <a href="http://techcrunch.com/events/disrupt-europe-berlin-2013/event-home/">TechCrunch Disrupt Europe</a>.
+  description: Video above is teammate presenting the project on <a href="https://goo.gl/Efx6sI" data-href="http://techcrunch.com/events/disrupt-europe-berlin-2013/event-home/">TechCrunch Disrupt Europe</a>.
   rows: 3
   rowsMd: 3
   rowsSm: 3
@@ -345,7 +345,7 @@
 
 - title: This Blog
   status: In&nbsp;Progress
-  description: Yup, the very website you're looking at now. It's built using <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>, <a target="_blank" href="https://pages.github.com/">Github Pages</a>, <a target="_blank" href="https://www.cloudflare.com">Cloud Flare</a>, <a target="_blank" href="https://domains.google.com">Google Domains</a>, <a target="_blank" href="http://www.getmdl.io/">Material Design Lite</a>, <a target="_blank" href="https://material.angularjs.org">Angular Material</a> and <a target="_blank" href="https://materialdesignicons.com/">Material Design Icons Webfont</a>. Inspired by <a target="_blank" href="http://bernardopacheco.net/">Bernardo Pacheco Blog</a>.
+  description: Yup, the very website you're looking at now. It's built using <a target="_blank" href="https://jekyllrb.com/">Jekyll</a>, <a target="_blank" href="https://pages.github.com/">Github Pages</a>, <a target="_blank" href="https://www.cloudflare.com">Cloud Flare</a>, <a target="_blank" href="https://domains.google.com">Google Domains</a>, <a target="_blank" href="https://www.getmdl.io/">Material Design Lite</a>, <a target="_blank" href="https://material.angularjs.org">Angular Material</a> and <a target="_blank" href="https://materialdesignicons.com/">Material Design Icons Webfont</a>. Inspired by <a target="_blank" href="https://goo.gl/c81Isg">Bernardo Pacheco Blog</a>.
   id: this-blog
   rows: 3
   rowsMd: 3

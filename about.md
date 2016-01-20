@@ -82,7 +82,7 @@ Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitc
 [intj]: https://www.linkedin.com/pulse/5-reasons-intjs-best-employees-penelope-trunk
 [mensa]: https://www.mensa.org/
 [agi]: https://en.wikipedia.org/wiki/Artificial_general_intelligence
-[asi]: http://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html
+[asi]: https://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html
 [bc]: https://en.bitcoin.it/wiki/Block_chain
 [mesh]: https://en.wikipedia.org/wiki/Mesh_networking
 [r]: https://en.wikipedia.org/wiki/R_(programming_language)
@@ -95,22 +95,22 @@ Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitc
 [atom]: https://atom.io/
 [bitcoin]: https://github.com/bitcoin/bitcoin
 [cloudflare]: https://www.cloudflare.com/
-[coffee]: http://coffeescript.org/
-[iced]: http://maxtaco.github.io/coffee-script/
+[coffee]: https://goo.gl/9243VU
+[iced]: https://maxtaco.github.io/coffee-script/
 [firebase]: https://www.firebase.com/
 [geny]: https://www.genymotion.com/#!/
 [gh-pages]: https://pages.github.com/
 [gae]: https://cloud.google.com/appengine/
-[gulp]: http://gulpjs.com/
-[jade]: http://jade-lang.com/
-[es6]: http://es6-features.org/
-[mdl]: http://www.getmdl.io/
+[gulp]: https://goo.gl/YOmd3s
+[jade]: https://goo.gl/7Tp9z0
+[es6]: https://goo.gl/9MOQ28
+[mdl]: https://www.getmdl.io/
 [meteor]: https://www.meteor.com/
-[mongoose]: http://mongoosejs.com/
+[mongoose]: https://goo.gl/hCne1O
 [npm]: https://www.npmjs.com/~meedamian
 [parse]: https://www.parse.com/
 [travis]: https://travis-ci.org/
-[yo]: http://yeoman.io/
+[yo]: https://goo.gl/505aDq
 
 <!-- Contact -->
 [hang_]: https://calendly.com/meedamian/30min

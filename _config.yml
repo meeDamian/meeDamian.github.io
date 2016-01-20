@@ -21,5 +21,5 @@ sass:
 
 paginate: 3
 paginate_path: "/page/:num"
-permalink: /post/:title
+permalink: /post/:title/
 exclude: [README.md, Gemfile.lock, Gemfile, script, vendor]

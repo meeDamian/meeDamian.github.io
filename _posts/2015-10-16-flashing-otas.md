@@ -8,22 +8,22 @@ category: guide
 
 #### Mandatory intro
 
-OTA stands for _Over The Air_. Those update files are usually delivered wirelessly directly to your device, but as it usually happens gradually, you might get your update couple of days, weeks or even months after the rollout starts. Luckily there are ways to accelerate that process. Among all the people who get OTAs first there usually is couple of people willing to manually extract them from their device, and share with others on websites like  [Android Police](http://www.androidpolice.com/?s=ota%20roundup).
+OTA stands for _Over The Air_. Those update files are usually delivered wirelessly directly to your device, but as it usually happens gradually, you might get your update couple of days, weeks or even months after the rollout starts. Luckily there are ways to accelerate that process. Among all the people who get OTAs first there usually is couple of people willing to manually extract them from their device, and share with others on websites like  [Android Police](https://goo.gl/pdM99T).
 
 
 #### Before you start
 
 You need to figure out 4 things:
 
-* How to [enable adb debbuging](http://developer.android.com/tools/help/adb.html#Enabling) on your handheld,
+* How to [enable adb debbuging](https://developer.android.com/tools/help/adb.html#Enabling) on your handheld,
 * How to [install adb](https://goo.gl/G46pWq) on your computer,
-* What's [your **Device Name**](http://forum.xda-developers.com/wiki/Google/Device_Codenames) and
+* What's [your **Device Name**](https://goo.gl/ck5t1y) and
 * What's the Build number you're currently on (Settings ⇨ About Phone/Tablet ⇨ **Build number**).
 
 
 ### Make sure everything matches
 
-After you [download your OTA](http://www.androidpolice.com/?s=ota%20roundup) you'll have a file like that:
+After you [download your OTA](https://goo.gl/FWDKvO) you'll have a file like that:
 
 ```bash
 $ <irrelevant-characters>.signed-<DeviceName>-<yourBuildNumber>-from-<newBuildNumber>.zip

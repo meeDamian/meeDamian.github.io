@@ -33,7 +33,7 @@ projects: true
             {% if project.video %}
               <video class="cover" src="{{project.video}}" poster="{{project.image}}"></video>
             {% elsif project.image %}
-              <img class="cover" src="{{project.image}}"{% if project.imgTitle %} title="{{project.imgTitle}}"{% endif %}/>
+              <img class="cover" src="{{project.image}}" alt="{{project.title}}"{% if project.imgTitle %} title="{{project.imgTitle}}"{% endif %}/>
             {% endif %}
             <h3>{% if project.type %}<i class="mdi mdi-{{project.type}}"></i>&nbsp;{% endif %}{{project.title}}</h3>
             <p>{% if project.description %}{{project.description}}{% else %}{{project.status}}{% endif %}</p>

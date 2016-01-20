@@ -35,7 +35,7 @@ And replacing all `project.VARIABLE` occurunces with `safeGet('VARIABLE')`. Use 
 
 **NOTE:** Variable name is **quoted** in a function call.
 
-That little trick disables [instacrash™](http://www.urbandictionary.com/define.php?term=Instacrash) functionality on the gradle part.
+That little trick disables [instacrash™](https://www.urbandictionary.com/define.php?term=Instacrash) functionality on the gradle part.
 
 
 #### Extracting _secret_ variables
