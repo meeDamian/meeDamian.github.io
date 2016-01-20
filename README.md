@@ -1,6 +1,6 @@
 # meeDamian.com
 
-[![Build Status](https://travis-ci.org/chester1000/chester1000.github.io.svg)](https://travis-ci.org/chester1000/chester1000.github.io)
+[![Build Status](https://travis-ci.org/chester1000/chester1000.github.io.svg)](https://travis-ci.org/chester1000/chester1000.github.io) [ ![Codeship Status for chester1000/chester1000.github.io](https://codeship.com/projects/d4c0eee0-7448-0132-b63a-2aca0eeadc1e/status?branch=master)](https://codeship.com/projects/55006)
 
 
 ## FAQ
