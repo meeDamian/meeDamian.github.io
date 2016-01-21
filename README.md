@@ -10,11 +10,12 @@
 **Yes**, everything is under [MIT licence](LICENCE.md).
 
 
-#### How do I even run it?
+#### How do I run/test it?
 
     $ git clone git@github.com:chester1000/chester1000.github.io.git
     $ bundle install
-    $ bundle exec jekyll serve
+    $ bundle exec jekyll serve  # to run
+    $ ./script/test             # to test
 
 
 #### How do I book mentoring sessions with you?
