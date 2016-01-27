@@ -45,11 +45,17 @@
       icon: github-circle
       url: https://github.com/chester1000/phonetics
 
-- title: Grant You
-  type: android
+- title: CLI Search
+  type: console
   status: Past
-  description: A pilot app simplifing the process of finding suitable grants and schoolarships for Danish citizens. Distributed independly from the Play Store.
-  id: grant-you
+  description: CLI tool to launch Google Search in the default browser
+  id: google-search-cli
+  buttons:
+    - label: Github
+      icon: github-circle
+      url: https://github.com/chester1000/google-search-cli
+    - label: npm
+      url: https://www.npmjs.com/package/google-search-cli
 
 - title: Lamassu Server
   type: language-javascript
@@ -327,6 +333,12 @@
     - label: Github
       icon: github-circle
       url: https://github.com/chester1000/Weather-Happy
+
+- title: Grant You
+  type: android
+  status: Past
+  description: A pilot app simplifing the process of finding suitable grants and schoolarships for Danish citizens. Distributed independly from the Play Store.
+  id: grant-you
 
 - title: JS Flows
   status: Concluded
