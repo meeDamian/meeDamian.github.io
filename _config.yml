@@ -1,3 +1,6 @@
+gems:
+  - jekyll-paginate
+
 author:
   name: Damian Mee
   phone: '+886909377026'
@@ -11,10 +14,11 @@ repo:
 url: https://meeDamian.com
 enforce_ssl: meeDamian.com
 
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: [with_toc_data, tables]
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 
 sass:
   style: compressed
