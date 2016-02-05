@@ -174,6 +174,6 @@ public class MainState extends BaseObservable {
 > #### Complete source code available [here<sup><i class="mdi mdi-github-circle"></i></sup>][source-gh] or [here<sup><i class="mdi mdi-folder-download"></i></sup>][source-dl].
 
 [binding-guide]: https://developer.android.com/tools/data-binding/guide.html
-[source-gh]: https://github.com/chester1000/Two-Way-Data-Binding
-[source-dl]: https://github.com/chester1000/Two-Way-Data-Binding/archive/master.zip
+[source-gh]: https://github.com/meeDamian/Two-Way-Data-Binding
+[source-dl]: https://github.com/meeDamian/Two-Way-Data-Binding/archive/master.zip
 [app-looks]: /post-content/2way-db.png

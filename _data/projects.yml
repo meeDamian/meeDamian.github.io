@@ -14,7 +14,7 @@
       url: https://play.google.com/store/apps/details?id=pl.d30.binClock
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/Pretty-Binary-Clock
+      url: https://github.com/meeDamian/Pretty-Binary-Clock
 
 - title: Net Tester
   type: console
@@ -24,10 +24,10 @@
   buttons:
     - label: Web
       icon: web
-      url: https://meedamian.com/net-test/
+      url: https://meeDamian.com/net-test/
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/net-test
+      url: https://github.com/meeDamian/net-test
 
 - title: Phonetics
   image: /res/phonetics_cover.png
@@ -40,10 +40,10 @@
   buttons:
     - label: Web
       icon: web
-      url: https://meedamian.com/phonetics/
+      url: https://meeDamian.com/phonetics/
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/phonetics
+      url: https://github.com/meeDamian/phonetics
 
 - title: CLI Search
   type: console
@@ -53,7 +53,7 @@
   buttons:
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/google-search-cli
+      url: https://github.com/meeDamian/google-search-cli
     - label: npm
       url: https://www.npmjs.com/package/google-search-cli
 
@@ -79,10 +79,10 @@
   buttons:
     - label: pdf
       icon: download
-      url: https://github.com/chester1000/business-card/raw/master/lines.pdf
+      url: https://github.com/meeDamian/business-card/raw/master/lines.pdf
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/business-card
+      url: https://github.com/meeDamian/business-card
 
 - title: Big Text
   image: /res/big_text_cover.png
@@ -98,7 +98,7 @@
   buttons:
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/BigText
+      url: https://github.com/meeDamian/BigText
 
 - title: Rakía
   type: android
@@ -124,7 +124,7 @@
   buttons:
     - label: Google Play
       icon: google-play
-      url: https://play.google.com/store/apps/details?id=com.meedamian.twitterlists
+      url: https://play.google.com/store/apps/details?id=com.meeDamian.twitterlists
 
 - title: Ozora Countdown
   type: android
@@ -137,7 +137,7 @@
       url: https://play.google.com/store/apps/details?id=pl.d30.ozora
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/ozoraApp
+      url: https://github.com/meeDamian/ozoraApp
 
 - title: BTC DashClock Monitor
   type: android
@@ -150,7 +150,7 @@
       url: https://play.google.com/store/apps/details?id=pl.d30.bitcoin
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/BitcoinMonitor
+      url: https://github.com/meeDamian/BitcoinMonitor
 
 - title: Auto-Resize TextView
   type: android
@@ -160,7 +160,7 @@
   buttons:
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/AutoResizeTextView
+      url: https://github.com/meeDamian/AutoResizeTextView
 
 - title: Good Fucking Design Advice
   type: android
@@ -173,7 +173,7 @@
       url: https://play.google.com/store/apps/details?id=com.meeDamian.designAdvice
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/Good-Fucking-Design-Advice-Android
+      url: https://github.com/meeDamian/Good-Fucking-Design-Advice-Android
 
 - title: Dvorak Keyboard Layout
   type: apple
@@ -184,10 +184,10 @@
   buttons:
     - label: what?
       icon: keyboard
-      url: https://github.com/chester1000/dvorak-programmer/blob/master/mac/Dvorak%20-%20Programmer's%20(Polish%2C%20ISO).pdf
+      url: https://github.com/meeDamian/dvorak-programmer/blob/master/mac/Dvorak%20-%20Programmer's%20(Polish%2C%20ISO).pdf
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/dvorak-programmer
+      url: https://github.com/meeDamian/dvorak-programmer
 
 - title: Cropp Mobile
   type: android
@@ -238,7 +238,7 @@
       url: https://chrome.google.com/webstore/detail/btc-address-monitor/cneciocfhifeoejglgkjmnjcpgdgioji
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/chrome-bitcoin-monitor
+      url: https://github.com/meeDamian/chrome-bitcoin-monitor
 
 - title: BTC Loan
   status: Past
@@ -284,7 +284,7 @@
       url: https://chrome.google.com/webstore/detail/g+-profile-link-fix/ajjoapnmpgnoemaepmjkkdlelgdddnch
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/google-plus-profile-link-fixer
+      url: https://github.com/meeDamian/google-plus-profile-link-fixer
 
 - title: Simple.meet
   status: Frozen
@@ -305,7 +305,7 @@
       url: https://chrome.google.com/webstore/detail/tabs-butcher/ofclkefgijcdjfilhhgdfabpdlcjogce
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/Tabs-Butcher
+      url: https://github.com/meeDamian/Tabs-Butcher
 
 - title: Coinbase BTC price ticker
   description: Configurable Chrome extension showing current BTC price from Coinbase. Also available for <a href="https://chrome.google.com/webstore/detail/kraken-btc-price/hbhnkankpgganmfflohdjjaiclgleocc" target="_blank">Kraken</a> and <a href="https://chrome.google.com/webstore/detail/btcchina-btc-price/aocobngnigfikpncfonplfgfmdihfoco" target="_blank">BTC China</a>.
@@ -318,7 +318,7 @@
       url: https://chrome.google.com/webstore/detail/coinbase-btc-price/fmibcmmnjijbkmohmicihncfmpbojcgo
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/coinbase-btc-price
+      url: https://github.com/meeDamian/coinbase-btc-price
 
 - title: Weather Happy
   image: /res/weather_happy_cover.png
@@ -332,7 +332,7 @@
   buttons:
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/Weather-Happy
+      url: https://github.com/meeDamian/Weather-Happy
 
 - title: Grant You
   type: android
@@ -350,10 +350,10 @@
   buttons:
     - label: Web
       icon: web
-      url: https://meedamian.com/js-flows/
+      url: https://meeDamian.com/js-flows/
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/js-flows
+      url: https://github.com/meeDamian/js-flows
 
 - title: This Blog
   status: In&nbsp;Progress
@@ -367,4 +367,4 @@
       url: refresh
     - label: Github
       icon: github-circle
-      url: https://github.com/chester1000/chester1000.github.io
+      url: https://github.com/meeDamian/meeDamian.github.io

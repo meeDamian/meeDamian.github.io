@@ -14,13 +14,13 @@ First, repo needs to be created:
 
 ```bash
 $ git init
-$ git remote add origin git@github.com:chester1000/meeDamian.com.git
+$ git remote add origin git@github.com:meeDamian/meeDamian.github.io.git
 ```
 
 **or** cloned:
 
 ```
-$ git clone git@github.com:chester1000/meeDamian.com.git
+$ git clone git@github.com:meeDamian/meeDamian.github.io.git
 ```
 
 Second, add heroku remote:
@@ -32,16 +32,16 @@ $ git remote set-url origin --push --add git@heroku.com:meedamian-com.git
 Previous command **replaces Github's push remote**. To re-add it:
 
 ```bash
-$ git remote set-url origin --push --add git@github.com:chester1000/meeDamian.com.git
+$ git remote set-url origin --push --add git@github.com:meeDamian/meeDamian.github.io.git
 ```
 
 If everything went well you should get something like this:
 
 ```bash
 $ git remote -v
-origin  git@github.com:chester1000/meeDamian.com.git (fetch)
+origin  git@github.com:meeDamian/meeDamian.github.io.git (fetch)
 origin  git@heroku.com:meedamian-com.git (push)
-origin  git@github.com:chester1000/meeDamian.com.git (push)
+origin  git@github.com:meeDamian/meeDamian.github.io.git (push)
 
 ```
 

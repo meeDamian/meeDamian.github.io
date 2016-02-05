@@ -4,11 +4,11 @@ gems:
 author:
   name: Damian Mee
   phone: '+886909377026'
-  github: chester1000
+  github: meedamian
   username: meeDamian
 
 repo:
-  name: chester1000.github.io
+  name: meedamian.github.io
   branch: master
 
 url: https://meeDamian.com

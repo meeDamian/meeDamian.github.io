@@ -14,7 +14,7 @@ like this:
 ![Android Studio generate wizard](/post-content/publishing-with-gradle/generate-wizard.png)
 
 So, you can imagine my surprise when [this happened](https://plus.google.com/+MaurycyDamianWasilewski/posts/hD7BhwN1cH5)
-(if you can't access this link [click here](https://github.com/chester1000/chester1000.github.io/blob/master/post-content/publishing-with-gradle/this-happened.png)).
+(if you can't access this link [click here](https://github.com/meeDamian/meeDamian.github.io/blob/master/post-content/publishing-with-gradle/this-happened.png)).
 It was unexpected, but pushed me to learn more about [Gradle](https://gradle.org/) build system. At first **gradle**
 docs seemed really overwhelming, because they were covering so much more than only publishing production builds (more
 about that in my future posts).

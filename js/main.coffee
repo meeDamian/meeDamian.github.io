@@ -3,7 +3,7 @@
 'use strict'
 
 # Get stats from Github
-mee = 'chester1000'
+mee = 'meeDamian'
 
 console.info "It's a lot easier to see the source code here:", "https://github.com/" + mee + "/" + mee + ".github.io"
 

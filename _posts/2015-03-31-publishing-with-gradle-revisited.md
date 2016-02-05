@@ -254,9 +254,9 @@ It appears that it's a wider topic and I'll address it in a next post. (But if y
 
 Since originally published this article was edited:
 
-1. [Auto-increment improvements](https://github.com/chester1000/meeDamian.com/commit/c50aad0a72dfef23e2f5cac6bef6ff3cd4f39f2b)
+1. [Auto-increment improvements](https://github.com/meeDamian/meeDamian.github.io/commit/c50aad0a72dfef23e2f5cac6bef6ff3cd4f39f2b)
 
-2. [`safeGetFile()` fn introduced and `getBuildVersion()` calls fixed](https://github.com/chester1000/meeDamian.com/commit/f0c5ddf2efa7e4c6b5c16aa7d5ae91feed3e03d2)
+2. [`safeGetFile()` fn introduced and `getBuildVersion()` calls fixed](https://github.com/meeDamian/meeDamian.github.io/commit/f0c5ddf2efa7e4c6b5c16aa7d5ae91feed3e03d2)
 
 
 > And that's it. **Here's a [complete version](https://goo.gl/LNyhfj) again.**

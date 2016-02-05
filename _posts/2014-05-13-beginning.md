@@ -38,7 +38,7 @@ tried _friending_ it with [express](https://goo.gl/QEDybS) v4.x, where `app.loca
 [is no longer a function](https://github.com/visionmedia/express/wiki/Migrating-from-3.x-to-4.x#reslocals), and I had to
 handle it [like this](https://github.com/jsantell/poet/pull/88/files) (I've used [underscore](https://goo.gl/3uWyd6),
 only because it was already `require`d there). As I didn't wanted to wait for someone to merge my PR, I decided to
-[link to own repo](https://github.com/chester1000/meeDamian.com/blob/cf8c24355dce30b395ca790718fcd84815b4323b/package.json#L12)
+[link to own repo](https://github.com/meeDamian/meeDamian.github.io/blob/cf8c24355dce30b395ca790718fcd84815b4323b/package.json#L12)
 in `package.json`.
 
 After that express hit me with a lot of structure changes - they've [decided to move a lot of stuff out](https://github.com/senchalabs/connect#middleware)
