@@ -6,7 +6,7 @@ tags: [android, gradle, android studio, apk]
 category: advice
 ---
 
-> **tl;wr:** use [this](https://goo.gl/LNyhfj).
+> **tl;wr:** use [this](https://goo.gl/mwtibx).
 
 #### Paragraph that everybody will ignore
 
@@ -259,4 +259,4 @@ Since originally published this article was edited:
 2. [`safeGetFile()` fn introduced and `getBuildVersion()` calls fixed](https://github.com/meeDamian/meeDamian.github.io/commit/f0c5ddf2efa7e4c6b5c16aa7d5ae91feed3e03d2)
 
 
-> And that's it. **Here's a [complete version](https://goo.gl/LNyhfj) again.**
+> And that's it. **Here's a [complete version](https://goo.gl/mwtibx) again.**
