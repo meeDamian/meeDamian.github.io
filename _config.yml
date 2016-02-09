@@ -1,5 +1,7 @@
 gems:
   - jekyll-paginate
+  - jekyll-coffeescript
+  - jekyll-mentions
 
 author:
   name: Damian Mee

@@ -7,13 +7,13 @@
       for="share-{{include.date | date: "%Y%m%d"}}">
 
     <li class="mdl-menu__item"
-    onclick="properShare('https://plus.google.com/share?url={{site.url | append:include.url | encodeURIComponent}}', 600, 600)">
+    onclick="properShare('https://plus.google.com/share?url={{site.url | append:include.url}}', 600, 600)">
       <i class="mdi mdi-google-plus"></i>
       <span>Share...</span>
     </li>
 
     <li class="mdl-menu__item"
-      onclick="properShare('https://twitter.com/intent/tweet?via={{site.author.username}}&url={{site.url | append:include.url | encodeURIComponent}}', 300, 600)">
+      onclick="properShare('https://twitter.com/intent/tweet?via={{site.author.username}}&url={{site.url | append:include.url}}', 300, 600)">
       <i class="mdi mdi-twitter"></i>
       <span>Tweet...</span>
     </li>
