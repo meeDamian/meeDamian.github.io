@@ -16,6 +16,23 @@
       icon: github-circle
       url: https://github.com/meeDamian/Pretty-Binary-Clock
 
+- title: Toggl CLI
+  image: /res/toggl-cli.png
+  description: Toggl.com utility tool to manage Time Entries from Terminal.
+  type: console
+  status: In&nbsp;Progress
+  id: toggl-cli
+  rows: 3
+  rowsMd: 3
+  rowsSm: 3
+  buttons:
+    - label: Github
+      icon: github-circle
+      url: https://github.com/meeDamian/toggl-cli
+    - label: npm
+      url: https://www.npmjs.com/package/toggl-cli
+
+
 - title: Net Tester
   type: console
   description: OSX CLI utility that gathers basic hotspot info (SSID, geo-location, DL/UP speed and ping) and submits it for other DNs to see.
@@ -45,30 +62,6 @@
       icon: github-circle
       url: https://github.com/meeDamian/phonetics
 
-- title: CLI Search
-  type: console
-  status: Past
-  description: CLI tool to launch Google Search in the default browser
-  id: google-search-cli
-  buttons:
-    - label: Github
-      icon: github-circle
-      url: https://github.com/meeDamian/google-search-cli
-    - label: npm
-      url: https://www.npmjs.com/package/google-search-cli
-
-- title: Lamassu Server
-  type: language-javascript
-  status: Significant Contributions
-  description: I designed, implemented and documented a universal API for plugins, among other things.
-  id: lamassu-server
-  buttons:
-    - label: npm
-      url: https://www.npmjs.com/package/lamassu-server
-    - label: Github
-      icon: github-circle
-      url: https://github.com/lamassu/lamassu-server
-
 - title: Business Card
   image: /res/lines.png
   status: Concluded
@@ -83,6 +76,24 @@
     - label: Github
       icon: github-circle
       url: https://github.com/meeDamian/business-card
+
+- title: Lamassu Server
+  type: language-javascript
+  status: Significant Contributions
+  description: I designed, implemented and documented a universal API for plugins, among other things.
+  id: lamassu-server
+  buttons:
+    - label: npm
+      url: https://www.npmjs.com/package/lamassu-server
+    - label: Github
+      icon: github-circle
+      url: https://github.com/lamassu/lamassu-server
+
+- title: Rakía
+  type: android
+  status: Past
+  description: A concept app presenting how to simplify User ⇄ Bitcoin ATM interacitons.
+  id: raqia
 
 - title: Big Text
   image: /res/big_text_cover.png
@@ -99,12 +110,6 @@
     - label: Github
       icon: github-circle
       url: https://github.com/meeDamian/BigText
-
-- title: Rakía
-  type: android
-  status: Past
-  description: A concept app presenting how to simplify User ⇄ Bitcoin ATM interacitons.
-  id: raqia
 
 - title: Lamassu Plugins
   type: language-javascript
@@ -144,6 +149,7 @@
   status: Concluded
   description: A <a href="https://play.google.com/store/apps/details?id=net.nurik.roman.dashclock">DashClock Widget</a> plugin showing Bitcoin and Litecoin price from selected cryptocurrency exchanges, as well as arbitrage opportunities between them.
   id: btc-dash-monitor
+  rowsMd: 3
   buttons:
     - label: Google Play
       icon: google-play
@@ -198,6 +204,18 @@
     - label: Google Play
       icon: google-play
       url: https://play.google.com/store/apps/details?id=pl.cropp
+
+- title: CLI Search
+  type: console
+  status: Past
+  description: CLI tool to launch Google Search in the default browser
+  id: google-search-cli
+  buttons:
+    - label: Github
+      icon: github-circle
+      url: https://github.com/meeDamian/google-search-cli
+    - label: npm
+      url: https://www.npmjs.com/package/google-search-cli
 
 - title: Plus Day
   image: /res/plus_day_cover.png
