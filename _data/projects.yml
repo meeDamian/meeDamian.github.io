@@ -18,7 +18,7 @@
 
 - title: Toggl CLI
   image: /res/toggl-cli.png
-  description: Toggl.com utility tool to manage Time Entries from Terminal.
+  description: <a href="https://toggl.com">Toggl.com</a> utility tool to manage Time Entries from a Terminal.
   type: console
   status: In&nbsp;Progress
   id: toggl-cli
@@ -144,43 +144,6 @@
       icon: github-circle
       url: https://github.com/meeDamian/ozoraApp
 
-- title: BTC DashClock Monitor
-  type: android
-  status: Concluded
-  description: A <a href="https://play.google.com/store/apps/details?id=net.nurik.roman.dashclock">DashClock Widget</a> plugin showing Bitcoin and Litecoin price from selected cryptocurrency exchanges, as well as arbitrage opportunities between them.
-  id: btc-dash-monitor
-  rowsMd: 3
-  buttons:
-    - label: Google Play
-      icon: google-play
-      url: https://play.google.com/store/apps/details?id=pl.d30.bitcoin
-    - label: Github
-      icon: github-circle
-      url: https://github.com/meeDamian/BitcoinMonitor
-
-- title: Auto-Resize TextView
-  type: android
-  status: In&nbsp;Progress
-  description: A library to produce the biggest text devices' screen can handle.
-  id: artv
-  buttons:
-    - label: Github
-      icon: github-circle
-      url: https://github.com/meeDamian/AutoResizeTextView
-
-- title: Good Fucking Design Advice
-  type: android
-  status: Concluded
-  description: Because sometimes you have to put your fucking soul in your designs.
-  id: gfda
-  buttons:
-    - label: Google Play
-      icon: google-play
-      url: https://play.google.com/store/apps/details?id=com.meeDamian.designAdvice
-    - label: Github
-      icon: github-circle
-      url: https://github.com/meeDamian/Good-Fucking-Design-Advice-Android
-
 - title: Dvorak Keyboard Layout
   type: apple
   status: Concluded
@@ -195,11 +158,53 @@
       icon: github-circle
       url: https://github.com/meeDamian/dvorak-programmer
 
+- title: Good Fucking Design Advice
+  type: android
+  status: Concluded
+  image: /res/gfda.png
+  description: Because sometimes you have to put your fucking soul in your designs.
+  id: gfda
+  cols: 4
+  rows: 5
+  rowsMd: 5
+  rowsSm: 3
+  buttons:
+    - label: Google Play
+      icon: google-play
+      url: https://play.google.com/store/apps/details?id=com.meeDamian.designAdvice
+    - label: Github
+      icon: github-circle
+      url: https://github.com/meeDamian/Good-Fucking-Design-Advice-Android
+
+- title: Auto-Resize TextView
+  type: android
+  status: In&nbsp;Progress
+  description: A library to produce the biggest text devices' screen can handle.
+  id: artv
+  buttons:
+    - label: Github
+      icon: github-circle
+      url: https://github.com/meeDamian/AutoResizeTextView
+
+- title: BTC DashClock Monitor
+  type: android
+  status: Concluded
+  description: A <a href="https://play.google.com/store/apps/details?id=net.nurik.roman.dashclock">DashClock Widget</a> plugin showing Bitcoin and Litecoin price from selected cryptocurrency exchanges, as well as arbitrage opportunities between them.
+  id: btc-dash-monitor
+  rowsMd: 3
+  buttons:
+    - label: Google Play
+      icon: google-play
+      url: https://play.google.com/store/apps/details?id=pl.d30.bitcoin
+    - label: Github
+      icon: github-circle
+      url: https://github.com/meeDamian/BitcoinMonitor
+
 - title: Cropp Mobile
   type: android
   status: Concluded
   id: cropp-mobile
-  description: Can't say this app didn't have many users. Can't say I was proud of it either.
+  description: A mobile app for a big polish clothing company.
   buttons:
     - label: Google Play
       icon: google-play
