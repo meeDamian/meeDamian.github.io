@@ -2,6 +2,7 @@ gems:
   - jekyll-paginate
   - jekyll-coffeescript
   - jekyll-mentions
+  - jekyll-redirect-from
 
 author:
   name: Damian Mee

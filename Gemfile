@@ -8,6 +8,7 @@ gem 'github-pages', versions['github-pages']
 gem 'jekyll-paginate'
 gem 'jekyll-mentions'
 gem 'jekyll-coffeescript'
+gem 'jekyll-redirect-from'
 gem 'rouge'
 
 gem 'html-proofer'
