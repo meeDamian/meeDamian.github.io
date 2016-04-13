@@ -6,7 +6,7 @@ tags: [keybase, git, commit, pgp, security]
 category: guide
 ---
 
-![screenshot-main](/post-content/keybase-signed-github/signed-commits.png)
+![screenshot-main][img-signed-commits]
 
 ##### Signing git commits has been a great idea since forever. A  great _unpopular_ idea. Luckily, that changes with the recent Github [announcement][gh-gpg-signatures]. This is a quick guide on how to set it up with your [keybase.io][keybase] account.
 
@@ -28,9 +28,9 @@ The more of your online identities you add the more trustworthy your profile bec
 
 #### Track people <small>(optional)</small>
 
-Tracking people makes their profiles more trustworthy, by providing an auditable proof of the authenticity of their identity. To understand more how it works, head [here][tracking].
+Tracking people makes their profiles more trustworthy, by providing an auditable authenticity proof of their identity. To understand more how it works, head [here][tracking].
 
-_"But whom should I track?"_, you might ask. and if you do, scroll down to [the handy list][keybase-list] that can get you started.
+_"But whom should I track?"_, you might ask puzzled. And if you do, scroll down to [the handy list][keybase-list] that can get you started.
 
 ### Keybase app
 
@@ -64,7 +64,7 @@ Once you're all set with your Keybase stuff, you need to teach your git how to c
 
 ### Get your key ID
 
-![screenshot-main](/post-content/keybase-signed-github/key-id.png)
+![screenshot-main][img-key-id]
 
 Either go to `https://keybase.io/<your-username>` and copy 8 last characters of your key fingerprint from there.
 
@@ -137,88 +137,80 @@ $ git config --global user.signingkey <key-id>
 
 All you commit now should be automagically signed with your Keybase key. If everything went well, you should see a "**Verified**" badge by all your new commits on Github.
 
-![](/post-content/keybase-signed-github/gh-tooltip.png)
+![Signed commit tooltip][img-gh-tooltip]
 
 
 ## People worth stalking <small>order by random</small>
 
-id|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|reason
+||
 :- | -- | :-
 [koush][@koush]                 | | Brilliant Android engineer, who [blocked his mom's number][koush-mom]
-[chris][@chris] & [max][@max]   | | Keybase is their baby. They met on [OkCupid][okcupid] (they also made it)
+[chris][@chris] & [max][@max]   | | They're to blame for Keybase and [OkCupid][okcupid]
 [vitalik][@vitalik]             | | The founder of [Ethereum][ethereum]
 [moot][@moot]                   | | All [4chan][4chan] posts are by him
 [codinghorror][@codinghorror]   | | Has a cool blog and founded [Stack Exchange][stack]
 [aikordek][@ai]                 | | Bitcoin & Startup girl
-[mpj][@mpj]                     | | Shares great [tweets][@mpj-twitter] and [videos][@mpj-yt]
+[mpj][@mpj]                     | | Shares great [tweets][mpj-twitter] and [videos][mpj-yt]
 [authy][@authy]                 | | The 2FA app you should be using instead of Google Authenticator
 [robpike][@rob]                 | | Co-creator of [Go][go]
-[sindresorhus][@sindresorhus]   | | He wrote [**all** npm packages][all-npm]
+[sindresorhus][@sindresorhus]   | | The guy who wrote [**all** npm packages][all-npm]
 [jakewharton][@jakewharton]     | | Cool Android dev
 [matthewdgreen][@matthewdgreen] | | He knows a lot of security thingies
 [oleganza][@oleganza]           | | Shares good UX and security content
-[meedamian][@meedamian]         | | best guy, ever
+[meedamian][@meedamian]         | | The original creator of this list
 
 
-## Cool future feature
+## KeyBase File System
 
-kbfs
-
-# TODO
-
-* write about kbfs
-* organize links neatly
-* improve stalk-list descriptions
+This one is quite off-topic, but I think it's amazing and worth including here. Keybase is working on a seamless, fully encrypted and synced `/keybase/{public,private}/` folder. Make sure to [check it out][kbfs]. If you need an invite [hit me up][email].
 
 
-[gh-gpg-signatures]: https://github.com/blog/2144-gpg-signature-verification
-[git-setup]: #git
-[email]: mailto:keybase@meedamian.com?subject=Keybase+invite
-[keybase]: https://keybase.io
-[tracking]: https://keybase.io/docs/server_security/tracking
+<!-- images -->
+[img-signed-commits]: /post-content/keybase-signed-github/signed-commits.png
+[img-key-id]:         /post-content/keybase-signed-github/key-id.png
+[img-gh-tooltip]:     /post-content/keybase-signed-github/gh-tooltip.png
+
+<!-- anchors-->
+[git-setup]:    #git
 [keybase-list]: #people-worth-stalking
 
-[install-mac]: https://keybase.io/docs/the_app/install_osx
-[install-linux]: https://keybase.io/docs/the_app/install_linux
-[install-more]: https://keybase.io/download
+<!-- URLs -->
+[gh-gpg-signatures]:  https://github.com/blog/2144-gpg-signature-verification
+[keybase]:            https://keybase.io
+[tracking]:           https://keybase.io/docs/server_security/tracking
+[install-mac]:        https://keybase.io/docs/the_app/install_osx
+[install-linux]:      https://keybase.io/docs/the_app/install_linux
+[install-more]:       https://keybase.io/download
+[github-keys]:        https://github.com/settings/keys
+[kbfs]:               https://keybase.io/docs/kbfs
 
-[github-keys]: https://github.com/settings/keys
+<!-- other -->
+[email]: mailto:keybase@meedamian.com?subject=Keybase+invite
 
-
-[@koush]: https://keybase.io/koush
-[koush-mom]: https://goo.gl/kOqc68
-
-[@chris]: https://keybase.io/chris
-[@max]: https://keybase.io/max
-[okcupid]: https://www.okcupid.com
-
-[@vitalik]: https://keybase.io/vbuterin
-[ethereum]: https://ethereum.org/
-
-[@moot]: https://keybase.io/moot
-[4chan]: https://www.4chan.org/
-
-[@codinghorror]: https://keybase.io/codinghorror
-[stack]: http://stackexchange.com
-
-[@ai]: https://keybase.io/aikordek
-
-[@mpj]: https://keybase.io/mpj
-[@mpj-yt]: https://www.youtube.com/c/mpjmevideos
-[@mpj-twitter]: https://twitter.com/mpjme
-
-[@authy]: https://keybase.io/authy
-
-[@rob]: https://keybase.io/robpike
-[go]: https://golang.org/
-
-[@sindresorhus]: https://keybase.io/sindresorhus
-[all-npm]: https://www.npmjs.com/~sindresorhus
-
-[@jakewharton]: https://keybase.io/jakewharton
-
+<!-- recommended users -->
+[@koush]:         https://keybase.io/koush
+[@chris]:         https://keybase.io/chris
+[@max]:           https://keybase.io/max
+[@vitalik]:       https://keybase.io/vbuterin
+[@moot]:          https://keybase.io/moot
+[@codinghorror]:  https://keybase.io/codinghorror
+[@ai]:            https://keybase.io/aikordek
+[@mpj]:           https://keybase.io/mpj
+[@authy]:         https://keybase.io/authy
+[@rob]:           https://keybase.io/robpike
+[@sindresorhus]:  https://keybase.io/sindresorhus
+[@jakewharton]:   https://keybase.io/jakewharton
 [@matthewdgreen]: https://keybase.io/matthewdgreen
+[@oleganza]:      https://keybase.io/oleganza
+[@meedamian]:     https://keybase.io/meedamian
 
-[@oleganza]: https://keybase.io/oleganza
-
-[@meedamian]: https://keybase.io/meedamian
+<!-- recommended user's links-->
+[koush-mom]:  https://goo.gl/kOqc68
+[okcupid]:    https://www.okcupid.com
+[ethereum]:   https://ethereum.org/
+[4chan]:      https://www.4chan.org/
+[mpj-twitter]:   https://twitter.com/mpjme
+[mpj-yt]:     https://www.youtube.com/c/mpjmevideos
+[stack]:      http://stackexchange.com
+[go]:         https://golang.org/
+[all-npm]:    https://www.npmjs.com/~sindresorhus
