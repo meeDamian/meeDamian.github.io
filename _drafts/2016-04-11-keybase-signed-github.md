@@ -142,7 +142,7 @@ All you commit now should be automagically signed with your Keybase key. If ever
 
 ## People worth stalking <small>order by random</small>
 
-||
+| | |
 :- | -- | :-
 [koush][@koush]                 | | Brilliant Android engineer, who [blocked his mom's number][koush-mom]
 [chris][@chris] & [max][@max]   | | They're to blame for Keybase and [OkCupid][okcupid]
