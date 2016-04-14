@@ -209,8 +209,8 @@ This one is quite off-topic, but I think it's amazing and worth including here. 
 [okcupid]:    https://www.okcupid.com
 [ethereum]:   https://ethereum.org/
 [4chan]:      https://www.4chan.org/
-[mpj-twitter]:   https://twitter.com/mpjme
+[mpj-twitter]:https://twitter.com/mpjme
 [mpj-yt]:     https://www.youtube.com/c/mpjmevideos
-[stack]:      http://stackexchange.com
+[stack]:      https://stackexchange.com
 [go]:         https://golang.org/
 [all-npm]:    https://www.npmjs.com/~sindresorhus
