@@ -140,7 +140,7 @@ All you commit now should be automagically signed with your Keybase key. If ever
 ![Signed commit tooltip][img-gh-tooltip]
 
 
-## People worth stalking <small>order by random</small>
+## People worth stalking
 
 ||||
 :-- | --- | :--
