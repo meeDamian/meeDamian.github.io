@@ -167,9 +167,9 @@ This one is quite off-topic, but I think it's amazing and worth including here. 
 
 
 <!-- images -->
-[img-signed-commits]: /post-content/keybase-signed-github/signed-commits.png
-[img-key-id]:         /post-content/keybase-signed-github/key-id.png
-[img-gh-tooltip]:     /post-content/keybase-signed-github/gh-tooltip.png
+[img-signed-commits]: /post-content/keybase-signed-github/signed-commits.png?1
+[img-key-id]:         /post-content/keybase-signed-github/key-id.png?1
+[img-gh-tooltip]:     /post-content/keybase-signed-github/gh-tooltip.png?1
 
 <!-- anchors-->
 [git-setup]:    #git
