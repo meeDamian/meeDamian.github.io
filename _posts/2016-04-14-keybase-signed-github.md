@@ -94,9 +94,9 @@ Once you're all set with your Keybase stuff, you need to teach your git how to c
 
 ### Get your key ID
 
-![screenshot-main][img-key-id]
+Go to `https://keybase.io/<your-username>` and copy 8 last characters of your key fingerprint from there.
 
-Either go to `https://keybase.io/<your-username>` and copy 8 last characters of your key fingerprint from there.
+![screenshot-main][img-key-id]
 
 Alternatively, run `gpg --list-keys`, and locate your keybase key on the list there, ex:
 
@@ -117,7 +117,9 @@ From there, copy your key ID (in the example above, it's `A809CB18`).
 
 ### Add email to your key <small>(optional)</small>
 
-If your key, for any reason, doesn't have any overlapping email addresses with your Github account, this step is necessary.
+If your key, for any reason¹, doesn't have any overlapping email addresses with your Github account, this step is necessary.
+
+¹<small> - Ex. you forgot to add it during key generation, or you have an old key that has `<your-username>@keybase.io` as an email</small>
 
 First, run:
 
