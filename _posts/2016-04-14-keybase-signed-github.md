@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Signing git commits using Keybase
-date: 2016-04-11
+date: 2016-04-14
 tags: [keybase, git, commit, pgp, security]
 category: guide
 ---
