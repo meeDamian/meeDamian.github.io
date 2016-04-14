@@ -44,8 +44,8 @@ Keybase really shines only when you also utilize its command line interface. GUI
 $ brew install keybase
 
 # 64-bit Debian:
-$ curl -O https://dist.keybase.io/linux/deb/keybase-latest-amd64.deb \
-&& sudo dpkg -i keybase-latest-amd64.deb
+$ curl -O https://dist.keybase.io/linux/deb/keybase-latest-amd64.deb && \
+  sudo dpkg -i keybase-latest-amd64.deb
 
 # Other
 ## All contributions welcome ;)
@@ -58,6 +58,35 @@ $ keybase login
 ```
 
 Follow the steps and make sure to **save your _paper wallet_ somewhere safe**.
+
+## Keys
+
+To make any of it possible you need your Keybase keys locally.
+
+### Public
+
+To import your public key just run:
+
+```shell
+# replace with your username where appropriate
+$ curl https://keybase.io/<your-username>/key.asc > keybase-public.key && \
+  gpg --import keybase-public.key && \
+  rm -f keybase-public.key
+```
+
+### Private
+
+Now it's time for the private key. Open your Keybase profile, and…
+
+![screenshot-main][img-export-key]
+
+Confirm password, copy everything from the popup and save it as ex. `keybase-private.key`.
+
+Then:
+
+```shell
+$ gpg --allow-secret-key-import --import keybase-private.key
+```
 
 ## Git
 
@@ -167,9 +196,10 @@ This one is quite off-topic, but I think it's amazing and worth including here. 
 
 
 <!-- images -->
-[img-signed-commits]: /post-content/keybase-signed-github/signed-commits.png?1
-[img-key-id]:         /post-content/keybase-signed-github/key-id.png?1
-[img-gh-tooltip]:     /post-content/keybase-signed-github/gh-tooltip.png?1
+[img-signed-commits]: /post-content/keybase-signed-github/signed-commits.png
+[img-export-key]:     /post-content/keybase-signed-github/export-key.png
+[img-key-id]:         /post-content/keybase-signed-github/key-id.png
+[img-gh-tooltip]:     /post-content/keybase-signed-github/gh-tooltip.png
 
 <!-- anchors-->
 [git-setup]:    #git
