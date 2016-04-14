@@ -3,6 +3,7 @@ gems:
   - jekyll-coffeescript
   - jekyll-mentions
   - jekyll-redirect-from
+  - jekyll-feed
 
 author:
   name: Damian Mee
