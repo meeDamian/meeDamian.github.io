@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Signing git commits using Keybase
-thumbnail: /post-content/keybase-signed-github/signed-commits.png
+thumbnail: /post-content/keybase-signed-github/signed-commits.png?thumb
 date: 2016-04-14
 tags: [keybase, git, commit, pgp, security]
 category: guide
