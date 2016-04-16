@@ -15,7 +15,7 @@ repo:
   name: meedamian.github.io
   branch: master
 
-url: https://meeDamian.com
+url: https://meedamian.com
 enforce_ssl: meeDamian.com
 
 highlighter: rouge
