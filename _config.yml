@@ -5,6 +5,14 @@ gems:
   - jekyll-redirect-from
   - jekyll-feed
 
+title: Damian Mee | Blog | Portfolio | About
+email: spam@meedamian.com
+description: >
+  I am a mobile developer building native apps for Android and websites
+  in Node.js; currently freelancing from…
+twitter_username: meeDamian
+github_username:  meeDamian
+
 author:
   name: Damian Mee
   phone: '+886909377026'
