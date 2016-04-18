@@ -69,9 +69,7 @@ To import your public key just run:
 
 ```shell
 # replace with your username where appropriate
-$ curl https://keybase.io/<your-username>/key.asc > keybase-public.key && \
-  gpg --import keybase-public.key && \
-  rm -f keybase-public.key
+$ curl https://keybase.io/<your-username>/key.asc | gpg --import
 ```
 
 ### Private
