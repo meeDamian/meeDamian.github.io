@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-### I am a mobile<sup><small><i id="i-mobile" class="info mdi mdi-information-outline"></i></small></sup> developer building **native apps** for **Android** and **websites** in **Node.js**; currently freelancing from **<a target="_blank" id="location" href="https://goo.gl/maps/NamBYKMgKU12">Taiwan</a>**<sup><small><i id="i-geo" class="info mdi mdi-information-outline"></i></small></sup>.
+### I am a mobile<sup><small><i id="i-mobile" class="info mdi mdi-information-outline"></i></small></sup> developer building **native apps** for **Android** and **servers** in **Node.js** and **Go**; currently freelancing from **<a target="_blank" id="location" href="https://goo.gl/maps/NamBYKMgKU12">Taiwan</a>**<sup><small><i id="i-geo" class="info mdi mdi-information-outline"></i></small></sup>.
 
 I am a minimalist, perfectionist and relativist. Always reliable internet tests diagnosed me as [INTJ-A][intj] and after solving enough logic charades I was invited to join [Mensa][mensa]. I am passionate about Futurism and all the technologies it will bring along. Being fascinated by the potential of [Artificial **Super** Intelligence][asi], I am curiously looking forward to witnessing the outcomes of [A.I.][agi] and [machine learning][machine] marriage. I am very drawn to decentralized technologies like [Blockchain][bc] or [Mesh Networks][mesh] and I am currently diving deeper into [R][r], [Go][go] and Machine Learning to teach my pet computer (and&nbsp;<span id="i-iot" class="info">_[internetted thingies][iot]_</span>) to play fetch.
 
@@ -15,7 +15,7 @@ I am a minimalist, perfectionist and relativist. Always reliable internet tests 
 
 #### Frequent guests at **my stack** party:
 
-Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [CloudFlare][cloudflare]¹, [Coffee Script][coffee]¹, [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku, [Jade][jade], Android Java, JavaScript, [ES6][es6], Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Parse][parse]¹, Polymer, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo].
+Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [CloudFlare][cloudflare]¹, [Coffee Script][coffee]¹, [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku, [Jade][jade], Android Java, JavaScript, [ES6][es6], Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Parse][parse]¹, Polymer, Postgres/PSQL, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo].
 
 <small>¹ - Hidden behind pixels on this very website.</small>
 
