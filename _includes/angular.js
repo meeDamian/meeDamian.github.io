@@ -9,7 +9,7 @@ angular.module('App', ['ngMaterial'])
       setTimeout(function() {
         var loader = document.getElementById('loader');
         if (loader) loader.remove();
-      }, 1234); // There's NOTHING to see in that porticular line! Noting! Move along...
+      }, 1234);
     };
 
     $scope.getMaxCols = function(given, def, max) {
