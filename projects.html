@@ -14,7 +14,7 @@ projects: true
     md-cols-xs="2"
     md-cols-sm="4"
     md-cols="6"
-    md-cols-gt-md="9"
+    md-cols-gt-lg="9"
     md-row-height="4:3"
     md-on-layout="onLayout()">
     {% for project in site.data.projects %}
@@ -22,12 +22,14 @@ projects: true
         md-colspan-xs="{(getMaxCols('{{project.cols}}', 2, 2))}"
         md-colspan-sm="{(getMaxCols('{{project.cols}}', 2, 4))}"
         md-colspan-md="{(getMaxCols('{{project.cols}}', 2, 6))}"
-        md-colspan-gt-md="{(getMaxCols('{{project.colsLG}}', 2, 9))}"
+        md-colspan-lg="{(getMaxCols('{{project.cols}}', 2, 6))}"
+        md-colspan-gt-lg="{(getMaxCols('{{project.colsLG}}', 2, 9))}"
 
         md-rowspan-xs="{('{{project.rowsXS}}' || 2)}"
         md-rowspan-sm="{('{{project.rowsSM}}' || 2)}"
         md-rowspan-md="{('{{project.rows}}' || 2)}"
-        md-rowspan-gt-md="{('{{project.rowsLG}}' || 3)}">
+        md-rowspan-lg="{('{{project.rows}}' || 2)}"
+        md-rowspan-gt-lg="{('{{project.rowsLG}}' || 3)}">
 
         <div class="content">
           <i id="{{project.id}}" class="info mdi mdi-information-outline"></i>
