@@ -15,7 +15,7 @@ I am a minimalist, perfectionist and relativist. Always reliable internet tests 
 
 #### Frequent guests at **my stack** party:
 
-Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [CloudFlare][cloudflare]¹, [Coffee Script][coffee]¹, [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku, [Jade][jade], Android Java, JavaScript, [ES6][es6], Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Parse][parse]¹, Polymer, Postgres/PSQL, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo].
+Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [CloudFlare][cloudflare]¹, [Coffee Script][coffee]¹, [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku, [Jade][jade], Android Java, JavaScript, [ES6][es6], Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Heroku][heroku]¹, Polymer, Postgres/PSQL, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo].
 
 <small>¹ - Hidden behind pixels on this very website.</small>
 
@@ -59,27 +59,25 @@ Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitc
   }
   window.setCurrentData = function(json) {
     // PHONE
-    var phoneHref = 'tel:' + json.phone.replace(/ /g, '');
-    updateLink('phone', phoneHref, json.phone);
+    if (json.phone) {
+      var phoneHref = 'tel:' + json.phone.replace(/ /g, '');
+      updateLink('phone', phoneHref, json.phone);
+    }
 
     // LOCATION
     var mapsLink = 'https://maps.google.com/?q=';
-    var query = [];
-    if (json.location.country != null)
-      query.push(json.location.country);
+    var query = [json.country, json.city]
+      .filter(function(v){return !!v;})
+      .join(', ')
+      .replace(/ /g, '+');
 
-    if (json.location.city != null)
-      query.push(json.location.city);
-
-    var queryStr = query.join(', ').replace(/ /g, '+');
-
-    updateLink('location', mapsLink + queryStr, json.location.country);
+    updateLink('location', mapsLink + query, json.country);
 
     // LOCATION UPDATED
-    document.getElementById('locUpdated').textContent = prettyDate(new Date(json.location.updated));
+    document.getElementById('locUpdated').textContent = prettyDate(new Date(json.relocated_at));
   };
 </script>
-<script src="https://basic-data.parseapp.com/{{site.author.username}}?callback=setCurrentData"></script>
+<script src="https://basic-data.herokuapp.com/{{site.author.username}}?callback=setCurrentData"></script>
 
 <!-- Description -->
 [intj]: https://www.linkedin.com/pulse/5-reasons-intjs-best-employees-penelope-trunk
@@ -111,7 +109,7 @@ Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitc
 [meteor]: https://www.meteor.com/
 [mongoose]: https://goo.gl/hCne1O
 [npm]: https://www.npmjs.com/~meedamian
-[parse]: https://www.parse.com/
+[heroku]: https://www.heroku.com/
 [travis]: https://travis-ci.org/
 [yo]: https://goo.gl/505aDq
 
