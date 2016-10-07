@@ -15,7 +15,7 @@ I am a minimalist, perfectionist and relativist. Always reliable internet tests 
 
 #### Frequent guests at **my stack** party:
 
-Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [CloudFlare][cloudflare]¹, [Coffee Script][coffee]¹, [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku, [Jade][jade], Android Java, JavaScript, [ES6][es6], Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Heroku][heroku]¹, Polymer, Postgres/PSQL, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo].
+Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [Go][go], [CloudFlare][cloudflare]¹, [ES6][es6]¹, [Coffee Script][coffee], [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, Gist¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku¹, [Jade][jade], Android Java, JavaScript, Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Heroku][heroku]¹, Polymer, Postgres/PSQL¹, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo], [Goose][goose].
 
 <small>¹ - Hidden behind pixels on this very website.</small>
 
@@ -23,8 +23,6 @@ Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitc
 ### Contact:
 * Call me: <a id="phone" href="tel:{{site.author.phone}}" target="_blank">{{site.author.phone}}</a>
 * Email me: <a href="mailto:hello@meeDamian.com" target="_blank">hello@meeDamian.com</a>
-* Schedule a Hangouts call: [here][hang_]
-* Book a mentoring session: [![Book session on Codementor][codementor_img]][codementor_url]
 
 <script>
   function prettyDate(date) {
@@ -76,8 +74,14 @@ Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitc
     // LOCATION UPDATED
     document.getElementById('locUpdated').textContent = prettyDate(new Date(json.relocated_at));
   };
+  window.processGist = function(json) {
+    var gist = json.data;
+    var data = JSON.parse(gist.files['location.json'].content);
+    data.relocated_at = gist.updated_at;
+    setCurrentData(data);
+  };
 </script>
-<script src="https://basic-data.herokuapp.com/{{site.author.username}}?callback=setCurrentData"></script>
+<script src="https://api.github.com/gists/{{site.author.gist}}?callback=processGist"></script>
 
 <!-- Description -->
 [intj]: https://www.linkedin.com/pulse/5-reasons-intjs-best-employees-penelope-trunk
@@ -112,8 +116,4 @@ Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitc
 [heroku]: https://www.heroku.com/
 [travis]: https://travis-ci.org/
 [yo]: https://goo.gl/505aDq
-
-<!-- Contact -->
-[hang_]: https://calendly.com/meedamian/30min
-[codementor_img]: https://cdn.codementor.io/badges/book_session_github.svg
-[codementor_url]: https://www.codementor.io/meedamian?utm_source=github&utm_medium=button&utm_term=meedamian&utm_campaign=github
+[goose]: https://bitbucket.org/liamstask/goose/
