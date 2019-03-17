@@ -1,4 +1,4 @@
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-coffeescript
   - jekyll-mentions
