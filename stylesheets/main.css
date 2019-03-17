@@ -170,7 +170,7 @@ blockquote::before {
 /* code snippets */
 code {
   /*inline code*/
-  padding: 2px 4px;
+  /*padding: 2px 4px;*/
   font-size: 90%;
   color: #c7254e;
   background-color: #f9f2f4;

@@ -13,7 +13,7 @@ like this:
 
 ![Android Studio generate wizard](/post-content/publishing-with-gradle/generate-wizard.png)
 
-So, you can imagine my surprise when [this happened](https://plus.google.com/+MaurycyDamianWasilewski/posts/hD7BhwN1cH5)
+So, you can imagine my surprise when [this happened](https://plus.google.com/+DamianMee/posts/hD7BhwN1cH5)
 (if you can't access this link [click here](https://github.com/meeDamian/meeDamian.github.io/blob/master/post-content/publishing-with-gradle/this-happened.png)).
 It was unexpected, but pushed me to learn more about [Gradle](https://gradle.org/) build system. At first **gradle**
 docs seemed really overwhelming, because they were covering so much more than only publishing production builds (more
@@ -238,11 +238,11 @@ This flow is almost perfect for me, but there are still things I could see impro
 
 * ~~automatically rename output files to include `versionName`~~,
 * ~~change output directory to some external location,~~
-* fix for those things is now included above. It [was provided](https://plus.google.com/+MaurycyDamianWasilewski/posts/fe6ZaSbwSsC)
+* fix for those things is now included above. It [was provided](https://plus.google.com/+DamianMee/posts/fe6ZaSbwSsC)
 by awesome guys from [+Mycelium](https://plus.google.com/115557143272470220180/posts)
 
 
-If you know how to do it [contact me](https://google.com/+MaurycyDamianWasilewski) or leave a comment below.
+If you know how to do it [contact me](https://twitter.com/meeDamian) or leave a comment below.
 
 ### Perfect flow
 

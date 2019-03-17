@@ -6,16 +6,17 @@ gems:
   - jekyll-feed
 
 title: Damian Mee | Blog | Portfolio | About
-email: spam@meedamian.com
+email: hello@meedamian.com
 description: >
-  I am a mobile developer building native apps for Android and websites
-  in Node.js; currently freelancing from…
+  I am a developer and speaker.  My deep understanding of Bitcoin and applied
+  cryptography allows me to help "blockchain startups" reach their full potential
+  and find paying customers as quickly as possible.
 twitter_username: meeDamian
 github_username:  meeDamian
 
 author:
   name: Damian Mee
-  phone: '+886909377026'
+  phone: '+66994549731'
   username: meeDamian
   twitter: meeDamian
   gist: d881897abb1b251a912d8a31c2b59298

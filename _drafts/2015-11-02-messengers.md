@@ -168,7 +168,7 @@ It opens conversations in those teeny tiny windows. WHY‽
 * "Where are you"
 
 
-[splash]: https://plus.google.com/+MaurycyDamianWasilewski/posts/81jQC4rcRTb
+[splash]: https://plus.google.com/+DamianMee/posts/81jQC4rcRTb
 [snackbar]: http://developer.android.com/intl/ru/reference/android/support/design/widget/Snackbar.html
 
 [fb]: https://facebook.com

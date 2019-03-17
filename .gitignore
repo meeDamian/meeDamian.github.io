@@ -4,3 +4,4 @@ downloads
 _site
 .sass-cache
 tmp/
+.idea

@@ -18,19 +18,13 @@
     $ ./script/test             # to test
 
 
-#### How do I book mentoring sessions with you?
-
-The easiest way is probably clicking this button:
- [![Book session on Codementor](https://cdn.codementor.io/badges/book_session_github.svg)](https://www.codementor.io/meedamian?utm_source=github&utm_medium=button&utm_term=meedamian&utm_campaign=github)
-
-
 #### Who are you?
 
-I'm a software engineer. There's more on me on my [LinkedIn](https://linkedin.com/in/meeDamian/en). If you want to see what I did [this is a good place](http://meedamian.com/projects) to go.
+I'm a software engineer. There's more on me on my [LinkedIn](https://linkedin.com/in/meeDamian/en). If you want to see what I did [this is a good place](https://meedamian.com/projects) to go.
 
 #### How do I get in touch/hire you?
 
-Either [tweet at me](https://twitter.com/meeDamian), send me [an email](email:mee.damian@gmail.com) or a letter:
+Either [tweet at me](https://twitter.com/meeDamian), send me [an email](email:hello@meedamian.com) or a letter:
 
     Damian Mee
     Delightful Ltd.
