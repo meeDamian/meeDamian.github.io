@@ -256,7 +256,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages (= 197)
   html-proofer
-  jekyll-coffeescript
   jekyll-feed
   jekyll-mentions
   jekyll-paginate
@@ -264,4 +263,4 @@ DEPENDENCIES
   rouge
 
 BUNDLED WITH
-   1.17.2
+   2.0.1

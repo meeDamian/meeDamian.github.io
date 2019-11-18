@@ -1,16 +1,12 @@
 plugins:
   - jekyll-paginate
-  - jekyll-coffeescript
   - jekyll-mentions
   - jekyll-redirect-from
   - jekyll-feed
 
 title: Damian Mee | Blog | Portfolio | About
 email: hello@meedamian.com
-description: >
-  I am a developer and speaker.  My deep understanding of Bitcoin and applied
-  cryptography allows me to help "blockchain startups" reach their full potential
-  and find paying customers as quickly as possible.
+description: Developer, writer, speaker.
 twitter_username: meeDamian
 github_username:  meeDamian
 

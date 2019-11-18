@@ -4,9 +4,16 @@ title: About
 permalink: /about/
 ---
 
+### I am a Developer, Software Architect, and Speaker.  Seasoned in web, mobile, start-ups, and Bitcoin.  Now I help architect & build systems that bring it all together.
+
+
+
+
+
+
 ### I am a mobile<sup><small><i id="i-mobile" class="info mdi mdi-information-outline"></i></small></sup> developer building **native apps** for **Android** and **servers** in **Node.js** and **Go**; currently freelancing from **<a target="_blank" id="location" href="https://goo.gl/maps/NamBYKMgKU12">Taiwan</a>**<sup><small><i id="i-geo" class="info mdi mdi-information-outline"></i></small></sup>.
 
-I am a minimalist, perfectionist and relativist. Always reliable internet tests diagnosed me as [INTJ-A][intj] and after solving enough logic charades I was invited to join [Mensa][mensa]. I am passionate about Futurism and all the technologies it will bring along. Being fascinated by the potential of [Artificial **Super** Intelligence][asi], I am curiously looking forward to witnessing the outcomes of [A.I.][agi] and [machine learning][machine] marriage. I am very drawn to decentralized technologies like [Blockchain][bc] or [Mesh Networks][mesh] and I am currently diving deeper into [R][r], [Go][go] and Machine Learning to teach my pet computer (and&nbsp;<span id="i-iot" class="info">_[internetted thingies][iot]_</span>) to play fetch.
+I am a minimalist, perfectionist, but realist.  Always reliable internet tests diagnosed me as [INTJ-A][intj] and after solving enough logic charades I was invited to join [Mensa][mensa]. I am passionate about Futurism and all the technologies it will bring along. Being fascinated by the potential of [Artificial **Super** Intelligence][asi], I am curiously looking forward to witnessing the outcomes of [A.I.][agi] and [machine learning][machine] marriage. I am very drawn to decentralized technologies like [Blockchain][bc] or [Mesh Networks][mesh] and I am currently diving deeper into [R][r], [Go][go] and Machine Learning to teach my pet computer (and&nbsp;<span id="i-iot" class="info">_[internetted thingies][iot]_</span>) to play fetch.
 
 <div class="mdl-tooltip" for="i-mobile">In the meaning of mobile apps,<br>as well as working remotely.</div>
 <div class="mdl-tooltip" for="i-geo">Updated <span id="locUpdated">1 day ago</span></div>
@@ -15,7 +22,7 @@ I am a minimalist, perfectionist and relativist. Always reliable internet tests 
 
 #### Frequent guests at **my stack** party:
 
-Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [Go][go], [CloudFlare][cloudflare]¹, [ES6][es6]¹, [Coffee Script][coffee], [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, Gist¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku¹, [Jade][jade], Android Java, JavaScript, Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Heroku][heroku]¹, Polymer, Postgres/PSQL¹, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo], [Goose][goose].
+Android Studio, AngularJS, [Angular Material][material]¹, [Atom][atom]¹, [Bitcoin Core][bitcoin], [Go][go]<sup><small><i id="i-go" class="info mdi mdi-information-outline"></i></small></sup>, [CloudFlare][cloudflare]¹, [ES6][es6]¹, [Coffee Script][coffee], [Iced Coffee Script][iced], Docker, Facebook API/SDKs, [Firebase][firebase], [GenyMotion][geny], Git¹, Github¹, Gist¹, [Github Pages][gh-pages]¹, Google APIs, [Google App Engine][gae], Google Chrome, Gradle, Grunt, [Gulp][gulp], Heroku¹, [Jade][jade], Android Java, JavaScript, Material Design¹, [Material Design Lite][mdl]¹, [Meteor][meteor], MongoDB, [Mongoose][mongoose], Node.js, [npm][npm], OSX, [Heroku][heroku]¹, Polymer, Postgres/PSQL¹, Socket.IO, [Travis CI][travis], Ubuntu, [yeoman][yo], [Goose][goose].
 
 <small>¹ - Hidden behind pixels on this very website.</small>
 
