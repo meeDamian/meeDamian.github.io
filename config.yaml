@@ -1,0 +1,42 @@
+baseURL: https://meedamian.com
+languageCode: en-us
+title: Damian Mee
+theme: introduction
+enableEmoji: true
+enableRobotsTXT: true
+canonifyURLs: true
+
+params:
+  themeStyle: dark
+  email: hi@meedamian.com
+  dateFormat: 2 Jan 2006
+  favicon: /favicon.ico
+
+  home:
+    localTime: true
+    timeZone: Asia/Bangkok
+    timeFormat: H:mm
+
+  social:
+    - url: https://twitter.com/meeDamian
+      icon: twitter
+      icon_pack: fab
+
+    - url: https://github.com/meeDamian
+      icon: github
+      icon_pack: fab
+
+    - url: https://keybase.io/meeDamian
+      icon: keybase
+      icon_pack: fab
+
+    - url: https://www.linkedin.com/in/meedamian/
+      icon: linkedin
+      icon_pack: fab
+
+    - url: mailto:hi@meedamian.com
+      icon: at
+      icon_pack: fas
+
+taxonomies:
+  tag: tags
