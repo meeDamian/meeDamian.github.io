@@ -1,19 +1,23 @@
 ---
-title: "About"
-image: "profile.jpg"
-weight: 1
+title: About
+image: profile.jpg
 ---
 
-This is **Introduction**, a minimalist website theme made for [Hugo](https://gohugo.io).
+<!-- picture by andrea -->
 
-### Features
+I'm a code monkey involved with open-source and Bitcoin for a ~decade now.  I slow-travel to see the world through the lens I can choose myself, and I've never experience boredom. 
 
-* Responsive display on any size screen
-* Light and Dark themes right out of the box
-* Multilingual - supports side-by-side content in multiple languages
-* Any number of custom index page sections from Markdown files
-* _Projects_ section with any number of projects: highly configurable as a photo gallery, modals, or external links
-* _Blog_ section with optional _Latest Post_, on the main page or as a separate section
-* Styled Markdown throughout with support for Hugo's syntax highlighting 
+So far, I lived in: 
+
+## 🇵🇱 🇹🇭 🇹🇼 🇦🇺 🇮🇳 🇬🇧 🇻🇳
+                         
+And spent less than 1 month in:
+
+#### 🇮🇹 🇩🇪 🇧🇪 🇰🇷 🇯🇵 🇳🇿 🇲🇾 🇸🇬 🇮🇩 🇲🇨 🇭🇰 🇫🇷 🇲🇲 🇵🇹 🇪🇸 🇨🇿 🇵🇭 🇭🇺 🇸🇮 🇸🇰 🇷🇺 🇳🇱 🇧🇾 🇺🇦 🇱🇹 🇱🇻 🇳🇴 🇸🇪 🇦🇹 🇱🇮 🇫🇮 🇭🇷 🇨🇭 🇲🇴 🇪🇪
 
 
+<br />
+
+##### <kbd>GPG:</kbd>[`D8CA 1776 EB92 6549 1D07 CE67 F546 ECBE A809 CB18`][gpg]
+
+[gpg]: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xd8ca1776eb9265491d07ce67f546ecbea809cb18

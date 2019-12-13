@@ -1,7 +1,6 @@
 baseURL: https://meedamian.com
 languageCode: en-us
 title: Damian Mee
-theme: introduction
 enableEmoji: true
 enableRobotsTXT: true
 canonifyURLs: true
@@ -11,11 +10,13 @@ params:
   email: hi@meedamian.com
   dateFormat: 2 Jan 2006
   favicon: /favicon.ico
+  customCSS: [ css/meedamian.css ]
 
   home:
     localTime: true
     timeZone: Asia/Bangkok
-    timeFormat: H:mm
+    timeFormat: HH:mm
+    numberOfProjectsToShow: 3
 
   social:
     - url: https://twitter.com/meeDamian
@@ -34,9 +35,16 @@ params:
       icon: linkedin
       icon_pack: fab
 
-    - url: mailto:hi@meedamian.com
-      icon: at
+    - url: https://hodl.studio
+      icon: bolt
       icon_pack: fas
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
 
 taxonomies:
   tag: tags

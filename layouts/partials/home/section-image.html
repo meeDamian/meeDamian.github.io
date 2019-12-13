@@ -1,0 +1,18 @@
+{{ $home := .Site.GetPage "/home" }}
+
+<div class="container">
+    <h2 class="title is-2 has-text-centered">{{ .Title }}</h2>
+    <div class="columns">
+        <div class="column is-one-third has-text-centered">
+            {{ with $home.Resources.GetMatch .Params.Image }}
+                {{ with .Resize "320x" }}
+                    <img class="img-responsive avatar" src="{{ .Permalink }}" alt="{{ .Name }}">
+                {{ end }}
+            {{ end }}
+        </div>
+
+        <div class="markdown column">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
