@@ -4,7 +4,7 @@ slug: speaking
 weight: 8
 ---
 
-Recently, I speak primarily about Bitcoin & Lightning Network.  Before that, I used to organize, and occasionally speak on GPG meetups.
+Recently, I speak mostly about Bitcoin & Lightning Network.  Before that, I used to organize, and occasionally speak on GPG meetups.
  
 Some of my archival slides can be found [here].  To schedule, please see the [contact] section 😁.
 

@@ -1,0 +1,49 @@
+bitcoin:
+  title: Full Archival Nodes
+  description: "I run a few Bitcoin Full Nodes, here are the ones available publicly:"
+  list:
+    - name: main
+      addr: hodl.studio
+      tor: lncmdma3namzrbnx.onion
+
+    - name: 2nd
+      addr: hodl.studio:8444
+      tor: lncmdmgoddecttey.onion
+
+    - name: oln
+      addr: hodl.studio:8555
+      tor: ey4jupk5n5bsv7uh.onion
+
+    - name: MacOS
+      addr: "-"
+      tor: lncmdmx7ezlplcck.onion
+
+ln:
+  title: LN nodes
+  description: >
+    These are my public Lightning nodes.  You might want to open a channel with the
+    first one, as it's quite well connected, while still a fairly small one.
+  list:
+    - name: main
+      pubkey: 03935a378993d0b55056801b11957aaecb9f85f34b64245f864c22a2d25001de74
+      addr: hodl.studio:9735
+
+    - name: 2nd
+      pubkey: 032260c3b64b471b7eb0630b4af5d07ca94ff4e759573cbbe1bfb25845c375ed6e
+      addr: hodl.studio:9744
+
+    - name: oln
+      pubkey: 03518777ed418857bbeec4c7970014d89b21a5e71385173b5c9a58bb4f26803374
+      addr: hodl.studio:9755
+
+watchtowers:
+  title: Altruistic Watchtowers
+  description: These might help you prevent funds loss :).  Feel free to connect as well.
+  list:
+    - name: main
+      pubkey: 02a676a615f2e705012b67bbce2e002b88c7ff51a439a645a16129d304282d18e3
+      addr: hodl.studio:9911
+
+    - name: oln
+      pubkey: 0218057e77a9ef7379a48743e8d84d2dae252368a42ee637c5adc1a64d3091f341
+      addr: hodl.studio:9955

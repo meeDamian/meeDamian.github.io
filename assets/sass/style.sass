@@ -1,11 +1,19 @@
-{{ $themeStyle := .Site.Params.themeStyle | default "light" }}
-$fa-font-path: '{{ "fonts/fontawesome-free/webfonts" | absURL }}'
+$fa-font-path: '{{ "fonts/fontawesome" | absURL }}'
 $nunito-font-path: '{{ "fonts/NunitoSans" | absURL }}'
 
 @import "fonts"
-@import "{{ $themeStyle }}-variables"
-@import "base-variables"
+@import "variables"
 @import "bulma-import"
 @import "fontawesome-import"
 @import "base"
-@import "{{ $themeStyle }}-style"
+@import "meedamian"
+
+.modal-card-title
+  color: $primary
+
+.modal-card-body
+  background-color: $background
+
+.markdown
+  strong
+    color: $body-color

@@ -3,19 +3,23 @@
     <h2 class="title is-2 has-text-centered">
         {{ .Title }}
     </h2>
+
     <div class="section">
         <div class="columns is-multiline">
-            {{ $totalProjects := (len .Pages) }}
+            {{ $totalProjects := len .Pages }}
+
             {{ $numberOfProjectsToShow := .Site.Params.home.numberOfProjectsToShow | default $totalProjects }}
-            {{ range $index, $element := .Pages.ByWeight | first $numberOfProjectsToShow }}
+            {{ range $i, $el := .Pages.ByWeight | first $numberOfProjectsToShow }}
                 {{ $width := "302x" }}
-                {{ $columWidth := "is-one-third" }}
+                {{ $columnWidth := "is-one-third" }}
+
                 {{ if .Site.Params.projects.useTwoColumns }}
-                    {{ $columWidth = "is-half" }}
                     {{ $width = "490x" }}
-                {{ end}}
-                <div class="column {{ $columWidth }}">
-                    <div class="card" data-target="#project-{{ $index }}">
+                    {{ $columnWidth = "is-half" }}
+                {{ end }}
+
+                <div class="column {{ $columnWidth }}">
+                    <div class="card" data-target="#project-{{ $i }}">
                         <div class="card-image">
                             <figure class="image is-3by2">
                                 <a {{ if .Params.external_link }} href="{{ .Params.external_link }}" {{ end }}>
@@ -28,6 +32,7 @@
                                 </a>
                             </figure>
                         </div>
+
                         <div class="card-content has-text-centered top-pad">
                             <a {{ if .Params.external_link }} href="{{ .Params.external_link }}" {{ end }}>
                                 {{ .Title }}
@@ -38,17 +43,18 @@
             {{ end }}
         </div>
     </div>
+
     {{ if lt $numberOfProjectsToShow $totalProjects }}
         <div class="container has-text-centered top-pad">
             <a href="{{ .Permalink }}">{{ i18n "index_projects_allProjects" . }}</a>
         </div>
     {{ end }}
 </div>
-<!-- End Projects container -->
-<!-- Projects modals -->
-{{ range $index, $element := .Pages.ByWeight | first $numberOfProjectsToShow }}
+
+
+{{ range $i, $el := .Pages.ByWeight | first $numberOfProjectsToShow }}
     {{ if not .Params.external_link }}
-        <div class="modal" id="project-{{ $index }}">
+        <div class="modal" id="project-{{ $i }}">
             <div class="modal-background"></div>
             <div class="modal-card">
                 {{ with .Title }}
@@ -59,22 +65,18 @@
 
                 {{ with .Resources.ByType "image" }}
                     {{ $moreThenOneImage := gt (len .) 1 }}
-                    {{ if $moreThenOneImage }}
-                        <div class="owl-carousel owl-theme">
-                    {{ end }}
+
+                    {{ if $moreThenOneImage }}<div class="owl-carousel owl-theme">{{ end }}
+
                     {{ range sort . "Params.weight" }}
                         {{ $image := .Resize "640x" }}
-                        {{ if $moreThenOneImage }}
-                            <div class="item owl-height">
-                        {{ end }}
+
+                        {{ if $moreThenOneImage }}<div class="item owl-height">{{ end }}
                         <img src="{{ $image.Permalink }}" class="img-responsive" alt="{{ $image.Name }}">
-                        {{ if $moreThenOneImage }}
-                            </div>
-                        {{ end }}
+                        {{ if $moreThenOneImage }}</div>{{ end }}
                     {{ end }}
-                    {{ if $moreThenOneImage }}
-                        </div>
-                    {{ end }}
+
+                    {{ if $moreThenOneImage }}</div>{{ end }}
                 {{ end }}
 
                 {{ with .Content }}
@@ -84,7 +86,7 @@
                 {{ end }}
             </div>
             <button class="modal-close is-large" aria-label="close"
-                    data-target="#project-{{ $index }}"></button>
+                    data-target="#project-{{ $i }}"></button>
         </div>
     {{ end }}
 {{ end }}

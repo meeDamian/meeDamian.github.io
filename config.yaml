@@ -6,11 +6,11 @@ enableRobotsTXT: true
 canonifyURLs: true
 
 params:
-  themeStyle: dark
   email: hi@meedamian.com
+  description: Damian Mee | homepage
+  showRSSButton: true
   dateFormat: 2 Jan 2006
   favicon: /favicon.ico
-  customCSS: [ css/meedamian.css ]
 
   home:
     localTime: true
@@ -39,12 +39,12 @@ params:
       icon: bolt
       icon_pack: fas
 
+permalinks:
+  blog: /post/:slug/
+
 markup:
   goldmark:
     renderer:
       unsafe: true
   highlight:
     codeFences: true
-
-taxonomies:
-  tag: tags

@@ -6,7 +6,7 @@ weight: 5
 
 #### Current toolkit
 
-[Go], [Docker]<sup>\(w/compose\)</sup>, {,ba,z,fi}sh, [Alpine], [lnd], [bitcoind], Github<sup>(Repo, Actions, Pages, gists)</sup>, gRPC, Keybase, Intellij, [qemu], Digital Ocean, git, [Raspberry&nbsp;Pi][RBP], deterministic builds, GPG, opentimestamps, IPFS, Let's Encrypt, Tor.
+[Go], [Docker]<sup>\(w/compose\)</sup>, {,ba,z,fi}sh, [Alpine], Debian, [lnd], [bitcoind], Github<sup>(Repo, Actions, Pages, gists)</sup>, gRPC, Keybase, Intellij, [qemu], Digital Ocean, git, [Raspberry&nbsp;Pi][RBP], deterministic builds, GPG, opentimestamps, IPFS, Let's Encrypt, Tor, mesh networks
 
 
 [Go]: https://github.com/search?o=desc&q=user%3AmeeDamian+language%3Ago&s=indexed&type=Code
@@ -24,4 +24,4 @@ weight: 5
 
 #### Prehistoric records include
 
-JavaScript, node.js, Python 2 & 3, Ruby, Travis, Google App Engine, Java, Android, Postgresql, MySQL, C/C++, Assembly, PHP&nbsp;😅, C<sup>S</sup><small>S</small> 😤, \[iced\]&nbsp;CoffeeScript, Angular, CloudFlare, Firebase, and a ton of APIs.
+JavaScript, node.js, Python 2 & 3, Ruby, Travis, Google App Engine, Java, Android, Postgresql, MySQL, MongoDB, C/C++, Assembly, Firebase, PHP&nbsp;😅, C<sup>S</sup><small>S</small> 😤, \[iced\]&nbsp;CoffeeScript, Angular, CloudFlare, Firebase, and a ton of APIs.

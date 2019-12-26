@@ -1,4 +1,4 @@
 ---
 title: Projects
-weight: 7
+weight: 6
 ---

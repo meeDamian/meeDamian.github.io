@@ -2,22 +2,26 @@
     <div class="container markdown top-pad">
         {{ .Content }}
     </div>
+
     <div class="container">
         <div class="section">
             <div class="columns is-multiline">
                 {{ $numberOfPages := len .Pages}}
+
                 {{ range .Pages.ByWeight }}
                     {{ $width := "302x" }}
-                    {{ $columWidth := "is-one-third" }}
+                    {{ $columnWidth := "is-one-third" }}
+
                     {{ if .Site.Params.projects.useTwoColumns }}
-                        {{ $columWidth = "is-half" }}
                         {{ $width = "490x" }}
-                    {{ end}}
-                    <div class="column {{ $columWidth }}">
+                        {{ $columnWidth = "is-half" }}
+                    {{ end }}
+
+                    <div class="column {{ $columnWidth }}">
                         <div class="card">
                             <div class="card-image">
                                 <figure class="image is-3by2">
-                                    <a href="{{ if .Params.external_link }}{{ .Params.external_link }}{{ else }}{{ .Permalink }}{{ end }}">
+                                    <a href="{{ .Params.external_link | default .Permalink }}">
                                         {{ with .Resources.ByType "image" }}
                                             {{ range first 1 (sort . "Params.weight") }}
                                                 {{ $image := .Resize $width }}
@@ -27,8 +31,9 @@
                                     </a>
                                 </figure>
                             </div>
+
                             <div class="card-content has-text-centered top-pad">
-                                <a href="{{ if .Params.external_link }}{{ .Params.external_link }}{{ else }}{{ .Permalink }}{{ end }}">
+                                <a href="{{ .Params.external_link | default .Permalink }}">
                                     {{ .Title }}
                                 </a>
                             </div>

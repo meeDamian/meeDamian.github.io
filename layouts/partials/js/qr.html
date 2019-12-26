@@ -1,0 +1,3 @@
+{{ $scripts := resources.Get "js/qrcode.js" | minify | fingerprint "sha512" }}
+<script src="{{ $scripts.Permalink }}"
+        integrity="{{ $scripts.Data.Integrity }}"></script>

@@ -1,14 +1,41 @@
-{{ define "head" }}
-    {{ partial "head/metadata.html" . }}
-    {{ partial "head/openGraph.html" . }}
-    {{ partial "head/favicons.html" . }}
-    {{ partial "head/css.html" . }}
-    {{ partial "css/owlCarousel.html" . }}
+{{ define "head-extra" }}
+    {{ partial "css/owlCarousel" . }}
 {{ end }}
 
-{{ define "main" }}
-    {{ partial "hero.html" . }}
 
+{{ define "hero-class" }}hero is-fullheight{{ end }}
+
+
+{{ define "hero" }}
+    {{ $fadeIn := or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}
+
+    <div class="hero-head"></div>
+
+    {{ with .Site.GetPage "/home" }}
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="bold-title {{ if $fadeIn }}fade-in one{{ end }}">
+                    {{ .Title }}
+                </h1>
+
+                <div class="subtitle is-3 {{ if $fadeIn }}fade-in two{{ end }}">
+                    {{ .Content }}
+                </div>
+
+                <div class="{{ if $fadeIn }}fade-in three{{ end }}">
+                    {{ partial "home/social.html" . }}
+                </div>
+            </div>
+        </div>
+    {{ end }}
+
+    <div class="hero-foot {{ if $fadeIn }}fade-in three{{ end }}">
+        {{ partial "nav.html" . }}
+    </div>
+{{ end }}
+
+
+{{ define "body" }}
     {{ $home := .Site.GetPage "/home" }}
 
     {{ $pages := $home.Resources.ByType "page" }}
@@ -31,41 +58,36 @@
         {{ end }}
 
         <div class="section" id="{{ $id | urlize }}">
-            {{ if eq .Type "projects" }}
-                {{ partial "projects.html" . }}
-
-            {{ else if eq .Type "blog" }}
-                {{ partial "blog.html" . }}
+            {{ if ne .Type "home" }}
+                {{ partial .Type .  }}
 
             {{ else if eq .Name "contact.md" }}
-                {{ partial "home/contact.html" . }}
+                {{ partial "home/contact" . }}
+
+            {{ else if eq .Name "bitcoin.md" }}
+                {{ partial "home/bitcoin" . }}
 
             {{ else if .Params.Image }}
-                {{ partial "home/section-image.html" . }}
+                {{ partial "home/section-image" . }}
 
             {{ else }}
-                {{ partial "home/section.html" . }}
+                {{ partial "home/section" . }}
 
             {{ end }}
 
-            {{ partial "top-icon.html" . }}
+            {{ partial "top-icon" . }}
         </div>
 
-        <div class="container">
-            <hr>
-        </div>
+        {{ partial "separator" . }}
     {{ end }}
 {{ end }}
 
-{{ define "footer" }}
-    {{ partial "footer/text.html" . }}
-    {{ partial "footer/scripts.html" . }}
-{{ end }}
 
-{{ define "js-include" }}
-    {{ partial "js/owlCarousel.html" . }}
+{{ define "js-extra" }}
+    {{ partial "js/owlCarousel" . }}
+    {{ partial "js/qr" . }}
 
     {{ if .Site.Params.home.localTime }}
-        {{ partial "js/momentjs.html" . }}
+        {{ partial "js/momentjs" . }}
     {{ end }}
 {{ end }}

@@ -5,7 +5,7 @@ image: profile.jpg
 
 <!-- picture by andrea -->
 
-I'm a code monkey involved with open-source and Bitcoin for a ~decade now.  I slow-travel to see the world through the lens I can choose myself, and I've never experience boredom. 
+I'm a code monkey involved with open-source and Bitcoin for a ~decade now.  I slow-travel to see the world through the lens I can choose myself, and I don't know what _boredom_ is. 
 
 So far, I lived in: 
 

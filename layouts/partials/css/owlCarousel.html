@@ -1,4 +1,8 @@
-{{ $owlCarousel := resources.Get "vendor/owlCarousel/owl.carousel.min.css" }}
-{{ $owlCarouselTheme := resources.Get "vendor/owlCarousel/owl.theme.default.min.css" }}
-{{ $owlCarouselBundle := slice $owlCarousel $owlCarouselTheme | resources.Concat "/styles/owlCarousel.min.css" | fingerprint }}
-<link rel="stylesheet" href="{{ $owlCarouselBundle.Permalink }}" integrity="{{ $owlCarouselBundle.Data.Integrity }}" crossorigin="anonymous" media="screen">
+{{ $owlCSS := resources.Get "vendor/owlCarousel/owl.carousel.css" }}
+{{ $owlTheme := resources.Get "vendor/owlCarousel/owl.theme.default.css" }}
+{{ $bundle := slice $owlCSS $owlTheme | resources.Concat "css/owlCarousel.css" | minify | fingerprint "sha512" }}
+
+<link rel="stylesheet" media="screen"
+      href="{{ $bundle.Permalink }}"
+      integrity="{{ $bundle.Data.Integrity }}"
+      crossorigin="anonymous">

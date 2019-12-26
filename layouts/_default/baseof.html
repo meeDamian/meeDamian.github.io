@@ -1,55 +1,128 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-
 <head>
-    {{ block "head" . }}
-        {{ partial "head/metadata.html" . }}
-        {{ partial "head/openGraph.html" . }}
-        {{ partial "head/favicons.html" . }}
-        {{ partial "head/css.html" . }}
+    {{ block "metadata" . }}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer">
+        {{- if .Site.Params.description }}
+            <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+        {{ end }}
+
+        <title>
+            {{- .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end -}}
+        </title>
+
+        {{- with .OutputFormats.Get "RSS" }}
+            <link href="{{ .RelPermalink }}"
+                  rel="alternate"
+                  type="application/rss+xml"
+                  title="{{ $.Site.Title }}"/>
+        {{ end -}}
     {{ end }}
 
-    {{ block "customCSS" . }}
-        <!-- No custom CSS included -->
+
+    {{ block "open-graph" . }}
+        <meta property="og:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description"
+              content="{{ .Description | default .Site.Params.description }}"/>
+        <meta property="og:url" content="{{ .Permalink }}"/>
+        <meta property="og:site_name" content="{{ .Site.Title }}"/>
+
+        {{ $images := .Resources.ByType "image" | default ((.Site.GetPage "page" "/home").Resources.ByType "image") }}
+        {{ range first 5 (sort $images "Params.weight") }}
+            <meta property="og:image" content="{{ .Permalink }}"/>
+        {{ end }}
     {{ end }}
+
+
+    {{ block "favicon" . }}
+        {{ with .Site.Params.favicon }}
+            <link rel="shortcut icon" href="{{ . | relURL }}">
+        {{ end }}
+    {{ end }}
+
+
+    {{ block "css" . }}
+        {{ $bundleRaw := resources.Get "sass/style.sass" | resources.ExecuteAsTemplate "css/main.tmp.css" . }}
+
+        {{ if .Site.IsServer }}
+            {{ $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) }}
+            {{ $bundle := $bundleRaw | toCSS $cssOpts }}
+            <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" media="screen">
+
+        {{ else }}
+            {{ $cssOpts := (dict "targetPath" "css/main.css" ) }}
+            {{ $postCSSOpts := (dict "use" "autoprefixer" ) }}
+            {{ $bundle := $bundleRaw | toCSS $cssOpts | postCSS $postCSSOpts | minify | fingerprint "sha512" }}
+
+            <link rel="stylesheet" media="screen"
+                  href="{{ $bundle.RelPermalink }}"
+                  integrity="{{ $bundle.Data.Integrity }}"
+                  crossorigin="anonymous">
+        {{ end }}
+    {{ end }}
+
+
+    {{ block "head-extra" . }}{{ end }}
 </head>
 
 <body>
 
-{{ if eq .Kind "home" }}
-    {{ block "main" . }}{{ end }}
-    {{ block "footer" . }}{{ end }}
-
-{{ else }}
-
-    {{ $fadeIn := .Site.Params.fadeIn | default true }}
-
-    <section id="top" class="section">
+<section id="top" class="{{block "hero-class" .}}section{{ end }}">
+    {{ block  "hero" . }}
+        {{ $fadeIn := .Site.Params.fadeIn | default true }}
 
         <div class="container hero {{ if $fadeIn }} fade-in one {{ end }}">
             {{ block "title" . }}
                 <h1 class="bold-title is-1">{{ .Title }}</h1>
             {{ end }}
         </div>
+    {{ end }}
+</section>
 
-        <div class="section {{ if $fadeIn }} fade-in two {{ end }}">
-            {{ partial "nav.html" . }}
 
-            {{ block "main" . }}{{ end }}
+{{ block "body" . }}
+    {{ $fadeIn := .Site.Params.fadeIn | default true }}
 
-            {{ block "footer" . }}
-                {{ partial "top-icon-with-hr.html" . }}
-                {{ partial "footer/text.html" . }}
-            {{ end }}
+    <div class="section {{ if $fadeIn }} fade-in two {{ end }}">
+        {{ partial "nav.html" . }}
+
+        {{ block "main" . }}{{ end }}
+
+        {{ partial "separator" . }}
+        {{ partial "top-icon.html" . }}
+        {{ partial "separator" . }}
+    </div>
+{{ end }}
+
+
+{{ block "footer-text" . }}
+    <div class="section" id="footer">
+        <div class="container has-text-centered">
+            <span class="footer-text">{{ i18n "footer_text" . | markdownify }}</span>
         </div>
-    </section>
+    </div>
 {{ end }}
 
-{{ block "js-include" . }}
-    {{ partial "footer/scripts.html" . }}
+
+{{ block "js" . }}
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+
+    {{ $scripts := resources.Get "js/index.js" | minify | fingerprint "sha512" }}
+    <script src="{{ $scripts.Permalink }}"
+            integrity="{{ $scripts.Data.Integrity }}"></script>
+
+    {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
 
-<!-- Include page specific scripts -->
-{{ block "customScripts" . }}{{ end }}
+
+{{ block "js-extra" . }}{{ end }}
 </body>
 </html>

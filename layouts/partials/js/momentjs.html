@@ -1,8 +1,8 @@
-{{ $momentJS := resources.Get "vendor/momentjs/moment.min.js" }}
-{{ $momentTZ := resources.Get "vendor/momentjs/moment-timezone.min.js" }}
-{{ $momentData := resources.Get "vendor/momentjs/moment-timezone-with-data-2012-2022.min.js" }}
-
+{{ $momentJS := resources.Get "vendor/momentjs/moment.js" }}
+{{ $momentTZ := resources.Get "vendor/momentjs/moment-timezone-with-data-10-year-range.js" }}
 {{ $momentInit := resources.Get "js/initMoment.js" }}
-{{ $momentBundle := slice $momentJS $momentTZ $momentData $momentInit | resources.Concat "js/bundleMoment.js" | fingerprint }}
+{{ $bundle := slice $momentJS $momentTZ $momentInit | resources.Concat "js/moment.js" | minify | fingerprint "sha512" }}
 
-<script src="{{ $momentBundle.Permalink }}" integrity="{{ $momentBundle.Data.Integrity }}"></script>
+<script
+        src="{{ $bundle.Permalink }}"
+        integrity="{{ $bundle.Data.Integrity }}"></script>
