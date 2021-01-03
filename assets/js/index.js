@@ -1,86 +1,76 @@
-// Nav burger animation
-document.addEventListener("DOMContentLoaded", function () {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length === 0) {
-        return;
-    }
+'use strict';
 
-    // Add a click event on each of them
-    $navbarBurgers.forEach(function ($el) {
-        $el.addEventListener("click", function () {
-            // Get the target from the "data-target" attribute
-            const $target = document.getElementById($el.dataset.target);
+// toggle `className` on all provided `elements`
+const classToggle = (className, ...elements) => elements.forEach(({classList}) => classList.toggle(className));
 
-            // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-            $el.classList.toggle("is-active");
-            $target.classList.toggle("is-active");
-        });
-    });
+function registerListener(selector, event, fn) {
+	document.querySelectorAll(selector).forEach(el => {
+		el.addEventListener(event, () => fn(el))
+	});
+}
 
+function initNavBurger() {
+	registerListener('.navbar-burger', 'click', el => {
+		classToggle('is-active', el, document.getElementById(el.dataset.target));
+	});
+}
+
+function initSomething1() {
+	registerListener('.card', 'click', el => {
+		if (!el.hasAttribute('data-target')) {
+			return;
+		}
+
+		classToggle('is-active', el);
+		document.getElementsByTagName('html')[0].classList.add('modal-open');
+	});
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+	initNavBurger();
+	initSomething1();
 });
 
-// Bitty scrolling links script
-$("a[href^=\"#\"]").click(function (e) {
-    e.preventDefault();
-
-    $("html, body").animate({
-        scrollTop: $(document.getElementById(this.hash.substr(1))).offset().top
-    }, 500);
-
-    $("#nav-menu").removeClass("is-active");
-
-    return true;
-});
-
-// Modal closer
-$(".card").click(function () {
-    $($(this).attr("data-target")).addClass("is-active");
-    $("html").addClass("modal-open");
-});
 
 $(".modal-close").click(function () {
-    $($(this).attr("data-target")).removeClass("is-active");
-    $("html").removeClass("modal-open");
+	$($(this).attr("data-target")).removeClass("is-active");
+	$("html").removeClass("modal-open");
 });
 
-$(document).keypress(function (e) {
-    if (e.which !== 0) {
-        return;
-    }
+$(document).keypress(e => {
+	if (e.which !== 0) {
+		return;
+	}
 
-    $(".modal.is-active").removeClass("is-active");
-    $("html").removeClass("modal-open");
+	$(".modal.is-active").removeClass("is-active");
+	$("html").removeClass("modal-open");
 });
 
 function doQR(id) {
-    const $qr = $(`${id} div`);
-    const $p = $qr.parent();
-    const pre = ($p.data('pre') || '').toUpperCase();
-    const data = ($p.data('payload') || '').toUpperCase();
+	document.querySelectorAll(`#${id} div`)
+		.forEach((el = {}) => {
+			const {parentElement} = el;
+			const {pre = '', payload = ''} = parentElement.dataset || {};
 
-    const qr = qrcode(0, 'L');
+			const qr = qrcode(0, 'L');
+			qr.addData(pre.toUpperCase(), 'Alphanumeric');
+			const chunks = payload.split('@');
 
-    qr.addData(`${pre}`, 'Alphanumeric');
+			qr.addData(chunks[0].toUpperCase(), 'Alphanumeric');
 
-    const chunks = data.split("@");
-    qr.addData(chunks[0], 'Alphanumeric');
-    if (chunks.length > 1) {
-        qr.addData('@');
-        qr.addData(chunks[1], 'Alphanumeric');
-    }
+			if (chunks.length > 1) {
+				qr.addData('@');
+				qr.addData(chunks[1].toUpperCase(), 'Alphanumeric');
+			}
 
-    qr.make();
-    $qr.html(qr.createSvgTag({
-        scalable: true,
-        margin: 2,
-        title: data
-    }));
+			qr.make();
+
+			el.innerHTML = qr.createSvgTag({scalable: true, margin: 2, title: payload});
+		});
 }
 
 $(() => {
-    doQR('#btc-qr');
-    doQR('#ln-qr');
+	doQR('btc-qr');
+	doQR('ln-qr');
 });
 

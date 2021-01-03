@@ -1,3 +1,8 @@
+@import "variables"
+
+html
+    scroll-behavior: smooth
+
 html, body
     background-color: $background
 
@@ -24,9 +29,11 @@ html.modal-open
 
 a
     color: $primary
+
     &:hover
         color: $link-hover
-        font-style: none
+        font-style: unset
+
     &:active
         color: $primary
 
@@ -41,8 +48,8 @@ ul
 
 img
     border-radius: 5px
-    border: 1px solid $secondary
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4)
+    //border: 1px solid $secondary
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4)
 
 hr
     background-color: #dbdbdb
@@ -52,7 +59,7 @@ hr
     max-width: 1000px
 
 .noborder
-    border-radius: 0px
+    border-radius: 0
     border: none
     box-shadow: none
 
@@ -64,7 +71,7 @@ pre
 
 .img-responsive
     border-radius: 5px
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4)
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4)
 
 .avatar
     border: none
@@ -93,8 +100,7 @@ pre
 
 .post-item
     display: block
-    list-style: none
-    list-style-position: outside
+    list-style: none outside none
     margin-left: 0
 
 .post-data
@@ -114,12 +120,11 @@ pre
 .fab
     font-size: 21px
 
-.blog-share
-    .icon
-        height: 1rem
-        width: 1rem
-        vertical-align: baseline
-        margin: 0 5px
+.blog-share .icon
+    height: 1rem
+    width: 1rem
+    vertical-align: baseline
+    margin: 0 5px
 
 .navbar-burger
     margin-right: auto
@@ -199,9 +204,8 @@ pre
         font-size: $size-5
     h6
         font-size: $size-6
-    a
-        &:hover
-            color: $secondary
+    a:hover
+        color: $secondary
     ul
         margin-bottom: 1.25rem
         margin-left: 1.5em
@@ -215,6 +219,7 @@ pre
         font-style: italic
     strong
         font-weight: 700
+        color: $body-color
     hr
         position: relative
         margin: 1.75rem 0
@@ -240,13 +245,17 @@ pre
         width: 100%
         border: 1px solid #e5e5e5
         border-collapse: collapse
+    tbody
+        color: #99a6a8
+    th
+        color: #75b8c8
     td, th
         padding: .25rem .5rem
         border: 1px solid #e5e5e5
         text-align: center
     tbody tr:nth-child(odd) td,
     tbody tr:nth-child(odd) th
-        background-color: #f7f7f7
+        background-color: #222
     pre
         border-radius: 3px
     img

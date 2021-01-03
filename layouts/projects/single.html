@@ -1,3 +1,7 @@
+{{ define "title" }}
+    <h1 class="bold-title is-1">{{ .Title }}</h1>
+{{ end }}
+
 {{ define "main" }}
     <div class="container markdown top-pad">
         {{ with .Resources.ByType "image" }}

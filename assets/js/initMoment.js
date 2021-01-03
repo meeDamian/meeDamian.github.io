@@ -1,14 +1,16 @@
-$(() => {
-    const tNode = $("#time");
+'use strict';
 
-    function update_localtime() {
-        const time = moment()
-            .tz(tNode.attr("data-time-zone"))
-            .format(tNode.attr("data-time-format"));
+(() => {
+	const updateLocalTime = (() => {
+		const tNode = document.getElementById('time');
+		const tz = tNode.getAttribute('data-time-zone');
+		const fmt = tNode.getAttribute('data-time-format');
 
-        tNode.html(time);
-    }
+		return () => tNode.innerHTML = moment().tz(tz).format(fmt);
+	})();
 
-    update_localtime();
-    setInterval(update_localtime, 1000);
-});
+	setTimeout(updateLocalTime, 0);
+	setInterval(updateLocalTime, 1e3);
+})();
+
+

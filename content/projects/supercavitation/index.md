@@ -1,6 +1,7 @@
 ---
-title: Supercavitation swaps
+title: Supercavitation submarine atomic swaps
 slug: supercavitation
+weight: 1
 ---
 
-RSk tech
+RSK tech

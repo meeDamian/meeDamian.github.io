@@ -1,39 +1,52 @@
 baseURL: https://meedamian.com
 languageCode: en-us
-title: Damian Mee
+
+author:
+  me:
+    name: &me Damian Mee
+    handle: &handle meeDamian
+    email: &email hi@meedamian.com
+
+title: *me
+
+default_social: &social
+  handle: *handle
+  icon_pack: fab
+
+
 enableEmoji: true
 enableRobotsTXT: true
 canonifyURLs: true
 
 params:
-  email: hi@meedamian.com
   description: Damian Mee | homepage
-  showRSSButton: true
   dateFormat: 2 Jan 2006
+  email: *email
   favicon: /favicon.ico
+  showRSSButton: true
 
   home:
     localTime: true
-    timeZone: Asia/Bangkok
+    timeZone: Asia/Kuala_Lumpur
     timeFormat: HH:mm
     numberOfProjectsToShow: 3
 
   social:
-    - url: https://twitter.com/meeDamian
+    - <<: *social
+      url: https://twitter.com/
       icon: twitter
-      icon_pack: fab
 
-    - url: https://github.com/meeDamian
+    - <<: *social
+      url: https://github.com/
       icon: github
-      icon_pack: fab
 
-    - url: https://keybase.io/meeDamian
+    - <<: *social
+      url: https://keybase.io/
       icon: keybase
-      icon_pack: fab
 
-    - url: https://www.linkedin.com/in/meedamian/
+    - <<: *social
+      url: https://www.linkedin.com/in/
       icon: linkedin
-      icon_pack: fab
 
     - url: https://hodl.studio
       icon: bolt
@@ -46,5 +59,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
   highlight:
     codeFences: true

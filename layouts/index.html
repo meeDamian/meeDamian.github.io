@@ -1,35 +1,23 @@
-{{ define "head-extra" }}
-    {{ partial "css/owlCarousel" . }}
-{{ end }}
-
-
 {{ define "hero-class" }}hero is-fullheight{{ end }}
 
-
 {{ define "hero" }}
-    {{ $fadeIn := or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}
-
     <div class="hero-head"></div>
 
     {{ with .Site.GetPage "/home" }}
         <div class="hero-body">
             <div class="container has-text-centered">
-                <h1 class="bold-title {{ if $fadeIn }}fade-in one{{ end }}">
-                    {{ .Title }}
-                </h1>
+                <h1 class="bold-title fade-in one">{{ .Title | safeHTML }}</h1>
 
-                <div class="subtitle is-3 {{ if $fadeIn }}fade-in two{{ end }}">
-                    {{ .Content }}
-                </div>
+                <div class="subtitle is-3 fade-in two">{{ .Content }}</div>
 
-                <div class="{{ if $fadeIn }}fade-in three{{ end }}">
+                <div class="fade-in three">
                     {{ partial "home/social.html" . }}
                 </div>
             </div>
         </div>
     {{ end }}
 
-    <div class="hero-foot {{ if $fadeIn }}fade-in three{{ end }}">
+    <div class="hero-foot fade-in three">
         {{ partial "nav.html" . }}
     </div>
 {{ end }}
@@ -38,9 +26,7 @@
 {{ define "body" }}
     {{ $home := .Site.GetPage "/home" }}
 
-    {{ $pages := $home.Resources.ByType "page" }}
-    {{ $pages = $pages | append (.Site.GetPage "/blog") }}
-    {{ $pages = $pages | append (.Site.GetPage "/projects") }}
+    {{ $pages := $home.Resources.ByType "page" | append (.Site.GetPage "/blog") (.Site.GetPage "/projects") }}
 
     {{/* sort by weight, excluding contact.md */}}
     {{ $pages = sort (where $pages ".Name" "ne" "contact.md") "Params.weight" }}
@@ -57,34 +43,33 @@
             {{ $id = .File.TranslationBaseName }}
         {{ end }}
 
-        <div class="section" id="{{ $id | urlize }}">
-            {{ if ne .Type "home" }}
-                {{ partial .Type .  }}
+        <section id="{{ $id | urlize }}">
+            <div class="container">
+                {{ if ne .Type "home" }}
+                    {{ partial .Type .  }}
 
-            {{ else if eq .Name "contact.md" }}
-                {{ partial "home/contact" . }}
+                {{ else if eq .Name "contact.md" }}
+                    {{ partial "home/contact" . }}
 
-            {{ else if eq .Name "bitcoin.md" }}
-                {{ partial "home/bitcoin" . }}
+                {{ else if eq .Name "bitcoin.md" }}
+                    {{ partial "home/bitcoin" . }}
 
-            {{ else if .Params.Image }}
-                {{ partial "home/section-image" . }}
+                {{ else if .Params.Image }}
+                    {{ partial "home/section-image" . }}
 
-            {{ else }}
-                {{ partial "home/section" . }}
+                {{ else }}
+                    {{ partial "home/section" . }}
 
-            {{ end }}
+                {{ end }}
 
-            {{ partial "top-icon" . }}
-        </div>
-
-        {{ partial "separator" . }}
+                {{ partial "top-icon" . }}
+            </div>
+        </section>
     {{ end }}
 {{ end }}
 
 
 {{ define "js-extra" }}
-    {{ partial "js/owlCarousel" . }}
     {{ partial "js/qr" . }}
 
     {{ if .Site.Params.home.localTime }}

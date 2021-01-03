@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="en">
 <head>
     {{ block "metadata" . }}
         <meta charset="utf-8">
@@ -73,11 +73,9 @@
 
 <body>
 
-<section id="top" class="{{block "hero-class" .}}section{{ end }}">
-    {{ block  "hero" . }}
-        {{ $fadeIn := .Site.Params.fadeIn | default true }}
-
-        <div class="container hero {{ if $fadeIn }} fade-in one {{ end }}">
+<section id="top" class="{{ block "hero-class" . }}section{{ end }}">
+    {{ block "hero" . }}
+        <div class="container hero fade-in one">
             {{ block "title" . }}
                 <h1 class="bold-title is-1">{{ .Title }}</h1>
             {{ end }}
@@ -87,9 +85,7 @@
 
 
 {{ block "body" . }}
-    {{ $fadeIn := .Site.Params.fadeIn | default true }}
-
-    <div class="section {{ if $fadeIn }} fade-in two {{ end }}">
+    <div class="section fade-in two">
         {{ partial "nav.html" . }}
 
         {{ block "main" . }}{{ end }}

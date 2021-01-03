@@ -6,7 +6,7 @@ weight: 5
 
 #### Current toolkit
 
-[Go], [Docker]<sup>\(w/compose\)</sup>, {,ba,z,fi}sh, [Alpine], Debian, [lnd], [bitcoind], Github<sup>(Repo, Actions, Pages, gists)</sup>, gRPC, Keybase, Intellij, [qemu], Digital Ocean, git, [Raspberry&nbsp;Pi][RBP], deterministic builds, GPG, opentimestamps, IPFS, Let's Encrypt, Tor, mesh networks
+[Go], [Docker]<sup>\(w/compose or stacks\)</sup>, {,a,ba,z,fi}sh, [Alpine], Debian, [lnd], [bitcoind], SQLite, Github<sup>(Repo, Actions, Pages, gists)</sup>, gRPC, Keybase, Intellij, [qemu], Digital Ocean, git, [Raspberry&nbsp;Pi][RBP], SQLite, deterministic builds, GPG, opentimestamps, [IPFS], Let's Encrypt, Tor, [HASSio]<sup>\(Zigbee, HACS)</sup>, mesh networks…
 
 
 [Go]: https://github.com/search?o=desc&q=user%3AmeeDamian+language%3Ago&s=indexed&type=Code
@@ -16,11 +16,12 @@ weight: 5
 [bitcoind]: https://github.com/lncm/docker-bitcoind
 [qemu]: https://github.com/meeDamian/simple-qemu
 [RBP]: https://medium.com/@meeDamian/bitcoin-full-node-on-rbp3-revised-88bb7c8ef1d1
-
+[IPFS]: https://github.com/lncm/docker-ipfs
+[HASSio]: https://www.home-assistant.io
 
 #### My nopes 
 
-.NET, node.js, <span title="Misspelled on purpose, to prevent search">Etherium</span>, any scam tokens, and anything with naïve _smart_ contracts.
+<b>.NET</b>, node.js, Ethereum<sup>(and its copycats)</sup>.
 
 #### Prehistoric records include
 

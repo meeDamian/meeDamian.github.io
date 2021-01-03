@@ -1,15 +1,21 @@
+{{ define "title" }}
+    <h1 class="bold-title is-1">{{ .Title }}</h1>
+    <div class="subtitle is-3 fade-in two">by {{ .Site.Author.me.name }}</div>
+{{ end }}
+
+
 {{ define "main" }}
     <div class="container markdown top-pad">
         {{ .Content }}
     </div>
 
     <div class="container">
-        <div class="section">
+        <div class="section" id="projects">
             <div class="columns is-multiline">
                 {{ $numberOfPages := len .Pages}}
 
                 {{ range .Pages.ByWeight }}
-                    {{ $width := "302x" }}
+                    {{ $width := "420x" }}
                     {{ $columnWidth := "is-one-third" }}
 
                     {{ if .Site.Params.projects.useTwoColumns }}

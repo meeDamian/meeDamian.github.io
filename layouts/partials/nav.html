@@ -9,7 +9,7 @@
         </a>
 
         {{ $isHome := .Page.IsHome }}
-        <div class="navbar-menu {{ if $isHome }}has-content-centered{{ end }}" id="navMenu">
+        <div id="navMenu" class="navbar-menu {{ if $isHome }}has-content-centered{{ end }}">
             {{ if not $isHome }}
                 <a class="navbar-item" href="{{ "" | relURL }}">{{ i18n "nav_main" . }}</a>
             {{ end }}
@@ -17,8 +17,7 @@
             {{ $home := .Site.GetPage "/home" }}
 
             {{ $pages := $home.Resources.ByType "page" }}
-            {{ $pages = $pages | append (.Site.GetPage "/blog") }}
-            {{ $pages = $pages | append (.Site.GetPage "/projects") }}
+            {{ $pages = $pages | append (.Site.GetPage "/blog") (.Site.GetPage "/projects") }}
 
             {{/* sort by weight, excluding contact.md */}}
             {{ $pages = sort (where $pages ".Name" "ne" "contact.md") "Params.weight" }}

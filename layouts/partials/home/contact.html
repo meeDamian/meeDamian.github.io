@@ -1,15 +1,14 @@
-<div class="container has-text-centered">
-    <h2 class="title is-2">{{ .Title }}</h2>
+{{ partial "home/section.html"  . }}
 
-    <div class="markdown">
-        {{ .Content }}
-    </div>
-
-    {{ if .Site.Params.home.localTime }}
-        <p>{{ i18n "index_currentTime" . }} <span id="time"
-                                                  data-time-zone="{{ .Site.Params.home.timeZone }}"
-                                                  data-time-format="{{ .Site.Params.home.timeFormat }}"></span>.
-        </p>
+<div class="has-text-centered">
+    {{ with .Site.Params.home }}
+        {{ if .localTime }}
+            <p>{{ i18n "index_currentTime" . }}
+                <span id="time"
+                      data-time-zone="{{ .timeZone }}"
+                      data-time-format="{{ .timeFormat }}"></span>.
+            </p>
+        {{ end }}
     {{ end }}
 
     {{ with .Site.Params.email }}

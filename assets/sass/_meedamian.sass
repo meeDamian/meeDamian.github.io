@@ -2,17 +2,6 @@
   font-family: monospace
   text-align: left
 
-.markdown
-  thead th
-    color: #75b8c8
-
-  tbody
-    color: #99a6a8
-
-    tr:nth-child(odd) td
-      background-color: #222
-
-
 
 .nodes
   text-align: start
@@ -21,9 +10,117 @@
   .highlight
     display: inline-block
 
+
 #ln-qr figcaption
   white-space: nowrap
   overflow: hidden
   text-overflow: ellipsis
+
+
+#projects
+  .card
+    background-color: transparent
+
+  .column img
+    object-fit: cover
+    border: none
+
+code
+  padding: 0
+
+
+$duration: 450ms
+$tile-width: 25vw
+$tile-height: $tile-width
+$growFactor: .5
+$moveRight: $tile-width * $growFactor
+$moveLeft: -$moveRight / 2
+
+.contain
+  padding: 0 10px
+  display: flex
+  flex-direction: row
+  align-items: center
+  width: 100%
+
+  &, *
+    box-sizing: border-box
+
+  #row
+    height: $tile-height + $tile-height * $growFactor
+    overflow: scroll hidden
+    width: 100%
+    transition: 1s transform
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  .inner-row
+    transition: $duration transform
+    font-size: 0
+    white-space: nowrap
+    margin: ($tile-height / 2) 0
+    padding-bottom: 10px
+
+    &:hover
+      transform: translate3d($moveLeft, 0, 0)
+
+      .tile
+        opacity: .666
+
+        &:hover
+          transform: scale(1 + $growFactor)
+          opacity: 1
+
+  .tile
+    width: $tile-width
+    height: $tile-height
+    position: relative
+    display: inline-block
+    background-color: skyblue
+    cursor: pointer
+    padding: 5px
+    box-sizing: border-box
+    transition: $duration transform
+    transform-origin: left center
+    margin: 5px
+
+    &:hover ~ .tile
+      transform: translate3d($moveRight, 0, 0)
+
+
+
+section:not(.hero):not(#top)
+  &:before, &:after
+    content: ''
+    width: 100%
+    max-width: 1000px
+    border-color: #dbdbdb
+    border-width: 1px
+    position: absolute
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
+
+  &:before
+    border-top-style: none
+
+  &:after
+    border-bottom-style: solid
+
+.container
+  padding: 3rem // 3rem 0 3rem
+  //margin: 3rem auto
+
+
+// People confuse my name with Damien often, hopefully this helps 😅
+@keyframes brighten
+  0%
+    filter: brightness(1.5)
+  3.333%
+    filter: brightness(1)
+#letter-a
+  animation: brighten 66.6s ease-out 3s infinite
 
 
