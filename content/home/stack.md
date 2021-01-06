@@ -21,8 +21,8 @@ weight: 5
 
 #### My nopes 
 
-<b>.NET</b>, node.js, Ethereum<sup>(and its copycats)</sup>.
+<b>.NET</b>, node.js, Ethereum<sup>(and copycats)</sup>.
 
 #### Prehistoric records include
 
-JavaScript, node.js, Python 2 & 3, Ruby, Travis, Google App Engine, Java, Android, Postgresql, MySQL, MongoDB, C/C++, Assembly, Firebase, PHP&nbsp;😅, C<sup>S</sup><small>S</small> 😤, \[iced\]&nbsp;CoffeeScript, Angular, CloudFlare, Firebase, and a ton of APIs.
+JavaScript, node.js, Python 2 & 3, Ruby, Travis, Google App Engine, Java, Android, Postgresql, MySQL, MongoDB, C/C++, Assembly, Firebase, PHP&nbsp;😅, <b title="CSS">C̛̹̥͚̰̯͋ͅˢ̢̧̢̡̛̉̐̊Ş̡͚̼̊̆̃͜ </b>😤, \[iced\]&nbsp;CoffeeScript, Angular, CloudFlare, Firebase, and a ton of APIs.

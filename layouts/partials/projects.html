@@ -33,12 +33,12 @@
 {{/*                {{ with .Resources.ByType "image" }}*/}}
 {{/*                    {{ $moreThenOneImage := gt (len .) 1 }}*/}}
 
-{{/*                    {{ if $moreThenOneImage }}<div class="owl-carousel owl-theme">{{ end }}*/}}
+{{/*                    {{ if $moreThenOneImage }}<div>{{ end }}*/}}
 
 {{/*                    {{ range sort . "Params.weight" }}*/}}
 {{/*                        {{ $image := .Resize "640x" }}*/}}
 
-{{/*                        {{ if $moreThenOneImage }}<div class="item owl-height">{{ end }}*/}}
+{{/*                        {{ if $moreThenOneImage }}<div class="item">{{ end }}*/}}
 {{/*                        <img src="{{ $image.Permalink }}" class="img-responsive" alt="{{ $image.Name }}">*/}}
 {{/*                        {{ if $moreThenOneImage }}</div>{{ end }}*/}}
 {{/*                    {{ end }}*/}}

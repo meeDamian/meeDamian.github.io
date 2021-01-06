@@ -1,7 +1,0 @@
-{{ $owlJS := resources.Get "vendor/owlCarousel/owl.carousel.js" }}
-{{ $owlInit := resources.Get "js/initOwlCarousel.js" }}
-{{ $bundle := slice $owlJS $owlInit | resources.Concat "js/owlCarousel.js" | minify | fingerprint "sha512" }}
-
-<script
-        src="{{ $bundle.Permalink }}"
-        integrity="{{ $bundle.Data.Integrity }}"></script>

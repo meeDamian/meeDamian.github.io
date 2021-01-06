@@ -4,9 +4,7 @@
     {{ with .Site.Params.home }}
         {{ if .localTime }}
             <p>{{ i18n "index_currentTime" . }}
-                <span id="time"
-                      data-time-zone="{{ .timeZone }}"
-                      data-time-format="{{ .timeFormat }}"></span>.
+                <span id="time" data-time-zone="{{ .timeZone }}"></span>.
             </p>
         {{ end }}
     {{ end }}

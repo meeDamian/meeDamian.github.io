@@ -1,8 +1,0 @@
-{{ $owlCSS := resources.Get "vendor/owlCarousel/owl.carousel.css" }}
-{{ $owlTheme := resources.Get "vendor/owlCarousel/owl.theme.default.css" }}
-{{ $bundle := slice $owlCSS $owlTheme | resources.Concat "css/owlCarousel.css" | minify | fingerprint "sha512" }}
-
-<link rel="stylesheet" media="screen"
-      href="{{ $bundle.Permalink }}"
-      integrity="{{ $bundle.Data.Integrity }}"
-      crossorigin="anonymous">

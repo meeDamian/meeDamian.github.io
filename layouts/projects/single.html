@@ -8,12 +8,12 @@
             <div class="has-text-centered">
                 {{ $moreThanOneImage := gt (len .) 1 }}
 
-                {{ if $moreThanOneImage }}<div class="owl-carousel owl-theme">{{ end }}
+                {{ if $moreThanOneImage }}<div>{{ end }}
 
                 {{ range sort . "Params.weight" }}
                     {{ $image := .Resize "1000x" }}
 
-                    {{ if $moreThanOneImage }}<div class="item owl-height">{{ end }}
+                    {{ if $moreThanOneImage }}<div class="item">{{ end }}
                     <img src="{{ $image.RelPermalink }}" class="img-responsive" alt="{{ $image.Name }}">
                     {{ if $moreThanOneImage }}</div>{{ end }}
                 {{ end }}
@@ -26,12 +26,4 @@
     </div>
 
     {{ partial "comments.html" . }}
-{{ end }}
-
-{{ define "head-extra" }}
-    {{ partial "css/owlCarousel.html" . }}
-{{ end }}
-
-{{ define "js-extra" }}
-    {{ partial "js/owlCarousel.html" . }}
 {{ end }}

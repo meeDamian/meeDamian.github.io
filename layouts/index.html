@@ -68,11 +68,6 @@
     {{ end }}
 {{ end }}
 
-
 {{ define "js-extra" }}
     {{ partial "js/qr" . }}
-
-    {{ if .Site.Params.home.localTime }}
-        {{ partial "js/momentjs" . }}
-    {{ end }}
 {{ end }}

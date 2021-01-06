@@ -65,6 +65,8 @@
                   integrity="{{ $bundle.Data.Integrity }}"
                   crossorigin="anonymous">
         {{ end }}
+
+        <script src="https://kit.fontawesome.com/9a3beb5f93.js" crossorigin="anonymous"></script>
     {{ end }}
 
 
@@ -107,10 +109,6 @@
 
 
 {{ block "js" . }}
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-
     {{ $scripts := resources.Get "js/index.js" | minify | fingerprint "sha512" }}
     <script src="{{ $scripts.Permalink }}"
             integrity="{{ $scripts.Data.Integrity }}"></script>

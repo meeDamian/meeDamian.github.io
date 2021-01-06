@@ -28,7 +28,6 @@ params:
   home:
     localTime: true
     timeZone: Asia/Kuala_Lumpur
-    timeFormat: HH:mm
     numberOfProjectsToShow: 3
 
   social:
@@ -46,7 +45,12 @@ params:
 
     - <<: *social
       url: https://www.linkedin.com/in/
-      icon: linkedin
+      icon: linkedin-in
+
+    - <<: *social
+      url: https://www.goodreads.com/
+      icon: book-open
+      icon_pack: fas
 
     - url: https://hodl.studio
       icon: bolt

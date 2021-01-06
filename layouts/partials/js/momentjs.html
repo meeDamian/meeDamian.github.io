@@ -1,8 +1,0 @@
-{{ $momentJS := resources.Get "vendor/momentjs/moment.js" }}
-{{ $momentTZ := resources.Get "vendor/momentjs/moment-timezone-with-data-10-year-range.js" }}
-{{ $momentInit := resources.Get "js/initMoment.js" }}
-{{ $bundle := slice $momentJS $momentTZ $momentInit | resources.Concat "js/moment.js" | minify | fingerprint "sha512" }}
-
-<script
-        src="{{ $bundle.Permalink }}"
-        integrity="{{ $bundle.Data.Integrity }}"></script>
