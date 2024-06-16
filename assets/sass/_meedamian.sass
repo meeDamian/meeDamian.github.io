@@ -12,7 +12,11 @@
 
 code
   padding: 0
+  font-family: 'Fira Code', monospace
 
+@supports (font-variation-settings: normal)
+  code
+    font-family: 'Fira Code VF', monospace
 
 $duration: 450ms
 $tile-width: 25vw
