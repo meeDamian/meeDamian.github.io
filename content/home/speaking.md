@@ -20,6 +20,7 @@ Some of my archival slides can be found [here].  To schedule, please see the [co
 | 2019-11-19 | WAW / meetup    | Bitcoin & Beer    | _Lightning Network: Present & Future_
 | 2019-02-28 | BKK / conf      | TokenomX          | [_Lightning Network, the smartphone of value_][ln-smartphone]
 | 2018-05-14 | CNX / meetup    | Advanced Bitcoin  | _What is Money?_
+| 2018-04-19 | BKK / conf      | TokenomX          | _Multiple panels orangepilling altcoiners_
 | _One day,_ | _I will complete_ | _the gap here!_ | _I promise 🙈 ..._
 | 2014-06-28 | MSQ / conf      | MobileOptimized   | _Do you speak Gradle?_  
 
