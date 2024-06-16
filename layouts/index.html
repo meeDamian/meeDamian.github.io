@@ -51,8 +51,7 @@
                 {{ else if eq .Name "contact.md" }}
                     {{ partial "home/contact" . }}
 
-                {{ else if eq .Name "bitcoin.md" }}
-                    {{ partial "home/bitcoin" . }}
+
 
                 {{ else if .Params.Image }}
                     {{ partial "home/section-image" . }}
@@ -66,8 +65,4 @@
             </div>
         </section>
     {{ end }}
-{{ end }}
-
-{{ define "js-extra" }}
-    {{ partial "js/qr" . }}
 {{ end }}

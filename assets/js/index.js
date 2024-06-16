@@ -42,35 +42,10 @@ const initLocalTime = () => {
 	setInterval(updateLocalTime, 1e3);
 };
 
-function doQR(id) {
-	document.querySelectorAll(`#${id} div`)
-		.forEach((el = {}) => {
-			const {parentElement} = el;
-			const {pre = '', payload = ''} = parentElement.dataset || {};
-
-			const qr = qrcode(0, 'L');
-			qr.addData(pre.toUpperCase(), 'Alphanumeric');
-			const chunks = payload.split('@');
-
-			qr.addData(chunks[0].toUpperCase(), 'Alphanumeric');
-
-			if (chunks.length > 1) {
-				qr.addData('@');
-				qr.addData(chunks[1].toUpperCase(), 'Alphanumeric');
-			}
-
-			qr.make();
-
-			el.innerHTML = qr.createSvgTag({scalable: true, margin: 2, title: payload});
-		});
-}
-
 document.addEventListener("DOMContentLoaded", () => {
 	initNavBurger();
 	initSomething1();
 	initLocalTime();
-	doQR('btc-qr');
-	doQR('ln-qr');
 });
 
 // $(".modal-close").click(function () {
