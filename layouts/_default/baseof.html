@@ -57,8 +57,6 @@
 
         {{ else }}
             {{ $cssOpts := (dict "targetPath" "css/main.css" ) }}
-            {{/*  {{ $postCSSOpts := (dict "use" "autoprefixer" ) }}  */}}
-            {{/*  {{ $bundle := $bundleRaw | toCSS $cssOpts | postCSS $postCSSOpts | minify | fingerprint "sha512" }}  */}}
             {{ $bundle := $bundleRaw | toCSS $cssOpts | minify | fingerprint "sha512" }}
 
             <link rel="stylesheet" media="screen"
