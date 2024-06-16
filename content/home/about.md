@@ -6,15 +6,15 @@ image_title: Picture by Andrea Brt
 
 <!-- Picture by Andrea -->
 
-I'm a Github addict involved with open-source and Bitcoin for a decade⁺ now.  I slow-travel to see the world the way I like it, and I don't know what _boredom_ is. 
+I'm a Github addict, involved with open-source & Bitcoin for over a decade.  I slow-travel experiencing the world the way I like it.  I'm from the generation that thinks throwing stones into a lake is exhilarating.
 
 So far, I've <b>lived</b> in: 
 
-## 🇵🇱 🇹🇭 🇲🇾 🇹🇼 🇮🇳 🇦🇺 🇬🇧 🇻🇳
+## 🇵🇱 🇹🇭 🇲🇾 🇹🇼 🇨🇴 🇮🇳 🇦🇺 🇬🇧 🇻🇳
 
-And spent up to <b>1 month</b> in:
+And spent <b>1 month</b> or less in:
 
-#### 🇮🇹 🇩🇪 🇧🇪 🇰🇷 🇯🇵 🇳🇿 🇸🇬 🇮🇩 🇲🇨 🇭🇰 🇫🇷 🇲🇲 🇵🇹 🇪🇸 🇨🇿 🇵🇭 🇭🇺 🇸🇮 🇸🇰 🇷🇺 🇳🇱 🇧🇾 🇺🇦 🇱🇹 🇱🇻 🇳🇴 🇸🇪 🇦🇹 🇱🇮 🇫🇮 🇭🇷 🇨🇭 🇲🇴 🇪🇪
+#### 🇮🇹 🇩🇪 🇧🇪 🇰🇷 🇯🇵 🇳🇿 🇸🇬 🇮🇩 🇲🇨 🇭🇰 🇫🇷 🇲🇲 🇵🇹 🇪🇸 🇨🇿 🇵🇭 🇭🇺 🇸🇮 🇸🇰 🇷🇺 🇳🇱 🇧🇾 🇺🇦 🇱🇹 🇱🇻 🇳🇴 🇸🇪 🇦🇹 🇱🇮 🇫🇮 🇭🇷 🇨🇭 🇲🇴 🇪🇪 🇲🇽
 
 
 <br />

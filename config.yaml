@@ -59,10 +59,10 @@ params:
 permalinks:
   blog: /post/:slug/
 
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-
-  highlight:
-    codeFences: true
+#markup:
+#  goldmark:
+#    renderer:
+#      unsafe: true
+#
+#  highlight:
+#    codeFences: true

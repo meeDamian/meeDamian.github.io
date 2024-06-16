@@ -51,8 +51,8 @@
                 <a class="navbar-item" href="{{ $url }}">{{ $title }}</a>
             {{ end }}
 
-            {{ if and .Site.Params.showRSSButton .Site.RSSLink }}
-                <a class="navbar-item" href="{{ .Site.RSSLink }}"><i class="fas fa-rss"></i></a>
+            {{ if and .Site.Params.showRSSButton (.OutputFormats.Get "RSS") }}
+                <a class="navbar-item" href="{{ (.OutputFormats.Get "RSS").Permalink }}"><i class="fas fa-rss"></i></a>
             {{ end }}
         </div>
     </nav>
