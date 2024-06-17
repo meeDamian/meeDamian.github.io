@@ -52,29 +52,33 @@ params:
 
   social:
     - <<: *social
-      url: https://twitter.com/
-      icon: twitter
+      url: https://x.com/
+      icon: x-twitter
 
     - <<: *social
       url: https://github.com/
-      icon: github
+      icon: github-alt
+
+    - <<: *social
+      url: https://www.goodreads.com/
+      icon: goodreads-g
+
+    - <<: *social
+      url: https://www.linkedin.com/in/
+      icon: linkedin
+
+    - <<: *social
+      url: https://t.me/
+      icon: telegram
 
     - <<: *social
       url: https://keybase.io/
       icon: keybase
 
-    - <<: *social
-      url: https://www.linkedin.com/in/
-      icon: linkedin-in
-
-    - <<: *social
-      url: https://www.goodreads.com/
-      icon: book-open
-      icon_pack: fas
-
-    - url: https://hodl.studio
-      icon: bolt
-      icon_pack: fas
+    # - <<: *social
+    #   url: nostr:npub1ftjdw3y6vg3gz2m67lyzauwsh00apkcf7vp9y03w56ztzw4pxhlsyhsrnu
+    #   icon: circle-nodes
+    #   icon_pack: fas
 
 permalinks:
   blog: /post/:slug/
