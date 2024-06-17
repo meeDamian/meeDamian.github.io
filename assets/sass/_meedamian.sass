@@ -25,6 +25,26 @@ $growFactor: .5
 $moveRight: $tile-width * $growFactor
 $moveLeft: -$moveRight / 2
 
+
+#spoken
+  overflow-x: auto
+  -webkit-overflow-scrolling: touch
+
+  table
+    overflow-x: auto
+    width: 100%
+    border-collapse: collapse // Ensure proper border handling
+
+    th, td
+      white-space: nowrap  //Prevent content from wrapping
+
+@media (max-width: 768px) // Adjust the breakpoint as needed
+  #spoken
+    width: 100vw
+    margin-left: -3rem
+    margin-right: -3rem
+
+
 .contain
   padding: 0 10px
   display: flex

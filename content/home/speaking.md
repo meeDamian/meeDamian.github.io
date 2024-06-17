@@ -11,6 +11,7 @@ Some of my archival slides can be found [here].  To schedule, please see the [co
 [here]: https://keybase.pub/meedamian/slides
 [contact]: #contact
 
+<div id="spoken">
 
 | 🗓          | 🌏              |           📜       | 🤔   
 |------------|-----------------|-------------------|--------------------
@@ -22,7 +23,9 @@ Some of my archival slides can be found [here].  To schedule, please see the [co
 | 2018-05-14 | CNX / meetup    | Advanced Bitcoin  | _What is Money?_
 | 2018-04-19 | BKK / conf      | TokenomX          | _Multiple panels orangepilling altcoiners_
 | _One day,_ | _I will complete_ | _the gap here!_ | _I promise 🙈 ..._
-| 2014-06-28 | MSQ / conf      | MobileOptimized   | _Do you speak Gradle?_  
+| 2014-06-28 | MSQ / conf      | MobileOptimized   | _Do you speak Gradle?_
+
+</div>
 
 [Bitcoin LN]: https://www.eventbrite.com/e/bitcoin-lightning-network-hardware-wallet-review-meetup-tickets-94350987343?aff=ebdssbdestsearch
 [Bitcoin Halving]: https://www.eventbrite.com/e/bitcoin-halving-why-it-matters-what-might-happen-bitcoinmalaysia-monthly-talk-tickets-94112841041#

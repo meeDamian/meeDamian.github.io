@@ -26,9 +26,17 @@ services:
   disqus:
     shortname: meeDamian
 
+
 privacy:
   googleAnalytics:
     respectDoNotTrack: true
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # needed to add <div>s around speaking table to make it responsive
+
 
 params:
   description: Damian Mee | homepage
