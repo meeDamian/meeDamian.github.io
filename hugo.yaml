@@ -52,20 +52,20 @@ params:
 
   social:
     - <<: *social
-      url: https://x.com/
-      icon: x-twitter
-
-    - <<: *social
       url: https://github.com/
       icon: github-alt
 
     - <<: *social
-      url: https://www.goodreads.com/
-      icon: goodreads-g
-
-    - <<: *social
       url: https://www.linkedin.com/in/
       icon: linkedin
+
+    - <<: *social
+      url: https://x.com/
+      icon: square-x-twitter
+
+    - <<: *social
+      url: https://www.goodreads.com/
+      icon: goodreads
 
     - <<: *social
       url: https://t.me/
