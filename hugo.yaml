@@ -43,7 +43,6 @@ params:
   dateFormat: 2 Jan 2006
   email: *email
   favicon: /favicon.ico
-  showRSSButton: true
 
   home:
     localTime: true
