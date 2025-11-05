@@ -73,10 +73,19 @@ pre
     border-radius: 5px
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4)
 
-.avatar
-    border: none
+.avatar-container
+    position: relative
+    display: inline-block
+    width: 100%
+    max-width: 320px
     @include mobile
         max-width: 50%
+
+.avatar
+    border: none
+    transition: opacity 0.1s ease-out
+    @include mobile
+        max-width: 100%
 
 .thumbnail
     border: none

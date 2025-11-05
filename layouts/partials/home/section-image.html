@@ -4,13 +4,26 @@
 
 <div class="columns">
     <div class="column is-one-third has-text-centered">
-        {{ with $home.Resources.GetMatch .Params.Image }}
-            {{ with .Resize "320x" }}
-                <img src="{{ .Permalink }}"
-                     class="img-responsive avatar"
-                     alt="{{ $.Param "image_title" }}"
-                     title="{{ $.Param "image_title" }}">
+        {{ $imageResource := $home.Resources.GetMatch .Params.Image }}
+        {{ if $imageResource }}
+            {{ with $imageResource.Resize "320x" }}
+                <div class="avatar-container">
+                    <img src="{{ .Permalink }}"
+                         class="img-responsive avatar"
+                         alt="{{ $.Param "image_title" }}"
+                         title="{{ $.Param "image_title" }}"
+                         id="face-tracker-avatar">
+                </div>
             {{ end }}
+        {{ else if .Params.Image }}
+            {{/* Fallback to static image if resource not found */}}
+            <div class="avatar-container">
+                <img src="/faces/gaze_px0p0_py0p0_256.webp"
+                     class="img-responsive avatar"
+                     alt="{{ .Param "image_title" }}"
+                     title="{{ .Param "image_title" }}"
+                     id="face-tracker-avatar">
+            </div>
         {{ end }}
     </div>
 

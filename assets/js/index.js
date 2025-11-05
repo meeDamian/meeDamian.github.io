@@ -42,10 +42,104 @@ const initLocalTime = () => {
 	setInterval(updateLocalTime, 1e3);
 };
 
+// Import face tracker
+// Note: In Hugo, we'll need to include this via baseof.html instead
+// This is a placeholder for the initialization logic
+
+const initFaceTracker = () => {
+	const avatarImg = document.getElementById('face-tracker-avatar');
+	const aboutSection = document.getElementById('about');
+	
+	if (!avatarImg || !aboutSection) {
+		return;
+	}
+
+	// Grid configuration (must match image generation parameters)
+	const P_MIN = -15;
+	const P_MAX = 15;
+	const STEP = 2;
+	const SIZE = 256;
+	
+	// Center gaze image (closest to 0,0 which is 1,1 in our odd-numbered grid)
+	const centerImage = '/faces/gaze_px1p0_py1p0_256.webp';
+
+	const quantizeToGrid = (val) => {
+		const raw = P_MIN + (val + 1) * (P_MAX - P_MIN) / 2; // [-1,1] -> [-15,15]
+		// Round to nearest STEP, but ensure we land on the actual grid (odd numbers)
+		let snapped = Math.round(raw / STEP) * STEP;
+		// Since P_MIN=-15 is odd and STEP=2, all valid values are odd
+		// If snapped is even, adjust to nearest odd
+		if (snapped % 2 === 0) {
+			// Choose nearest odd number
+			snapped = raw > snapped ? snapped + 1 : snapped - 1;
+		}
+		return Math.max(P_MIN, Math.min(P_MAX, snapped));
+	};
+
+	const gridToFilename = (px, py) => {
+		const sanitize = (val) => {
+			// Ensure we have a decimal point (add .0 if integer)
+			let str = val.toString();
+			if (!str.includes('.')) {
+				str += '.0';
+			}
+			// Replace minus with 'm', then replace decimal point with 'p'
+			return str.replace('-', 'm').replace('.', 'p');
+		};
+		return `gaze_px${sanitize(px)}_py${sanitize(py)}_${SIZE}.webp`;
+	};
+
+	const updateGaze = (clientX, clientY) => {
+		const rect = avatarImg.getBoundingClientRect();
+		const centerX = rect.left + rect.width / 2;
+		const centerY = rect.top + rect.height / 2;
+
+		const nx = (clientX - centerX) / (rect.width / 2);
+		const ny = (clientY - centerY) / (rect.height / 2);
+
+		const clampedX = Math.max(-1, Math.min(1, nx));
+		const clampedY = Math.max(-1, Math.min(1, -ny)); // Invert Y-axis
+
+		const px = quantizeToGrid(clampedX);
+		const py = quantizeToGrid(clampedY);
+
+		const filename = gridToFilename(px, py);
+		const imagePath = `/faces/${filename}`;
+
+		// Debug logging (remove after testing)
+		// console.log(`Mouse: (${clientX}, ${clientY}) -> Normalized: (${nx.toFixed(2)}, ${ny.toFixed(2)}) -> Grid: (${px}, ${py}) -> ${filename}`);
+
+		if (!avatarImg.src.endsWith(imagePath)) {
+			avatarImg.src = imagePath;
+		}
+	};
+
+	const handleMouseMove = (e) => updateGaze(e.clientX, e.clientY);
+	const handleTouchMove = (e) => {
+		if (e.touches.length > 0) {
+			updateGaze(e.touches[0].clientX, e.touches[0].clientY);
+		}
+	};
+
+	const handleMouseLeave = () => {
+		// Return to center gaze when leaving the about section
+		avatarImg.src = centerImage;
+	};
+
+	// Add listeners to the about section only
+	aboutSection.addEventListener('mousemove', handleMouseMove);
+	aboutSection.addEventListener('touchmove', handleTouchMove, { passive: true });
+	aboutSection.addEventListener('mouseleave', handleMouseLeave);
+
+	// Initial state: set to center gaze
+	avatarImg.src = centerImage;
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 	initNavBurger();
 	initSomething1();
 	initLocalTime();
+	initFaceTracker();
 });
 
 // $(".modal-close").click(function () {
