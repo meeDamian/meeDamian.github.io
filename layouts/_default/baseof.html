@@ -70,6 +70,15 @@
 
 
     {{ block "head-extra" . }}{{ end }}
+
+    {{/* Preload face tracking images for smooth interaction */}}
+    {{ if .IsHome }}
+        {{ range (readDir "static/faces") }}
+            {{ if strings.HasSuffix .Name ".webp" }}
+                <link rel="preload" as="image" href="/faces/{{ .Name }}">
+            {{ end }}
+        {{ end }}
+    {{ end }}
 </head>
 
 <body>
