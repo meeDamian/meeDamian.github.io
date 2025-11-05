@@ -1,18 +1,16 @@
 baseURL: https://meedamian.com
 languageCode: en-us
 
-author:
-  me:
-    name: &me Damian Mee
-    handle: &handle meeDamian
-    email: &email hi@meedamian.com
+me: &me
+  name: &mee Damian Mee
+  handle: &handle meeDamian
+  email: &email hi@meedamian.com
 
-title: *me
+title: *mee
 
 default_social: &social
   handle: *handle
   icon_pack: fab
-
 
 enableEmoji: true
 enableRobotsTXT: true
@@ -43,6 +41,8 @@ params:
   dateFormat: 2 Jan 2006
   email: *email
   favicon: /favicon.ico
+
+  author: *me
 
   home:
     localTime: true
