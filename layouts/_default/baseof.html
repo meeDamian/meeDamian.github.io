@@ -115,6 +115,19 @@
     </div>
 {{ end }}
 
+{{/* Video modal for project videos */}}
+<div id="video-modal" class="video-modal">
+    <div class="video-modal-overlay"></div>
+    <div class="video-modal-content">
+        <button class="video-modal-close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <video id="video-player" controls>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
 
 {{ block "js" . }}
     {{ $scripts := resources.Get "js/index.js" | minify | fingerprint "sha512" }}

@@ -2,60 +2,19 @@
     {{ .Title }}
 </h2>
 
-<div class="has-text-centered">🚧 Section WIP 🚧</div>
-
-<div class="section contain">
-    <div id="row">
-        <div class="inner-row">
-            {{ range $i, $el := .Pages.ByWeight }}
-                {{ .Scratch.Set "i" $i }}
-                {{ partial "project-tile.html" . }}
-            {{ end }}
-        </div>
+<div class="projects-carousel-wrapper">
+    <div class="projects-carousel">
+        {{ range .Site.Data.projects }}
+            {{ partial "project-card.html" . }}
+        {{ end }}
+    </div>
+    
+    {{/* Scroll hint indicator */}}
+    <div class="scroll-hint">
+        <i class="fa-solid fa-chevron-right"></i>
     </div>
 </div>
 
 <div class="container has-text-centered top-pad">
     <a href="{{ .Permalink }}">{{ i18n "index_projects_allProjects" . }}</a>
 </div>
-
-
-
-{{/*{{ range $i, $el := .Pages.ByWeight | first $numberOfProjectsToShow }}*/}}
-{{/*    {{ if not .Params.external_link }}*/}}
-{{/*        <div class="modal" id="project-{{ $i }}">*/}}
-{{/*            <div class="modal-background"></div>*/}}
-{{/*            <div class="modal-card">*/}}
-{{/*                {{ with .Title }}*/}}
-{{/*                    <header class="modal-card-header bottom-pad">*/}}
-{{/*                        <p class="modal-card-title has-text-centered">{{ . }}</p>*/}}
-{{/*                    </header>*/}}
-{{/*                {{ end }}*/}}
-
-{{/*                {{ with .Resources.ByType "image" }}*/}}
-{{/*                    {{ $moreThenOneImage := gt (len .) 1 }}*/}}
-
-{{/*                    {{ if $moreThenOneImage }}<div>{{ end }}*/}}
-
-{{/*                    {{ range sort . "Params.weight" }}*/}}
-{{/*                        {{ $image := .Resize "640x" }}*/}}
-
-{{/*                        {{ if $moreThenOneImage }}<div class="item">{{ end }}*/}}
-{{/*                        <img src="{{ $image.Permalink }}" class="img-responsive" alt="{{ $image.Name }}">*/}}
-{{/*                        {{ if $moreThenOneImage }}</div>{{ end }}*/}}
-{{/*                    {{ end }}*/}}
-
-{{/*                    {{ if $moreThenOneImage }}</div>{{ end }}*/}}
-{{/*                {{ end }}*/}}
-
-{{/*                {{ with .Content }}*/}}
-{{/*                    <section class="modal-card-body markdown">*/}}
-{{/*                        {{ . }}*/}}
-{{/*                    </section>*/}}
-{{/*                {{ end }}*/}}
-{{/*            </div>*/}}
-
-{{/*            <button class="modal-close is-large" aria-label="close" data-target="#project-{{ $i }}"></button>*/}}
-{{/*        </div>*/}}
-{{/*    {{ end }}*/}}
-{{/*{{ end }}*/}}

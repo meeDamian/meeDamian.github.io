@@ -135,11 +135,82 @@ const initFaceTracker = () => {
 	avatarImg.src = centerImage;
 };
 
+const initProjectsCarousel = () => {
+	const carousel = document.querySelector('.projects-carousel');
+	const scrollHint = document.querySelector('.scroll-hint');
+	
+	if (!carousel || !scrollHint) {
+		return;
+	}
+
+	// Hide scroll hint after user scrolls
+	let hasScrolled = false;
+	carousel.addEventListener('scroll', () => {
+		if (!hasScrolled && carousel.scrollLeft > 50) {
+			hasScrolled = true;
+			scrollHint.style.opacity = '0';
+			scrollHint.style.transition = 'opacity 0.5s ease';
+		}
+	});
+
+	// Also hide on touch/mouse interaction
+	carousel.addEventListener('touchstart', () => {
+		scrollHint.style.opacity = '0';
+	}, { once: true });
+};
+
+const initVideoModal = () => {
+	const modal = document.getElementById('video-modal');
+	const videoPlayer = document.getElementById('video-player');
+	const videoSource = videoPlayer.querySelector('source');
+	const closeBtn = document.querySelector('.video-modal-close');
+	const overlay = document.querySelector('.video-modal-overlay');
+	
+	if (!modal || !videoPlayer) {
+		return;
+	}
+
+	// Open video modal when clicking cards with video
+	document.addEventListener('click', (e) => {
+		const card = e.target.closest('.project-card.has-video');
+		if (card) {
+			const videoUrl = card.dataset.video;
+			if (videoUrl) {
+				videoSource.src = videoUrl;
+				videoPlayer.load();
+				modal.classList.add('active');
+				document.body.style.overflow = 'hidden';
+				videoPlayer.play();
+			}
+		}
+	});
+
+	// Close modal
+	const closeModal = () => {
+		modal.classList.remove('active');
+		document.body.style.overflow = '';
+		videoPlayer.pause();
+		videoPlayer.currentTime = 0;
+	};
+
+	closeBtn.addEventListener('click', closeModal);
+	overlay.addEventListener('click', closeModal);
+	
+	// Close on Escape key
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && modal.classList.contains('active')) {
+			closeModal();
+		}
+	});
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 	initNavBurger();
 	initSomething1();
 	initLocalTime();
 	initFaceTracker();
+	initProjectsCarousel();
+	initVideoModal();
 });
 
 // $(".modal-close").click(function () {

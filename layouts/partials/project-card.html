@@ -1,0 +1,79 @@
+{{/* Horizontal carousel project card */}}
+<div class="project-card {{ if .video }}has-video{{ end }}" 
+     id="project-{{ .id }}"
+     {{ if .video }}data-video="/projects/{{ .video }}"{{ end }}>
+    {{/* Image/Icon Section */}}
+    <div class="project-image">
+        {{ if .video }}
+            <div class="video-play-overlay">
+                <i class="fa-solid fa-circle-play"></i>
+            </div>
+        {{ end }}
+        {{ if .image }}
+            <img src="/projects/{{ .image }}" alt="{{ .title }}" loading="lazy">
+            {{/* Show type icon badge when both image and type exist */}}
+            {{ if .type }}
+                <div class="project-type-badge">
+                    {{ if eq .type "terminal" }}
+                        <i class="fa-solid fa-{{ .type }}"></i>
+                    {{ else }}
+                        <i class="fa-brands fa-{{ .type }}"></i>
+                    {{ end }}
+                </div>
+            {{ end }}
+        {{ else if .type }}
+            <div class="project-icon-placeholder">
+                {{ if eq .type "terminal" }}
+                    <i class="fa-solid fa-{{ .type }}"></i>
+                {{ else }}
+                    <i class="fa-brands fa-{{ .type }}"></i>
+                {{ end }}
+            </div>
+        {{ else }}
+            <div class="project-icon-placeholder">
+                <i class="fa-solid fa-code"></i>
+            </div>
+        {{ end }}
+    </div>
+
+    {{/* Content Section */}}
+    <div class="project-content">
+        {{/* Title and Status */}}
+        <div class="project-header">
+            <h3 class="project-title">{{ .title }}</h3>
+            {{ if .status }}
+                <span class="project-status-badge">{{ .status | safeHTML }}</span>
+            {{ end }}
+        </div>
+
+        {{/* Description - truncated */}}
+        {{ if .description }}
+            <div class="project-description">
+                {{ .description | safeHTML | truncate 120 }}
+            </div>
+        {{ end }}
+
+        {{/* Action buttons - max 2 visible */}}
+        {{ if .buttons }}
+            <div class="project-buttons">
+                {{ range first 2 .buttons }}
+                    <a href="{{ .url }}" 
+                       class="project-btn"
+                       {{ if not (or (hasPrefix .url "/") (hasPrefix .url "#") (eq .url "refresh")) }}
+                           target="_blank" rel="noopener"
+                       {{ end }}
+                       title="{{ .label }}">
+                        {{ if .icon }}
+                            {{ if or (eq .icon "download") (eq .icon "web") (eq .icon "keyboard") (eq .icon "refresh") }}
+                                <i class="fa-solid fa-{{ .icon }}"></i>
+                            {{ else }}
+                                <i class="fa-brands fa-{{ .icon }}"></i>
+                            {{ end }}
+                        {{ end }}
+                        <span>{{ .label }}</span>
+                    </a>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+</div>

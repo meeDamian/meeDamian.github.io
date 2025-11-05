@@ -2,6 +2,293 @@
   font-family: monospace
   text-align: left
 
+// Projects full page grid layout
+.projects-grid-page
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  gap: 2rem
+  margin: 2rem 0
+  padding: 1rem 0
+
+  @include mobile
+    grid-template-columns: 1fr
+    gap: 1.5rem
+    margin: 1rem 0
+
+  // Cards in grid should not have scroll-snap and can be taller
+  .project-card
+    scroll-snap-align: none
+    height: auto
+    min-height: 380px
+
+  // Show more description lines on full page
+  .project-description
+    -webkit-line-clamp: 4
+    
+  // Show all buttons on full page
+  .project-buttons
+    flex-wrap: wrap
+
+// Projects horizontal carousel
+.projects-carousel-wrapper
+  position: relative
+  width: 100vw
+  margin: 2rem 0
+  margin-left: calc(-50vw + 50%)
+  overflow: hidden
+
+  @include mobile
+    margin: 1rem 0
+    margin-left: calc(-50vw + 50%)
+
+.projects-carousel
+  display: flex
+  gap: 1.5rem
+  overflow-x: auto
+  overflow-y: hidden
+  scroll-behavior: smooth
+  scroll-snap-type: x mandatory
+  padding: 1rem 2rem 2rem
+  -webkit-overflow-scrolling: touch
+  scrollbar-width: none
+  -ms-overflow-style: none
+
+  &::-webkit-scrollbar
+    display: none
+
+  @include mobile
+    gap: 1rem
+    padding: 1rem 1rem 1.5rem
+    scroll-padding-left: 1rem
+
+.project-card
+  flex: 0 0 300px
+  height: 380px
+  background: $background
+  border: 1px solid rgba(219, 219, 219, 0.3)
+  border-radius: 12px
+  overflow: hidden
+  scroll-snap-align: start
+  transition: all 0.3s ease
+  display: flex
+  flex-direction: column
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+
+  &:hover
+    border-color: $primary
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15)
+    transform: translateY(-4px)
+
+  @include mobile
+    flex: 0 0 280px
+    height: 360px
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 1rem
+
+.project-image
+  width: 100%
+  height: 160px
+  background: linear-gradient(135deg, rgba($primary, 0.1) 0%, rgba($primary, 0.05) 100%)
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  position: relative
+
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: transform 0.3s ease
+
+  .project-card:hover &
+    img
+      transform: scale(1.05)
+
+.video-play-overlay
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 4rem
+  color: white
+  opacity: 0.9
+  z-index: 2
+  pointer-events: none
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5)
+  transition: all 0.3s ease
+
+  .project-card.has-video:hover &
+    opacity: 1
+    transform: translate(-50%, -50%) scale(1.1)
+
+.project-type-badge
+  position: absolute
+  top: 0.5rem
+  right: 0.5rem
+  background: rgba(0, 0, 0, 0.7)
+  backdrop-filter: blur(4px)
+  border-radius: 6px
+  padding: 0.4rem 0.5rem
+  font-size: 1.2rem
+  color: white
+  z-index: 3
+  display: flex
+  align-items: center
+  justify-content: center
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+
+.project-icon-placeholder
+  font-size: 4rem
+  color: $primary
+  opacity: 0.4
+
+.project-content
+  padding: 1.25rem
+  display: flex
+  flex-direction: column
+  flex: 1
+
+.project-header
+  margin-bottom: 0.5rem
+
+.project-title
+  font-size: 1.1rem
+  font-weight: 600
+  color: $h-color
+  margin: 0 0 0.25rem 0
+  line-height: 1.3
+
+.project-status-badge
+  display: inline-block
+  font-size: 0.7rem
+  color: rgba($body-color, 0.6)
+  text-transform: uppercase
+  letter-spacing: 0.5px
+
+.project-description
+  flex: 1
+  color: $body-color
+  font-size: 0.85rem
+  line-height: 1.5
+  margin-bottom: 1rem
+  overflow: hidden
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+
+  a
+    color: $primary
+
+.project-buttons
+  display: flex
+  gap: 0.5rem
+  margin-top: auto
+
+.project-btn
+  flex: 1
+  padding: 0.5rem 0.75rem
+  border: 1px solid $primary
+  border-radius: 6px
+  color: $primary
+  font-size: 0.85rem
+  text-align: center
+  transition: all 0.2s ease
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 0.25rem
+
+  &:hover
+    background-color: $primary
+    color: white
+
+.scroll-hint
+  position: absolute
+  right: 2rem
+  top: 50%
+  transform: translateY(-50%)
+  font-size: 2rem
+  color: $primary
+  opacity: 0.3
+  pointer-events: none
+  animation: pulse 2s ease-in-out infinite
+  transition: opacity 0.5s ease
+
+  @include mobile
+    display: none
+
+@keyframes pulse
+  0%, 100%
+    opacity: 0.3
+  50%
+    opacity: 0.6
+
+// Video modal
+.video-modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  display: none
+  align-items: center
+  justify-content: center
+
+  &.active
+    display: flex
+
+.video-modal-overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.9)
+  cursor: pointer
+
+.video-modal-content
+  position: relative
+  width: 90%
+  max-width: 1200px
+  z-index: 10000
+
+  @include mobile
+    width: 95%
+
+.video-modal-close
+  position: absolute
+  top: -3rem
+  right: 0
+  background: transparent
+  border: none
+  color: white
+  font-size: 2rem
+  cursor: pointer
+  padding: 0.5rem
+  transition: transform 0.2s ease
+
+  &:hover
+    transform: scale(1.1)
+
+  @include mobile
+    top: -2.5rem
+    font-size: 1.5rem
+
+#video-player
+  width: 100%
+  max-height: 80vh
+  background: black
+  border-radius: 8px
+
+.project-card.has-video
+  cursor: pointer
+
 #projects
   .card
     background-color: transparent
@@ -29,20 +316,83 @@ $moveLeft: -$moveRight / 2
 #spoken
   overflow-x: auto
   -webkit-overflow-scrolling: touch
+  margin: 2rem 0
 
   table
-    overflow-x: auto
     width: 100%
-    border-collapse: collapse // Ensure proper border handling
+    border-collapse: collapse
+    border-spacing: 0
+    font-size: 0.95rem
+    background: transparent
+    border: none !important
 
-    th, td
-      white-space: nowrap  //Prevent content from wrapping
+    thead
+      tr
+        border-bottom: 2px solid rgba(219, 219, 219, 0.3)
 
-@media (max-width: 768px) // Adjust the breakpoint as needed
+        th
+          padding: 0.5rem 1rem
+          text-align: left
+          font-weight: 400
+          color: $body-color
+          white-space: nowrap
+          font-size: 1.5rem
+          background: transparent
+          border: none !important
+
+    tbody
+      tr
+        border-bottom: 1px solid rgba(219, 219, 219, 0.15)
+        transition: background-color 0.2s ease
+
+        &:hover
+          background-color: rgba(219, 219, 219, 0.05)
+
+        &:last-child
+          border-bottom: none
+
+        td
+          padding: 0.5rem 1rem
+          white-space: nowrap
+          color: $body-color
+          background: transparent
+          vertical-align: top
+          border: none !important
+
+          &:first-child
+            font-weight: 500
+            color: $primary
+
+          a
+            color: $primary
+            text-decoration: none
+            border-bottom: 1px solid transparent
+            transition: border-color 0.2s ease
+
+            &:hover
+              border-bottom-color: $primary
+
+          em
+            font-style: italic
+            opacity: 0.8
+
+@media (max-width: 768px)
   #spoken
     width: 100vw
     margin-left: -3rem
     margin-right: -3rem
+    border-radius: 0
+    box-shadow: none
+
+    table
+      font-size: 0.85rem
+
+      thead tr th
+        padding: 0.75rem 0.5rem
+        font-size: 1rem
+
+      tbody tr td
+        padding: 0.75rem 0.5rem
 
 
 .contain
