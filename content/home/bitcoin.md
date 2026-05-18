@@ -1,5 +1,5 @@
 ---
-title: ⚡️ ₿itcoin
+title: ₿itcoin
 slug: bitcoin
 weight: 7
 ---
