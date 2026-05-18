@@ -1,0 +1,50 @@
+---
+title: "Advanced Patterns: Grok + Hermes for Complex Workflows"
+slug: advanced-grok-hermes
+date: 2026-05-18
+tags: [hermes, grok, agents, workflows, tools, skills]
+category: tutorial
+---
+
+# Advanced Grok + Hermes Workflows
+
+Once you have the basics down, here are some powerful patterns for using Grok inside Hermes Agent.
+
+## Multi-Agent Delegation
+
+Grok excels at planning. Use it to orchestrate sub-agents:
+
+```bash
+hermes delegate --goal "Refactor the auth module" --model grok-4.3
+```
+
+## Skill Authoring with Grok
+
+Grok is fantastic at writing reusable skills. Ask it to generate SKILL.md files following Hermes conventions:
+
+- Clear trigger conditions
+- Step-by-step instructions
+- Pitfall warnings
+- Verification steps
+
+## Persistent Memory + Tool Use
+
+Combine Grok's context handling with Hermes' memory tool to maintain long-running projects across sessions.
+
+Example workflow:
+
+1. Research a topic using browser tools
+2. Save key facts to memory
+3. Generate code using Grok
+4. Test via terminal tool
+5. Commit on a new branch
+
+## Pro Tips
+
+- Set `model: grok-4.3` per-job in cron tasks for heavy lifting
+- Use `skill_view` liberally — Grok loves structured docs
+- For creative tasks, pair with image_generate or manim-video skills
+
+These patterns have significantly boosted my productivity on Raspberry Pi projects and personal automation. 
+
+What workflows are you building with Grok and Hermes?
