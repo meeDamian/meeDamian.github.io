@@ -46,7 +46,7 @@ params:
 
   home:
     localTime: true
-    timeZone: Asia/Kuala_Lumpur
+    timeZone: Europe/Warsaw
     numberOfProjectsToShow: 3
 
   social:
@@ -70,7 +70,6 @@ params:
       url: https://t.me/
       icon: telegram
 
-    # - <<: *social
     # - <<: *social
     #   url: nostr:npub1ftjdw3y6vg3gz2m67lyzauwsh00apkcf7vp9y03w56ztzw4pxhlsyhsrnu
     #   icon: circle-nodes
