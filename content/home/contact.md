@@ -3,22 +3,17 @@ title: Contact
 slug: contact
 ---
 
-You can find me pretty much anywhere as [@][0][m][1][e][2][e][3][D][4][a][5][m][6][i][7][a][8][n][9].
+You can find me pretty much anywhere as [@][0][m][1][e][2][e][3][D][4][a][5][m][6][i][7][a][8][n][0].
 
-For **quickest reply** use [𝕏 (Twitter)][1] or [Messenger][7].<br />
-For **security issues** use [<samp>meedamian@pm.me</samp>][a] or Wire <sup>([install][wire] & [find me][wire-mee])</sup>.
+For **quickest reply** use [𝕏 (Twitter)][1] or [Messenger][6].<br />
 
 [0]: https://github.com/meeDamian
 [1]: https://x.com/meeDamian
-[2]: https://keybase.io/meedamian
-[3]: https://www.npmjs.com/~meedamian
-[4]: https://hub.docker.com/u/meedamian
-[5]: https://nomadlist.com/@meedamian
-[6]: https://medium.com/@meeDamian
-[7]: https://m.me/meedamian
-[8]: https://bitcoinhackers.org/@meedamian
-[9]: https://www.linkedin.com/in/meedamian/
-[a]: mailto:meedamian@pm.me
+[2]: https://www.npmjs.com/~meedamian
+[3]: https://hub.docker.com/u/meedamian
+[4]: https://nomadlist.com/@meedamian
+[5]: https://medium.com/@meeDamian
+[6]: https://m.me/meedamian
+[7]: https://bitcoinhackers.org/@meedamian
+[8]: https://www.linkedin.com/in/meedamian/
 
-[wire]: https://wire.com/en/download/
-[wire-mee]: https://meedamian.keybase.pub/wire.txt
