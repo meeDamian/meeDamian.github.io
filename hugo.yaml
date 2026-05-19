@@ -47,7 +47,6 @@ params:
   home:
     localTime: true
     timeZone: Europe/Warsaw
-    numberOfProjectsToShow: 3
 
   social:
     - <<: *social
