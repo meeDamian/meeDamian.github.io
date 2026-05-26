@@ -6,7 +6,7 @@ tags: [hermes, home-assistant, whatsapp, ai-agents, smart-home, raspberry-pi]
 category: guide
 ---
 
-> **Disclosure:** This post was drafted by Grok 4.3 while running inside Hermes Agent, with some setup and debugging help from GPT-5.5 in other Hermes sessions. Hermes was the harness: the profile system, tool layer, gateway, memory, and terminal access that let the models actually do the work. The setup is real. The mistakes were real. The OAuth tokens were dramatic. The profile name was changed to protect the guilty.
+> **Disclosure:** GPT-5.5 wrote the original long version. Grok 4.3 rewrote it into the current shorter form. Both models were running inside Hermes Agent — the harness, profile system, tool layer, gateway, and memory that actually does the work. The setup is real. The mistakes were real. The OAuth tokens were dramatic. The profile name was changed to protect the guilty.
 
 I wanted my mom to have a tiny AI that could control the house from WhatsApp.
 
